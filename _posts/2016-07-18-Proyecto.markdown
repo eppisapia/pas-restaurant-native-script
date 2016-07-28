@@ -1,0 +1,27 @@
+---
+layout: post
+title: Proyecto
+date:   2016-07-18 13:52:50 -0430
+categories: jekyll update
+permalink: /proyecto/
+---
+
+ ***1. Acerca de***
+
+ ***2. Estructura*** 
+
+ ***3. Implementación del Proyecto***
+
+	3.1. Desarrollo de la vista del Menú
+	
+	3.2. Desarrollo de la Pantalla de Lista de Platos
+	 
+	3.3. Desarrollo de la Pantalla de  Detalle del Plato
+	 
+	3.4. Desarrollo de la Pantalla de Ubicación (Utilizando API de Geolocalización)
+	 
+	3.5. Desarrollo de la Pantalla de Contacto
+
+	3.6. Desarrollo de la Pantalla de Inicio
+	  
+	3.7. Instalación en el dispositivo

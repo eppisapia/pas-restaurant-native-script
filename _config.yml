@@ -6,16 +6,16 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: NativeScript
+email: eduardo.pisapia@synery-gb.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://blog.synergy-gb.com/pas-restaurant-react-native" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+  En la presente página se busca introducir el Framework de desarrollo móvil NativeScript,
+  ilustrando la elaboración de una aplicación para familiarizar a los desarrolladores
+  con el framework.
+baseurl: "/pas-restaurant-native-script" # the subpath of your site, e.g. /blog
+url: "http://blog.synergy-gb.com" # the base hostname & protocol for your site
+twitter_username: 
+github_username:  eppisapia
 
 # Build settings
 markdown: kramdown
