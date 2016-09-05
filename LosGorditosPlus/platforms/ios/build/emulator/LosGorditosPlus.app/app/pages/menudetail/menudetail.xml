@@ -1,0 +1,47 @@
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  xmlns:statusbar="nativescript-statusbar"
+  loaded="loaded"
+  navigatingTo="onNavigatingTo"
+  >
+  <page.actionBar>
+    <action-bar title="detalle" />
+  </page.actionBar>
+  <drawer:rad-side-drawer id="drawer">
+    <drawer:rad-side-drawer.mainContent>
+      <stack-layout loaded="mainContentLoaded" class="menu-background">
+
+        <StackLayout marginBottom= "5">
+
+          <image src="{{img}}" height="{{height*0.35}}" />
+          <DockLayout>
+            <StackLayout dock="left">
+              <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center"/>
+            </StackLayout>
+            <StackLayout dock="right" marginRight="3">
+              <image src="{{rank}}" horizontalAlignment="right" height="15" marginTop="6"/>
+            </StackLayout>
+            </DockLayout>
+              <DockLayout >
+              <StackLayout dock="left">
+                <Label text="{{ price }}" horizontalAlignment="left" verticalAlignment="center"/>
+              </StackLayout>
+              <StackLayout dock="right" marginRight="3">
+                <image src="~/images/1_Icons/recursos-28.png" horizontalAlignment="right" marginTop="5" height="30" marginRight="2"/>
+              </StackLayout>
+            </DockLayout>
+          
+          
+        </StackLayout>
+        
+      </stack-layout>
+
+    </drawer:rad-side-drawer.mainContent>
+    <drawer:rad-side-drawer.drawerContent>
+      <widgets:drawer-content />
+    </drawer:rad-side-drawer.drawerContent>
+  </drawer:rad-side-drawer>
+
+</page>

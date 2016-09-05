@@ -1,0 +1,51 @@
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  xmlns:statusbar="nativescript-statusbar"
+  loaded="loaded"
+  navigatingTo="onNavigatingTo"
+  actionBarHidden="true"
+  >
+  <drawer:rad-side-drawer id="drawer">
+    <drawer:rad-side-drawer.mainContent>
+      <stack-layout loaded="mainContentLoaded">
+        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" >
+          <image src="~/images/1_Icons/recursos-10.png" id="menu" tap="back" height="20" />
+          <Label text="detalle" textWrap="true" class="title"/>
+        </StackLayout>
+        <StackLayout>
+          <AbsoluteLayout padding="5">
+            <StackLayout left="0" top="0" width="{{width-10}}">
+              <image src="{{img}}" />
+            </StackLayout>
+            <DockLayout left="0" top="{{height*0.22}}" class="bara" width="{{width-10}}" height="{{height*0.09}}">
+              <StackLayout dock="left">
+                <Label text="{{ name }}" class="DishName" />
+              </StackLayout>
+              <StackLayout dock="right" marginRight="3">
+                <image src="{{rank}}" horizontalAlignment="right" height="16" marginTop="6"/>
+              </StackLayout>
+            </DockLayout>
+            <image src="~/images/1_Icons/recursos-28.png" left="50" top="{{height*0.27}}" left="{{width*0.77}}" height="55"/>
+            <Label text="{{ price }}" top="{{height*0.31}}" class="DishPrice"/>
+          </AbsoluteLayout>
+          <DockLayout>
+            <StackLayout dock="left" class="button_1">
+              <Label text="Cambiar Plato" tap="back"/>
+            </StackLayout>
+            <StackLayout dock="right" class="button_2">
+              <Label text="Pedir" horizontalAlignment="center"/>
+            </StackLayout>
+          </DockLayout>
+          <Label text="{{description}}" class="description"/>
+        </StackLayout>   
+      </stack-layout>
+
+    </drawer:rad-side-drawer.mainContent>
+    <drawer:rad-side-drawer.drawerContent>
+      <widgets:drawer-content />
+    </drawer:rad-side-drawer.drawerContent>
+  </drawer:rad-side-drawer>
+
+</page>

@@ -14,11 +14,33 @@ class MenuPage extends BasePage{
         view.bindingContext = vm;
     }
 
-    changeFavoritos() {
+    changeToList(args) {
+    	let tabNumber = args.view.id;
+    	let tabTitle;
+    	switch (tabNumber){
+    		case 0: 
+	    		tabTitle = "favoritos" ;
+	    		break;
+    		case 1:
+	    		tabTitle = "principales";
+	    		break;
+    		case 2:
+    			tabTitle = "ensaladas";
+	    		break;
+    		case 3:
+    			tabTitle = "postres";
+	    		break;
+    		case 4:
+    			tabTitle = "bebidas";
+	    		break;
+    		default: 
+	    		tabTitle = "favoritos";
+	    		break;
+    		}
 	    var navigationOptions={
 	        moduleName:'pages/menulist/menulist',
-	        context:{tab: 0,
-	                title: "favoritos"
+	        context:{tab: tabNumber,
+	                title: tabTitle
 	                }
 	    }
 	    topmost().navigate(navigationOptions);

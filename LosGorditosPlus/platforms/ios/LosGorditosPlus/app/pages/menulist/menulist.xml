@@ -10,9 +10,9 @@
   <drawer:rad-side-drawer id="drawer">
     <drawer:rad-side-drawer.mainContent>
       <!-- Home page contents -->
-      <stack-layout loaded="mainContentLoaded">
+      <stack-layout loaded="mainContentLoaded" class="menu-background">
         <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" >
-          <image src="res://ic_menu" id="menu" tap="toggleDrawer" height="20" />
+          <image src="res://ic_menu" id="menu" tap="toggleDrawer" height="13" />
           <Label text="{{titleTab}}" textWrap="true" class="title"/>
         </StackLayout>
         <StackLayout orientation="horizontal" marginTop="3">
@@ -58,23 +58,29 @@
           </StackLayout>
         </StackLayout>
         <StackLayout margin= "5">
-          <ListView items="{{ groceryList }}" id="groceryList" height="{{height*0.65}}">
-              <ListView.itemTemplate>
-                <StackLayout marginBottom= "5">
-                  <image src="{{img}}" height="{{height*0.15}}" />
-                  <DockLayout class="DishBar">
-                    <StackLayout dock="left">
-                      <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center" class="DishName"/>
-                      <Label text="{{ price }}" horizontalAlignment="left" verticalAlignment="center" class="DishPrice"/>
-                    </StackLayout>
-                    <StackLayout dock="right" marginRight="3">
-                      <image src="~/images/1_Icons/recursos-07.png"  horizontalAlignment="right" marginTop="5" height="17" marginRight="2" />
-                      <image src="{{rank}}" horizontalAlignment="right" height="15" marginTop="6"/>
-                    </StackLayout>
-                  </DockLayout>
-                </StackLayout>
-              </ListView.itemTemplate>
-          </ListView>
+            <ListView items="{{ groceryList }}" id="groceryList" height="{{height*0.69}}">
+                <ListView.itemTemplate>
+                  <StackLayout marginBottom= "5">
+                    <image src="{{img}}" height="{{height*0.15}}" />
+                    <DockLayout class="DishBar">
+                      <StackLayout dock="left">
+                        <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center" class="DishName"/>
+                        <Label text="{{ price }}" horizontalAlignment="left" verticalAlignment="center" class="DishPrice"/>
+                      </StackLayout>
+                      <StackLayout dock="right" marginRight="3">
+                        <image src="~/images/1_Icons/recursos-07.png" horizontalAlignment="right" marginTop="5" height="17" marginRight="2"
+                        name="{{ name }}"
+                        price="{{ price }}" 
+                        rank="{{rank}}" 
+                        description="{{description}}"
+                        img="{{img}}"
+                        tap="changeToDetail" />
+                        <image src="{{rank}}" horizontalAlignment="right" height="15" marginTop="6"/>
+                      </StackLayout>
+                    </DockLayout>
+                  </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
         </StackLayout>
       </stack-layout>
 

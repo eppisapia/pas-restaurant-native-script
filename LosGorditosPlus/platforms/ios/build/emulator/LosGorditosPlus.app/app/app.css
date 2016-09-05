@@ -40,3 +40,18 @@
 	border-width: 1;
 	opacity: 0.3;
 }
+
+.bar {
+	padding: 4;
+	padding-left: 9;
+	background-image: ~/images/7_Others/recursos-43;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  	color: white;
+}
+
+.title {
+	margin-left: 85;
+	font-size: 24;
+}

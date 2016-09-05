@@ -14,11 +14,33 @@ var MenuPage = (function (_super) {
         var view = args.object;
         view.bindingContext = vm;
     };
-    MenuPage.prototype.changeFavoritos = function () {
+    MenuPage.prototype.changeToList = function (args) {
+        var tabNumber = args.view.id;
+        var tabTitle;
+        switch (tabNumber) {
+            case 0:
+                tabTitle = "favoritos";
+                break;
+            case 1:
+                tabTitle = "principales";
+                break;
+            case 2:
+                tabTitle = "ensaladas";
+                break;
+            case 3:
+                tabTitle = "postres";
+                break;
+            case 4:
+                tabTitle = "bebidas";
+                break;
+            default:
+                tabTitle = "favoritos";
+                break;
+        }
         var navigationOptions = {
             moduleName: 'pages/menulist/menulist',
-            context: { tab: 0,
-                title: "favoritos"
+            context: { tab: tabNumber,
+                title: tabTitle
             }
         };
         frame_1.topmost().navigate(navigationOptions);

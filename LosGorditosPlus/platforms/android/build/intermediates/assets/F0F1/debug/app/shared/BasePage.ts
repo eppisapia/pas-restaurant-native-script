@@ -4,7 +4,8 @@ import {Observable, EventData} from "data/observable";
 import {View} from "ui/core/view";
 
 
-let appViewModel = new Observable({selectedPage: "home"});
+let appViewModel = new Observable({selectedPage: "menu"});
+
 export abstract class BasePage {
     //implement this function in the inheriting pages to set their specific binding context
     abstract mainContentLoaded(args:EventData);

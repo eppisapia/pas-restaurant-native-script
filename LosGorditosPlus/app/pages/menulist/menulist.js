@@ -1,12 +1,13 @@
 "use strict";
 var BasePage_1 = require("../../shared/BasePage");
+var frame_1 = require("ui/frame");
 var observable_1 = require("data/observable");
 var platform_1 = require("platform");
 var vm = new observable_1.Observable({
     groceryList: ([
-        { name: "Pizza con Peperoni", img: "~/images/7_Others/recursos-48", rank: "~/images/7_Others/componente-02", price: "6.700 Bsf", description: "" },
-        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49", rank: "~/images/7_Others/componente-02", price: "6.700 Bsf", description: "" },
-        { name: "eggs", img: "~/images/7_Others/recursos-48", rank: "~/images/7_Others/componente-02", price: "6.700 Bsf", description: "" }
+        { name: "Pizza con Peperoni", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-02", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
+        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49", rank: "~/images/Recursos/componente-04", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
+        { name: "eggs", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-03", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
     ]),
     active: 0,
     titleTab: "",
@@ -61,6 +62,24 @@ var MenuListPage = (function (_super) {
         }
         vm.set("active", tabActive);
         vm.set("titleTab", tabTitle);
+    };
+    MenuListPage.prototype.changeToDetail = function (args) {
+        var dish_img = args.view.img;
+        var dish_rank = args.view.rank;
+        var dish_description = args.view.description;
+        var dish_price = args.view.price;
+        var dish_name = args.view.name;
+        var navigationOptions = {
+            moduleName: 'pages/menudetail/menudetail',
+            context: {
+                name: dish_name,
+                img: dish_img,
+                rank: dish_rank,
+                price: dish_price,
+                description: dish_description
+            }
+        };
+        frame_1.topmost().navigate(navigationOptions);
     };
     return MenuListPage;
 }(BasePage_1.BasePage));

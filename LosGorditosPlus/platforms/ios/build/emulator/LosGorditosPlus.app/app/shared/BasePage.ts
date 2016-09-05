@@ -5,6 +5,7 @@ import {View} from "ui/core/view";
 
 
 let appViewModel = new Observable({selectedPage: "menu"});
+
 export abstract class BasePage {
     //implement this function in the inheriting pages to set their specific binding context
     abstract mainContentLoaded(args:EventData);
@@ -14,6 +15,10 @@ export abstract class BasePage {
         page.bindingContext = appViewModel;   
     }
     
+    back(){
+        topmost().goBack();
+    }
+
     toggleDrawer(){
         let page = <Page>topmost().currentPage;
         let drawer = <any>page.getViewById("drawer");

@@ -42,7 +42,8 @@
 }
 
 .bar {
-	padding: 13;
+	padding: 4;
+	padding-left: 9;
 	background-image: ~/images/7_Others/recursos-43;
     background-repeat: no-repeat;
     background-position: center;
@@ -51,6 +52,6 @@
 }
 
 .title {
-	margin-left: 75;
+	margin-left: 85;
 	font-size: 24;
 }

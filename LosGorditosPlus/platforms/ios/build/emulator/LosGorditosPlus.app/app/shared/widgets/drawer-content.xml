@@ -1,14 +1,13 @@
 <grid-layout class="drawer-content">
   <stack-layout>
-   {() => selectedPage == "menu" ? 
-          {<StackLayout orientation="horizontal" margin="15" >
-                <image src="res://ic_menu" id="menu" tap="toggleDrawer" height="20" />
-              </StackLayout>}
-           : '' }}
+    <StackLayout orientation="horizontal" margin="{{ selectedPage == 'menu' ? '15' : '1' }}" >
+      <image src="{{ selectedPage == 'menu' ? 'res://ic_menu' : '' }}" tap="toggleDrawer" height="{{ selectedPage == 'menu' ? '20' : '1' }}" />
+    </StackLayout>
+
   	<StackLayout orientation="horizontal" margin="10" paddingLeft="5">
       <image src="~/images/1_Icons/recursos-02.png" height="37" tap="navigate"/>
-	    <label text="menú" id="menulist" tap="navigate" marginLeft="10"/>
-      <image src="{{ selectedPage == 'menulist' ? '~/images/1_Icons/recursos-06.png' : '' }}" class="activity-menu"/>
+	    <label text="menú" id="menu" tap="navigate" marginLeft="10"/>
+      <image src="{{ selectedPage == 'menu' ? '~/images/1_Icons/recursos-06.png' : '' }}" class="activity-menu"/>
   	</StackLayout>
 
     <StackLayout class="line"/>

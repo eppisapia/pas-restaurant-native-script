@@ -15,6 +15,10 @@ export abstract class BasePage {
         page.bindingContext = appViewModel;   
     }
     
+    back(){
+        topmost().goBack();
+    }
+
     toggleDrawer(){
         let page = <Page>topmost().currentPage;
         let drawer = <any>page.getViewById("drawer");
