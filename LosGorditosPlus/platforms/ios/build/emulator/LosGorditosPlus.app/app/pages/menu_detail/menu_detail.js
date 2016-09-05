@@ -1,0 +1,1 @@
+//# sourceMappingURL=menu_detail.js.map

@@ -1,0 +1,45 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node4-lts/4.4.7/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '@angular2' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose install initial load of /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/package.json
+5 verbose installManyTop reading scoped package data from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/node_modules/babel-traverse/package.json
+6 verbose installManyTop reading scoped package data from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/node_modules/babel-types/package.json
+7 verbose installManyTop reading scoped package data from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/node_modules/babylon/package.json
+8 verbose installManyTop reading scoped package data from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/node_modules/lazy/package.json
+9 verbose installManyTop reading scoped package data from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/node_modules/nativescript-dev-typescript/package.json
+10 verbose installManyTop reading scoped package data from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/node_modules/nativescript-statusbar/package.json
+11 verbose installManyTop reading scoped package data from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/node_modules/nativescript-telerik-ui/package.json
+12 verbose installManyTop reading scoped package data from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/node_modules/tns-core-modules/package.json
+13 verbose installManyTop reading scoped package data from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/node_modules/typescript/package.json
+14 info package.json babel-traverse@6.14.0 No description
+15 info package.json lazy@1.0.11 license should be a valid SPDX license expression
+16 verbose readDependencies loading dependencies from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/package.json
+17 silly cache add args [ '@angular2', null ]
+18 verbose cache add spec @angular2
+19 silly cache add parsed spec Result {
+19 silly cache add   raw: '@angular2',
+19 silly cache add   scope: null,
+19 silly cache add   name: null,
+19 silly cache add   rawSpec: '@angular2',
+19 silly cache add   spec: '/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/@angular2',
+19 silly cache add   type: 'local' }
+20 error addLocal Could not install /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/@angular2
+21 verbose stack Error: ENOENT: no such file or directory, open '/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/@angular2'
+21 verbose stack     at Error (native)
+22 verbose cwd /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus
+23 error Darwin 15.0.0
+24 error argv "/usr/local/Cellar/node4-lts/4.4.7/bin/node" "/usr/local/bin/npm" "install" "@angular2"
+25 error node v4.4.7
+26 error npm  v2.15.8
+27 error path /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/@angular2
+28 error code ENOENT
+29 error errno -2
+30 error syscall open
+31 error enoent ENOENT: no such file or directory, open '/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/@angular2'
+31 error enoent This is most likely not a problem with npm itself
+31 error enoent and is related to npm not being able to find a file.
+32 verbose exit [ -2, true ]

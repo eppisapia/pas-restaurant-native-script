@@ -1,0 +1,33 @@
+.menu-background {
+	background-image: ~/images/6_BG/recursos-40;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  	color: white;
+}
+
+.lineTab {
+	height: 3;
+	background-color: #ffc300;
+	border-color: #ffc300;
+	border-width: 10;
+}
+
+.DishBar{
+	background-color: #909090;
+	opacity: 0.75;
+}
+
+.DishName {
+	font-size: 20;
+	font-weight: bold;
+	color: white;
+	margin-left: 5;
+}
+
+.DishPrice {
+	font-size: 20;
+	font-weight: bold;
+	color: #ffc300;
+	margin-left: 5;
+}

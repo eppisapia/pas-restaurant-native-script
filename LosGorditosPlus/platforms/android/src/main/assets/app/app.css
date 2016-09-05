@@ -1,0 +1,16 @@
+﻿action-bar {
+  background-color: #ffc300;
+  color: white;
+}
+.drawer-content {
+	background-image: ~/images/7_Others/recursos-41;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  	color: white;
+  	margin-right: 60;
+}
+.drawer-content label {
+  font-size: 20;
+}
+

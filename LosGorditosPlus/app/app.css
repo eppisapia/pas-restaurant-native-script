@@ -1,0 +1,56 @@
+﻿action-bar {
+  background-color: #ffc300;
+  color: white;
+}
+.drawer-content {
+	background-image: ~/images/7_Others/recursos-41;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  	color: white;
+  	margin-right: 60;
+}
+.drawer-content label {
+  font-size: 24;
+}
+
+.activity-menu {
+	margin-left: 79;
+	height: 12;
+}
+
+.activity-about {
+	margin-left: 11;
+	height: 12;
+}
+
+.activity-location {
+	margin-left: 8;
+	height: 11;
+}
+
+.activity-contact {
+	margin-left: 42.5;
+	height: 11;
+}
+
+.line {
+	height: 2;
+	border-color: #ffffff;
+	border-width: 1;
+	opacity: 0.3;
+}
+
+.bar {
+	padding: 13;
+	background-image: ~/images/7_Others/recursos-43;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  	color: white;
+}
+
+.title {
+	margin-left: 75;
+	font-size: 24;
+}

@@ -1,0 +1,35 @@
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  xmlns:statusbar="nativescript-statusbar"
+  loaded="loaded"
+  actionBarHidden="true">
+
+  <drawer:rad-side-drawer id="drawer">
+    <drawer:rad-side-drawer.mainContent>
+      <!-- Home page contents -->
+      <stack-layout loaded="mainContentLoaded">
+        <TabView>
+           <TabView.items>
+             <TabViewItem title="Tab 1">
+               <TabViewItem.view>
+                  <Label text="Label in Tab1" />
+               </TabViewItem.view>
+             </TabViewItem>
+             <TabViewItem title="Tab 2">
+               <TabViewItem.view>
+                  <Label text="Label in Tab2" />
+               </TabViewItem.view>
+             </TabViewItem>
+           </TabView.items>
+         </TabView>
+      </stack-layout>
+
+    </drawer:rad-side-drawer.mainContent>
+    <drawer:rad-side-drawer.drawerContent>
+      <widgets:drawer-content />
+    </drawer:rad-side-drawer.drawerContent>
+  </drawer:rad-side-drawer>
+
+</page>

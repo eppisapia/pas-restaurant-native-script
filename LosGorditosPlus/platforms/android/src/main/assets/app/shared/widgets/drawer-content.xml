@@ -1,0 +1,29 @@
+<grid-layout class="drawer-content">
+  <stack-layout>
+  	<StackLayout orientation="horizontal" margin="10">
+      <image src="~/images/1_Icons/recursos-02" height="40"/>
+	    <label text="Menú" id="menu"/>
+      <image src="{{ selectedPage == 'menu' ? '~/images/1_Icons/recursos-06' : '' }}" height="15"/>
+  	</StackLayout>
+  	<StackLayout orientation="horizontal" margin="10">
+      <image imageSource="~/images/1_Icons/recursos-03" height="40"/>
+      <label text="Información" id="about" tap="navigate"/>
+      <image src="{{ selectedPage == 'about' ? '~/images/1_Icons/recursos-06' : '' }}" height="15"/>
+    </StackLayout>
+    <StackLayout orientation="horizontal" margin="10">
+      <image src="~/images/1_Icons/recursos-05" height="40"/>
+      <label text="Ubicación" id="location" />
+      <image src="{{ selectedPage == 'location' ? '~/images/1_Icons/recursos-06' : '' }}" height="15"/>
+    </StackLayout>
+    <StackLayout orientation="horizontal" margin="10">
+      <image src="~/images/1_Icons/recursos-04" height="30"/>
+      <label text="Contacto" id="contact" />
+      <image src="{{ selectedPage == 'contact' ? '~/images/1_Icons/recursos-06' : '' }}"  height="15"/>
+    </StackLayout>
+  </stack-layout>
+  <GridLayout rows="auto,auto" horizontalAlignment="center" verticalAlignment="bottom">
+      <image src="~/images/3_Logos/recursos-39" height="55" row="0" />
+      <label row="1" height="30"/>
+  </GridLayout>
+
+</grid-layout>

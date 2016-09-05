@@ -1,0 +1,63 @@
+{
+  "name": "nativescript-template-drawer-ts",
+  "main": "app.js",
+  "version": "1.2.0",
+  "author": {
+    "name": "Ignacio Fuentes"
+  },
+  "description": "A NativeScript starter template, in TypeScript, with drawer navigation",
+  "license": "MIT",
+  "keywords": [
+    "telerik",
+    "mobile",
+    "nativescript",
+    "{N}",
+    "tns",
+    "appbuilder",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ignaciofuentes/nativescript-template-drawer-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ignaciofuentes/nativescript-template-drawer-ts/issues"
+  },
+  "homepage": "https://github.com/ignaciofuentes/nativescript-template-drawer-ts",
+  "dependencies": {
+    "nativescript-statusbar": "^1.0.0",
+    "nativescript-telerik-ui": "^1.1.1",
+    "tns-core-modules": "^2.0.1"
+  },
+  "devDependencies": {
+    "nativescript-dev-typescript": "^0.3.0"
+  },
+  "gitHead": "7620c1700d495583e57a4ef1df5a292ea858f481",
+  "_id": "nativescript-template-drawer-ts@1.2.0",
+  "scripts": {},
+  "_shasum": "bc649bf0a30eef48d041aadab9bc3268a718a2de",
+  "_from": "nativescript-template-drawer-ts@latest",
+  "_npmVersion": "2.13.1",
+  "_nodeVersion": "4.4.3",
+  "_npmUser": {
+    "name": "ignaciofuentes",
+    "email": "ignaciofuentes@outlook.com"
+  },
+  "dist": {
+    "shasum": "bc649bf0a30eef48d041aadab9bc3268a718a2de",
+    "tarball": "https://registry.npmjs.org/nativescript-template-drawer-ts/-/nativescript-template-drawer-ts-1.2.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "ignaciofuentes",
+      "email": "ignaciofuentes@outlook.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/nativescript-template-drawer-ts-1.2.0.tgz_1466484405911_0.9015067119617015"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/nativescript-template-drawer-ts/-/nativescript-template-drawer-ts-1.2.0.tgz",
+  "readme": "ERROR: No README data found!"
+}
