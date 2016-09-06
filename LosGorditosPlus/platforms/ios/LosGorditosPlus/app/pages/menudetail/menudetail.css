@@ -30,7 +30,7 @@
 	border-color: #ffc300;
 	border-width: 1;
 	padding: 5;
-	margin-left: 5;
+
 }
 
 .button_1 label {
@@ -53,9 +53,22 @@
 }
 
 .description {
-	margin-left: 5;
-	padding-right: 5; 
 	font-size: 16;
 	color: #222222;
 	text-align: justify;
+}
+
+.share_button {
+	opacity: 1;
+	height: 55;
+}
+.share {
+	background-color: #e3e3e3;
+	border-radius: 5;
+	opacity: 1;
+}
+
+.shadow {
+	background-color: #3c3c3c;
+	opacity: 0.80;
 }

@@ -8,6 +8,7 @@ var vm = new observable_1.Observable({
     img: "",
     rank: "",
     description: "",
+    show: false,
     width: platform_1.screen.mainScreen.widthDIPs,
     height: platform_1.screen.mainScreen.heightDIPs
 });

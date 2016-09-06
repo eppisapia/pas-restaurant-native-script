@@ -1,0 +1,67 @@
+.menu-background {
+	background-image: ~/images/Recursos/componente-01;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  	color: white;
+}
+
+.DishName {
+	font-size: 22;
+	font-weight: bold;
+	color: white;
+	margin: 5;
+	padding-top: 2;
+	vertical-align: center;
+}
+
+.DishPrice {
+	font-size: 24;
+	font-weight: bold;
+	color: #ffc300;
+}
+
+.bara {
+	background-color: #909090;
+	opacity: 0.98;
+}
+
+.button_1 {
+	border-color: #ffc300;
+	border-width: 1;
+	padding: 5;
+	margin-left: 5;
+}
+
+.button_1 label {
+	font-size: 22;
+	color: #ffc300;
+}
+
+.button_2 {
+	background-color: #ffc300;
+	padding: 5;
+	margin-left: 6;
+	margin-right: 5;
+}
+
+.button_2 label {
+	color: white;
+	font-size: 22;
+	vertical-align: center;
+	font-weight: bold;
+}
+
+.description {
+	margin-left: 5;
+	padding-right: 5; 
+	font-size: 16;
+	color: #222222;
+	text-align: justify;
+}
+
+.share {
+	-webkit-box-shadow: 0px 10px 124px 58px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 124px 58px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 124px 58px rgba(0,0,0,0.75);
+}

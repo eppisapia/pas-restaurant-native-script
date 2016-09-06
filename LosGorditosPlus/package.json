@@ -13,6 +13,7 @@
     }
   },
   "dependencies": {
+    "nativescript-collapsing-header": "^2.0.0",
     "nativescript-statusbar": "^1.0.0",
     "nativescript-telerik-ui": "^1.1.1",
     "tns-core-modules": "^2.0.1"

@@ -5,37 +5,46 @@
   xmlns:statusbar="nativescript-statusbar"
   loaded="loaded"
   navigatingTo="onNavigatingTo"
+  actionBarHidden="true"
   >
-  <page.actionBar>
-    <action-bar title="detalle" />
-  </page.actionBar>
   <drawer:rad-side-drawer id="drawer">
     <drawer:rad-side-drawer.mainContent>
-      <stack-layout loaded="mainContentLoaded" class="menu-background">
-
-        <StackLayout marginBottom= "5">
-
-          <image src="{{img}}" height="{{height*0.35}}" />
-          <DockLayout>
-            <StackLayout dock="left">
-              <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center"/>
+      <stack-layout loaded="mainContentLoaded">
+        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" >
+          <image src="~/images/1_Icons/recursos-10.png" id="menu" tap="back" height="20" />
+          <Label text="detalle" textWrap="true" class="title"/>
+        </StackLayout>
+        <StackLayout>
+          <AbsoluteLayout padding="5">
+            <StackLayout left="0" top="0" width="{{width-10}}">
+              <image src="{{img}}" />
             </StackLayout>
-            <StackLayout dock="right" marginRight="3">
-              <image src="{{rank}}" horizontalAlignment="right" height="15" marginTop="6"/>
-            </StackLayout>
-            </DockLayout>
-              <DockLayout >
+            <DockLayout left="0" top="{{height*0.22}}" class="bara" width="{{width-10}}" height="{{height*0.09}}">
               <StackLayout dock="left">
-                <Label text="{{ price }}" horizontalAlignment="left" verticalAlignment="center"/>
+                <Label text="{{ name }}" class="DishName" />
               </StackLayout>
               <StackLayout dock="right" marginRight="3">
-                <image src="~/images/1_Icons/recursos-28.png" horizontalAlignment="right" marginTop="5" height="30" marginRight="2"/>
+                <image src="{{rank}}" horizontalAlignment="right" height="16" marginTop="6"/>
               </StackLayout>
             </DockLayout>
-          
-          
-        </StackLayout>
-        
+            <image src="~/images/1_Icons/recursos-28.png" top="{{height*0.27}}" left="{{width*0.77}}" height="55"/>
+            <Label text="{{ price }}" top="{{height*0.31}}" class="DishPrice"/>
+            <StackLayout left="{{width*0.70}}" top="{{height*0.40}}" orientation="horizontal" class="share">
+              <image src="~/images/1_Icons/recursos-29.png" height="40"/>
+              <image src="~/images/1_Icons/recursos-30.png" height="40"/>
+              <image src="~/images/1_Icons/recursos-31.png" height="40"/>
+            </StackLayout>
+          </AbsoluteLayout>
+         <DockLayout top="{{height*0.37}}">
+            <StackLayout dock="left" class="button_1">
+              <Label text="Cambiar Plato" tap="back"/>
+            </StackLayout>
+            <StackLayout dock="right" class="button_2">
+              <Label text="Pedir" horizontalAlignment="center"/>
+            </StackLayout>
+          </DockLayout>
+          <Label top="{{height*0.60}}" text="{{description}}" class="description"/>
+        </StackLayout>   
       </stack-layout>
 
     </drawer:rad-side-drawer.mainContent>

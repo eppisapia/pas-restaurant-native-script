@@ -5,9 +5,9 @@ var observable_1 = require("data/observable");
 var platform_1 = require("platform");
 var vm = new observable_1.Observable({
     groceryList: ([
-        { name: "Pizza con Peperoni", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-02", price: "6.700 Bsf", description: "" },
-        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49", rank: "~/images/Recursos/componente-04", price: "6.700 Bsf", description: "" },
-        { name: "eggs", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-03", price: "6.700 Bsf", description: "" }
+        { name: "Pizza con Peperoni", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-02", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
+        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49", rank: "~/images/Recursos/componente-04", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
+        { name: "eggs", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-03", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
     ]),
     active: 0,
     titleTab: "",

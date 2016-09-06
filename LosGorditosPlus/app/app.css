@@ -55,3 +55,24 @@
 	margin-left: 85;
 	font-size: 24;
 }
+
+.white_bg{
+	background-image: ~/images/Recursos/componente-01;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.open {
+	height: 19;
+	margin-top: 10;
+	margin-right: 9;
+	margin-bottom: 3;
+}
+
+.close {
+	width: 20 ;
+	margin-top: 15;
+	margin-right: 9;
+	margin-bottom: 3;
+}
