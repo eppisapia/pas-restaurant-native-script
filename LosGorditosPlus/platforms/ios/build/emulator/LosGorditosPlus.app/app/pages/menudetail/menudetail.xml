@@ -14,8 +14,8 @@
           <image src="~/images/1_Icons/recursos-10.png" id="menu" tap="back" height="20" />
           <Label text="detalle" textWrap="true" class="title"/>
         </StackLayout>
-        <StackLayout>
-          <AbsoluteLayout padding="5">
+        <AbsoluteLayout>
+          <AbsoluteLayout left="0" top="0" padding="5">
             <StackLayout left="0" top="0" width="{{width-10}}">
               <image src="{{img}}" />
             </StackLayout>
@@ -27,24 +27,25 @@
                 <image src="{{rank}}" horizontalAlignment="right" height="16" marginTop="6"/>
               </StackLayout>
             </DockLayout>
-            <image src="~/images/1_Icons/recursos-28.png" top="{{height*0.27}}" left="{{width*0.77}}" height="55"/>
             <Label text="{{ price }}" top="{{height*0.31}}" class="DishPrice"/>
-            <StackLayout left="{{width*0.70}}" top="{{height*0.40}}" orientation="horizontal" class="share">
-              <image src="~/images/1_Icons/recursos-29.png" height="40"/>
-              <image src="~/images/1_Icons/recursos-30.png" height="40"/>
-              <image src="~/images/1_Icons/recursos-31.png" height="40"/>
-            </StackLayout>
+            <DockLayout top="{{height*0.37}}" width="{{width-10}}">
+              <StackLayout dock="left" class="button_1">
+                <Label text="Cambiar Plato" tap="back"/>
+              </StackLayout>
+              <StackLayout dock="right" class="button_2">
+                <Label text="Pedir" horizontalAlignment="center"/>
+              </StackLayout>
+            </DockLayout>
+            <Label top="{{height*0.45}}" text="{{description}}" textWrap="true" width="{{width-10}}" class="description"/>
           </AbsoluteLayout>
-         <DockLayout top="{{height*0.37}}">
-            <StackLayout dock="left" class="button_1">
-              <Label text="Cambiar Plato" tap="back"/>
-            </StackLayout>
-            <StackLayout dock="right" class="button_2">
-              <Label text="Pedir" horizontalAlignment="center"/>
-            </StackLayout>
-          </DockLayout>
-          <Label top="{{height*0.60}}" text="{{description}}" class="description"/>
-        </StackLayout>   
+          <AbsoluteLayout left="0" top="0" height="{{height}}" width="{{width}}" class="shadow" visibility="{{ show == 1 ? 'visible' : 'collapsed' }}"/>
+          <StackLayout left="{{width*0.37}}" top="{{height*0.37}}" orientation="horizontal" class="share" visibility="{{ show == 1 ? 'visible' : 'collapsed' }}">
+            <image src="~/images/1_Icons/recursos-29.png" height="50" margin="5"/>
+            <image src="~/images/1_Icons/recursos-30.png" height="50" margin="5"/>
+            <image src="~/images/1_Icons/recursos-31.png" height="50" margin="5"/>
+          </StackLayout>
+          <image src="~/images/1_Icons/recursos-28.png" class="share_button" top="{{height*0.27}}" tap="share" left="{{width*0.77}}"/>
+        </AbsoluteLayout>
       </stack-layout>
 
     </drawer:rad-side-drawer.mainContent>

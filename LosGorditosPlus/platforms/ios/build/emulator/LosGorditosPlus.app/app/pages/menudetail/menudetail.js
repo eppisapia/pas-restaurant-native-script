@@ -8,7 +8,7 @@ var vm = new observable_1.Observable({
     img: "",
     rank: "",
     description: "",
-    show: false,
+    show: 0,
     width: platform_1.screen.mainScreen.widthDIPs,
     height: platform_1.screen.mainScreen.heightDIPs
 });
@@ -31,6 +31,12 @@ var MenuDetailPage = (function (_super) {
         vm.set("img", gotData.img);
         vm.set("rank", gotData.rank);
         vm.set("description", gotData.description);
+    };
+    MenuDetailPage.prototype.share = function () {
+        if (vm.get("show") == 0)
+            vm.set("show", 1);
+        else
+            vm.set("show", 0);
     };
     return MenuDetailPage;
 }(BasePage_1.BasePage));
