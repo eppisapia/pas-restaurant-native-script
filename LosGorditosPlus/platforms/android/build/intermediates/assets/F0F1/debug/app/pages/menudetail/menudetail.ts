@@ -5,6 +5,7 @@ import {View} from "ui/core/view";
 import segmentedBarModule = require("ui/segmented-bar");
 import {screen} from "platform"
 import {Page} from "ui/page";
+import buttonModule = require("ui/button");
 
 let vm = new Observable({ 
     name: "default",
@@ -12,6 +13,7 @@ let vm = new Observable({
     img: "",
     rank: "",
     description:"",
+    show: 0,
     width: screen.mainScreen.widthDIPs,
     height: screen.mainScreen.heightDIPs
  });
@@ -34,5 +36,12 @@ class MenuDetailPage extends BasePage{
         vm.set("description", gotData.description);
 	}
 
+    share() {
+        if (vm.get("show") == 0)
+            vm.set("show", 1);
+        else
+            vm.set("show",0);
+
+    }
 }
 export = new MenuDetailPage();

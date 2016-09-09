@@ -3,7 +3,7 @@
   color: white;
 }
 .drawer-content {
-	background-image: ~/images/7_Others/recursos-41;
+	background-image: ~/images/7_Others/recursos-41.png;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -44,7 +44,7 @@
 .bar {
 	padding: 4;
 	padding-left: 9;
-	background-image: ~/images/7_Others/recursos-43;
+	background-image: ~/images/7_Others/recursos-43.png;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -57,7 +57,7 @@
 }
 
 .white_bg{
-	background-image: ~/images/Recursos/componente-01;
+	background-image: ~/images/Recursos/componente-01.png;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

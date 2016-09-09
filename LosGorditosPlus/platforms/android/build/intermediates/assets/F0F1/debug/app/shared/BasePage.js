@@ -9,6 +9,9 @@ var BasePage = (function () {
         var page = args.object;
         page.bindingContext = appViewModel;
     };
+    BasePage.prototype.back = function () {
+        frame_1.topmost().goBack();
+    };
     BasePage.prototype.toggleDrawer = function () {
         var page = frame_1.topmost().currentPage;
         var drawer = page.getViewById("drawer");

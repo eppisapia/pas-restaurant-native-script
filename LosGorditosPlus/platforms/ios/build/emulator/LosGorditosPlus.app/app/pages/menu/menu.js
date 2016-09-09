@@ -18,19 +18,19 @@ var MenuPage = (function (_super) {
         var tabNumber = args.view.id;
         var tabTitle;
         switch (tabNumber) {
-            case 0:
+            case "fav":
                 tabTitle = "favoritos";
                 break;
-            case 1:
+            case "pri":
                 tabTitle = "principales";
                 break;
-            case 2:
+            case "ens":
                 tabTitle = "ensaladas";
                 break;
-            case 3:
+            case "pos":
                 tabTitle = "postres";
                 break;
-            case 4:
+            case "beb":
                 tabTitle = "bebidas";
                 break;
             default:

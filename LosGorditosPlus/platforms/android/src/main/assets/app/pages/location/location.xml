@@ -1,0 +1,21 @@
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  xmlns:statusbar="nativescript-statusbar"
+  loaded="loaded"
+  navigatingTo="onNavigatingTo"
+  actionBarHidden="true"
+  >
+  <drawer:rad-side-drawer id="drawer">
+    <drawer:rad-side-drawer.mainContent>
+      <stack-layout loaded="mainContentLoaded">
+  
+      </stack-layout>
+    </drawer:rad-side-drawer.mainContent>
+    <drawer:rad-side-drawer.drawerContent>
+      <widgets:drawer-content />
+    </drawer:rad-side-drawer.drawerContent>
+  </drawer:rad-side-drawer>
+
+</page>

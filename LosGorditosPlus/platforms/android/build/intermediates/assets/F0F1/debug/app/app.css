@@ -3,7 +3,7 @@
   color: white;
 }
 .drawer-content {
-	background-image: ~/images/7_Others/recursos-41;
+	background-image: ~/images/7_Others/recursos-41.png;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -42,9 +42,9 @@
 }
 
 .bar {
-	padding-top: 13;
-	padding-left: 13;
-	background-image: ~/images/7_Others/recursos-43;
+	padding: 4;
+	padding-left: 9;
+	background-image: ~/images/7_Others/recursos-43.png;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -52,6 +52,27 @@
 }
 
 .title {
-	margin-left: 75;
+	margin-left: 85;
 	font-size: 24;
+}
+
+.white_bg{
+	background-image: ~/images/Recursos/componente-01.png;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.open {
+	height: 19;
+	margin-top: 10;
+	margin-right: 9;
+	margin-bottom: 3;
+}
+
+.close {
+	width: 20 ;
+	margin-top: 15;
+	margin-right: 9;
+	margin-bottom: 3;
 }

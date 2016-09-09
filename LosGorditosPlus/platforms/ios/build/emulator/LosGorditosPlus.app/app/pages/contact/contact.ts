@@ -34,7 +34,14 @@ let vm = new Observable({
           zona: "Carrizal"}
     ]),
 	width: screen.mainScreen.widthDIPs,
-    height: screen.mainScreen.heightDIPs}
+  height: screen.mainScreen.heightDIPs,
+  latitude: -33.86,
+  longitude: 151.20,
+  zoom: 8,
+  bearing: 0,
+  tilt: 0,
+  padding: 40,
+  }
 );
 
 class ContactPage extends BasePage{
@@ -84,6 +91,10 @@ class ContactPage extends BasePage{
       vm.set("sel_movil", movil);
       vm.set("lszonas",0);
       vm.set("infzona",1);
+    }
+    onMapReady(args) {
+      console.log("onMapReady");
+      var mapView = args.object;
     }
 }
 

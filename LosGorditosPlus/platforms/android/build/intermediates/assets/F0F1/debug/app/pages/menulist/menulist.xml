@@ -12,7 +12,7 @@
       <!-- Home page contents -->
       <stack-layout loaded="mainContentLoaded" class="menu-background">
         <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" >
-          <image src="res://ic_menu" id="menu" tap="toggleDrawer" height="20" />
+          <image src="res://ic_menu" id="menu" tap="toggleDrawer" height="13" />
           <Label text="{{titleTab}}" textWrap="true" class="title"/>
         </StackLayout>
         <StackLayout orientation="horizontal" marginTop="3">
@@ -58,7 +58,6 @@
           </StackLayout>
         </StackLayout>
         <StackLayout margin= "5">
-          <AbsoluteLayout>
             <ListView items="{{ groceryList }}" id="groceryList" height="{{height*0.69}}">
                 <ListView.itemTemplate>
                   <StackLayout marginBottom= "5">
@@ -82,7 +81,6 @@
                   </StackLayout>
                 </ListView.itemTemplate>
             </ListView>
-          </AbsoluteLayout>
         </StackLayout>
       </stack-layout>
 

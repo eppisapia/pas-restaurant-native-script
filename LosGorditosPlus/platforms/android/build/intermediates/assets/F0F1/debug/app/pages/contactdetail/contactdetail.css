@@ -1,0 +1,31 @@
+.text {
+    font-size: 16;
+    color: #3e3e3e;
+}
+
+.yellow_bar {
+	background-color: #ffc300;
+	margin-top: 4;
+	height: 2;
+	opacity: 0.80;
+}
+
+.mensaje {
+	margin-top: 30;
+	padding: 5;
+	border-width: 2;
+	border-color: #ffc300;
+	font-size: 16;
+    color: #3e3e3e;
+    margin-bottom: 20;
+}
+.boton {
+	margin: 5;
+	background-color: #ffc300;
+	width: 100;
+	padding: 5;
+	color: white;
+	font-size: 18;
+	font-weight: bold;
+	text-align: center;
+}

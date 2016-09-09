@@ -6,47 +6,48 @@
 	objectVersion = 46;
 	objects = {
 /* Begin PBXBuildFile section */
+		0A89DFB9BDD94489ABE29842 /* TelerikAppFeedback.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0953D1006F44D53B447404B /* TelerikAppFeedback.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1136E0DF196E4EA189E56C2B /* ic_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 834777B1F4A0413885B8FF8E /* ic_menu@2x.png */; };
+		1169BB7FA590401798F0ABEF /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 28D79EF8D8F84372AEBFA60A /* icon-72.png */; };
+		123C9EB7BF454FC79F5FD5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D58FFD2C8AB41D880F685BB /* Assets.xcassets */; };
+		1B3E1B70063642AEB2BB1255 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 092BC787CEFB4939BA97F0B2 /* Default@2x.png */; };
+		259F65E1C06B4417B3C50417 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB61252FDDD42648DD0056E /* Default-667h@2x.png */; };
+		271454A3FA72413EB8917BD5 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 054F7165390C4808A92A7DB3 /* Icon-Small-50@2x.png */; };
+		27AED1B99C4D41DE9597A64B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E325B13DF73A41BD9CAD76BE /* Default.png */; };
+		27EB467D3ABD4194B8217754 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 725CB2DAB5034611B34EAC51 /* Icon-Small-50.png */; };
+		2C04F687546847C68EB93E2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B7469397C44D399CA43BE4 /* Default-568h@2x.png */; };
+		36527E82CCB54CE2B50DDC71 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B356E71F40184F13867A13D1 /* icon-60@2x.png */; };
+		3764A9B8F3C842D1BA6FDB6E /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0985F428202A40D6B392BC11 /* icon-72@2x.png */; };
+		3A0EFF0BA603454B93196DEC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AAE5443A38C6486BAA779531 /* icon.png */; };
+		3E254DD0EB6243FCBFD70D16 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = E8F32942204C477698EBFE58 /* Icon-Small.png */; };
+		40BA56F3233548918EDA92D1 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E01D5D81A7AC4FEEB2220A1A /* Default-Portrait@2x.png */; };
+		4A646D2068DA43658993330D /* Default-Landscape@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86EF24F22CE54B3E815CA68D /* Default-Landscape@3x.png */; };
+		4C079D7BD0B941EE8B3A7B4A /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95CB6065B4A2472498CD4AB7 /* Default-Landscape@2x.png */; };
+		4DECB23953E84FFCBF32A271 /* TelerikUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A2EE7B70B4D4F99B87698F2 /* TelerikUI.framework */; };
+		59E35DA4C0E14AA0990AB48B /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = CF023ECC8F7241FAAEB0F734 /* Default-Landscape.png */; };
+		5D53BEA42BFB4CCCADA0CB83 /* TelerikUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A2EE7B70B4D4F99B87698F2 /* TelerikUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		661E1266CFD1426296EC598C /* icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 3807D9E28F41458DA22DACA5 /* icon-60.png */; };
+		67E7907736B94285BF4FDE03 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A09EA5E82645A08A431C9B /* icon-40@2x.png */; };
+		7712F1E14E1A48DAA9E34BEA /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D933E5E6177945A9A24E6523 /* icon@2x.png */; };
+		79FE816D03EE4C79BA00CF9C /* Default-Landscape-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66ABCD04C7BB4BE19002F6FD /* Default-Landscape-667h@2x.png */; };
+		7A9E0372D69A4703830E6CEF /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FC0A2FE8A3468182BE6073 /* icon-76@2x.png */; };
+		7CEE558D714D4F7EA39F5912 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 9336B738C86D4626BEFA386F /* icon-76.png */; };
+		816C4D09322146769476C44B /* TelerikAppFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0953D1006F44D53B447404B /* TelerikAppFeedback.framework */; };
 		858B842D18CA22B800AB12DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 858B833A18CA111C00AB12DE /* InfoPlist.strings */; };
+		8995610D973A48238EF7DD00 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4AD23D418B4A8391192ECA /* Default-Portrait.png */; };
+		91881E7EC78F45DF8147E14A /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F7434AE5C1C4FB9953D7E9B /* icon-40.png */; };
+		9FD5F9A1B1844304A998E2D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A18D16EAEE4C0E8CEC3D08 /* LaunchScreen.storyboard */; };
+		A8031CD204DE4E09A7562BD4 /* ic_menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0FC8AF6E3F4CB18938A297 /* ic_menu@3x.png */; };
 		CD45EE7C18DC2D5800FB50C0 /* app in Resources */ = {isa = PBXBuildFile; fileRef = CD45EE7A18DC2D5800FB50C0 /* app */; };
 		CD62955D1BB2678900AE3A93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD62955C1BB2678900AE3A93 /* main.m */; };
-		123C9EB7BF454FC79F5FD5F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D58FFD2C8AB41D880F685BB /* Assets.xcassets */; };
-		2C04F687546847C68EB93E2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B7469397C44D399CA43BE4 /* Default-568h@2x.png */; };
-		259F65E1C06B4417B3C50417 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB61252FDDD42648DD0056E /* Default-667h@2x.png */; };
-		F5560C19E62C42EE90BCD1EA /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 937A79E912B647E5B345B4AE /* Default-736h@3x.png */; };
-		F1CD0BCD417D45E78BF98ACD /* Default-Landscape-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D98427F7C31F4B2CB5AE5E1C /* Default-Landscape-568h@2x.png */; };
-		79FE816D03EE4C79BA00CF9C /* Default-Landscape-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66ABCD04C7BB4BE19002F6FD /* Default-Landscape-667h@2x.png */; };
-		59E35DA4C0E14AA0990AB48B /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = CF023ECC8F7241FAAEB0F734 /* Default-Landscape.png */; };
-		4C079D7BD0B941EE8B3A7B4A /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 95CB6065B4A2472498CD4AB7 /* Default-Landscape@2x.png */; };
-		4A646D2068DA43658993330D /* Default-Landscape@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86EF24F22CE54B3E815CA68D /* Default-Landscape@3x.png */; };
-		8995610D973A48238EF7DD00 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4AD23D418B4A8391192ECA /* Default-Portrait.png */; };
-		40BA56F3233548918EDA92D1 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E01D5D81A7AC4FEEB2220A1A /* Default-Portrait@2x.png */; };
-		27AED1B99C4D41DE9597A64B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E325B13DF73A41BD9CAD76BE /* Default.png */; };
-		1B3E1B70063642AEB2BB1255 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 092BC787CEFB4939BA97F0B2 /* Default@2x.png */; };
-		27EB467D3ABD4194B8217754 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 725CB2DAB5034611B34EAC51 /* Icon-Small-50.png */; };
-		271454A3FA72413EB8917BD5 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 054F7165390C4808A92A7DB3 /* Icon-Small-50@2x.png */; };
-		3E254DD0EB6243FCBFD70D16 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = E8F32942204C477698EBFE58 /* Icon-Small.png */; };
 		D1111DECAE4244169093113A /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63051BDDCA844A6DA5F073FB /* Icon-Small@2x.png */; };
-		9FD5F9A1B1844304A998E2D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A18D16EAEE4C0E8CEC3D08 /* LaunchScreen.storyboard */; };
-		E9E39C47F51644369C3D87EF /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C1920C995903493DB317C348 /* build.xcconfig */; };
+		DC87BAB4560372A06CF43930 /* Pods_LosGorditosPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC80801AB41643E2FDBF891 /* Pods_LosGorditosPlus.framework */; };
 		E9CA5BA9D3C74E84AB7515B5 /* ic_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = CEEBB5AFED7D4E91808FB6A6 /* ic_menu.png */; };
-		1136E0DF196E4EA189E56C2B /* ic_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 834777B1F4A0413885B8FF8E /* ic_menu@2x.png */; };
-		A8031CD204DE4E09A7562BD4 /* ic_menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0FC8AF6E3F4CB18938A297 /* ic_menu@3x.png */; };
-		91881E7EC78F45DF8147E14A /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F7434AE5C1C4FB9953D7E9B /* icon-40.png */; };
-		67E7907736B94285BF4FDE03 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A09EA5E82645A08A431C9B /* icon-40@2x.png */; };
-		661E1266CFD1426296EC598C /* icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 3807D9E28F41458DA22DACA5 /* icon-60.png */; };
-		36527E82CCB54CE2B50DDC71 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B356E71F40184F13867A13D1 /* icon-60@2x.png */; };
-		1169BB7FA590401798F0ABEF /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 28D79EF8D8F84372AEBFA60A /* icon-72.png */; };
-		3764A9B8F3C842D1BA6FDB6E /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0985F428202A40D6B392BC11 /* icon-72@2x.png */; };
-		7CEE558D714D4F7EA39F5912 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 9336B738C86D4626BEFA386F /* icon-76.png */; };
-		7A9E0372D69A4703830E6CEF /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FC0A2FE8A3468182BE6073 /* icon-76@2x.png */; };
-		3A0EFF0BA603454B93196DEC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AAE5443A38C6486BAA779531 /* icon.png */; };
-		7712F1E14E1A48DAA9E34BEA /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D933E5E6177945A9A24E6523 /* icon@2x.png */; };
-		816C4D09322146769476C44B /* TelerikAppFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0953D1006F44D53B447404B /* TelerikAppFeedback.framework */; };
-		0A89DFB9BDD94489ABE29842 /* TelerikAppFeedback.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0953D1006F44D53B447404B /* TelerikAppFeedback.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4DECB23953E84FFCBF32A271 /* TelerikUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A2EE7B70B4D4F99B87698F2 /* TelerikUI.framework */; };
-		5D53BEA42BFB4CCCADA0CB83 /* TelerikUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A2EE7B70B4D4F99B87698F2 /* TelerikUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E9E39C47F51644369C3D87EF /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C1920C995903493DB317C348 /* build.xcconfig */; };
 		EFF79AD2F59942CDA5775903 /* TNSWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5804EB464E94880AFF31010 /* TNSWidgets.framework */; };
+		F1CD0BCD417D45E78BF98ACD /* Default-Landscape-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D98427F7C31F4B2CB5AE5E1C /* Default-Landscape-568h@2x.png */; };
 		F29163FE5F784D57AB85DF39 /* TNSWidgets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5804EB464E94880AFF31010 /* TNSWidgets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F5560C19E62C42EE90BCD1EA /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 937A79E912B647E5B345B4AE /* Default-736h@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,51 +67,52 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		054F7165390C4808A92A7DB3 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "LosGorditosPlus/Resources/Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		092BC787CEFB4939BA97F0B2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "LosGorditosPlus/Resources/Default@2x.png"; sourceTree = "<group>"; };
+		0985F428202A40D6B392BC11 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72@2x.png"; path = "LosGorditosPlus/Resources/icon-72@2x.png"; sourceTree = "<group>"; };
+		0AC80801AB41643E2FDBF891 /* Pods_LosGorditosPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LosGorditosPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C0FC8AF6E3F4CB18938A297 /* ic_menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_menu@3x.png"; path = "LosGorditosPlus/Resources/ic_menu@3x.png"; sourceTree = "<group>"; };
+		1A2EE7B70B4D4F99B87698F2 /* TelerikUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TelerikUI.framework; path = ../../lib/iOS/TelerikUI.framework; sourceTree = "<group>"; };
+		28D79EF8D8F84372AEBFA60A /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "LosGorditosPlus/Resources/icon-72.png"; sourceTree = "<group>"; };
+		2D58FFD2C8AB41D880F685BB /* Assets.xcassets */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = Assets.xcassets; path = LosGorditosPlus/Resources/Assets.xcassets; sourceTree = "<group>"; };
+		34B7469397C44D399CA43BE4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "LosGorditosPlus/Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
+		3807D9E28F41458DA22DACA5 /* icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60.png"; path = "LosGorditosPlus/Resources/icon-60.png"; sourceTree = "<group>"; };
+		4FB61252FDDD42648DD0056E /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-667h@2x.png"; path = "LosGorditosPlus/Resources/Default-667h@2x.png"; sourceTree = "<group>"; };
+		63051BDDCA844A6DA5F073FB /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "LosGorditosPlus/Resources/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		66ABCD04C7BB4BE19002F6FD /* Default-Landscape-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape-667h@2x.png"; path = "LosGorditosPlus/Resources/Default-Landscape-667h@2x.png"; sourceTree = "<group>"; };
+		6F7434AE5C1C4FB9953D7E9B /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40.png"; path = "LosGorditosPlus/Resources/icon-40.png"; sourceTree = "<group>"; };
+		725CB2DAB5034611B34EAC51 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "LosGorditosPlus/Resources/Icon-Small-50.png"; sourceTree = "<group>"; };
+		834777B1F4A0413885B8FF8E /* ic_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_menu@2x.png"; path = "LosGorditosPlus/Resources/ic_menu@2x.png"; sourceTree = "<group>"; };
 		858B832E18CA111C00AB12DE /* LosGorditosPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LosGorditosPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		858B833918CA111C00AB12DE /* LosGorditosPlus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LosGorditosPlus-Info.plist"; sourceTree = "<group>"; };
 		858B833B18CA111C00AB12DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		858B833F18CA111C00AB12DE /* LosGorditosPlus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LosGorditosPlus-Prefix.pch"; sourceTree = "<group>"; };
 		858B843318CA22B800AB12DE /* LosGorditosPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LosGorditosPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86EF24F22CE54B3E815CA68D /* Default-Landscape@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@3x.png"; path = "LosGorditosPlus/Resources/Default-Landscape@3x.png"; sourceTree = "<group>"; };
+		9336B738C86D4626BEFA386F /* icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76.png"; path = "LosGorditosPlus/Resources/icon-76.png"; sourceTree = "<group>"; };
+		937A79E912B647E5B345B4AE /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-736h@3x.png"; path = "LosGorditosPlus/Resources/Default-736h@3x.png"; sourceTree = "<group>"; };
+		95CB6065B4A2472498CD4AB7 /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x.png"; path = "LosGorditosPlus/Resources/Default-Landscape@2x.png"; sourceTree = "<group>"; };
+		AAE5443A38C6486BAA779531 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = LosGorditosPlus/Resources/icon.png; sourceTree = "<group>"; };
+		B356E71F40184F13867A13D1 /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60@2x.png"; path = "LosGorditosPlus/Resources/icon-60@2x.png"; sourceTree = "<group>"; };
+		B3A18D16EAEE4C0E8CEC3D08 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = LaunchScreen.storyboard; path = LosGorditosPlus/Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5804EB464E94880AFF31010 /* TNSWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TNSWidgets.framework; path = ../../lib/iOS/TNSWidgets.framework; sourceTree = "<group>"; };
+		C1920C995903493DB317C348 /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; name = build.xcconfig; path = LosGorditosPlus/Resources/build.xcconfig; sourceTree = "<group>"; };
 		CD45EE7A18DC2D5800FB50C0 /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = "<group>"; };
 		CD62955C1BB2678900AE3A93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = internal/main.m; sourceTree = SOURCE_ROOT; };
 		CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-debug.xcconfig"; sourceTree = "<group>"; };
 		CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-release.xcconfig"; sourceTree = "<group>"; };
 		CDF4743E1BA4855C0087EA85 /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
-		2D58FFD2C8AB41D880F685BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = Assets.xcassets; path = "LosGorditosPlus/Resources/Assets.xcassets"; sourceTree = "<group>"; fileEncoding = 4; };
-		34B7469397C44D399CA43BE4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "LosGorditosPlus/Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
-		4FB61252FDDD42648DD0056E /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-667h@2x.png"; path = "LosGorditosPlus/Resources/Default-667h@2x.png"; sourceTree = "<group>"; };
-		937A79E912B647E5B345B4AE /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-736h@3x.png"; path = "LosGorditosPlus/Resources/Default-736h@3x.png"; sourceTree = "<group>"; };
-		D98427F7C31F4B2CB5AE5E1C /* Default-Landscape-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape-568h@2x.png"; path = "LosGorditosPlus/Resources/Default-Landscape-568h@2x.png"; sourceTree = "<group>"; };
-		66ABCD04C7BB4BE19002F6FD /* Default-Landscape-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape-667h@2x.png"; path = "LosGorditosPlus/Resources/Default-Landscape-667h@2x.png"; sourceTree = "<group>"; };
+		CEEBB5AFED7D4E91808FB6A6 /* ic_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_menu.png; path = LosGorditosPlus/Resources/ic_menu.png; sourceTree = "<group>"; };
 		CF023ECC8F7241FAAEB0F734 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape.png"; path = "LosGorditosPlus/Resources/Default-Landscape.png"; sourceTree = "<group>"; };
-		95CB6065B4A2472498CD4AB7 /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x.png"; path = "LosGorditosPlus/Resources/Default-Landscape@2x.png"; sourceTree = "<group>"; };
-		86EF24F22CE54B3E815CA68D /* Default-Landscape@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@3x.png"; path = "LosGorditosPlus/Resources/Default-Landscape@3x.png"; sourceTree = "<group>"; };
 		CF4AD23D418B4A8391192ECA /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "LosGorditosPlus/Resources/Default-Portrait.png"; sourceTree = "<group>"; };
-		E01D5D81A7AC4FEEB2220A1A /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x.png"; path = "LosGorditosPlus/Resources/Default-Portrait@2x.png"; sourceTree = "<group>"; };
-		E325B13DF73A41BD9CAD76BE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "LosGorditosPlus/Resources/Default.png"; sourceTree = "<group>"; };
-		092BC787CEFB4939BA97F0B2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "LosGorditosPlus/Resources/Default@2x.png"; sourceTree = "<group>"; };
-		725CB2DAB5034611B34EAC51 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "LosGorditosPlus/Resources/Icon-Small-50.png"; sourceTree = "<group>"; };
-		054F7165390C4808A92A7DB3 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "LosGorditosPlus/Resources/Icon-Small-50@2x.png"; sourceTree = "<group>"; };
-		E8F32942204C477698EBFE58 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "LosGorditosPlus/Resources/Icon-Small.png"; sourceTree = "<group>"; };
-		63051BDDCA844A6DA5F073FB /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "LosGorditosPlus/Resources/Icon-Small@2x.png"; sourceTree = "<group>"; };
-		B3A18D16EAEE4C0E8CEC3D08 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = LaunchScreen.storyboard; path = "LosGorditosPlus/Resources/LaunchScreen.storyboard"; sourceTree = "<group>"; fileEncoding = 4; };
-		C1920C995903493DB317C348 /* build.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = unknown; name = build.xcconfig; path = "LosGorditosPlus/Resources/build.xcconfig"; sourceTree = "<group>"; fileEncoding = 4; };
-		CEEBB5AFED7D4E91808FB6A6 /* ic_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_menu.png; path = "LosGorditosPlus/Resources/ic_menu.png"; sourceTree = "<group>"; };
-		834777B1F4A0413885B8FF8E /* ic_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_menu@2x.png"; path = "LosGorditosPlus/Resources/ic_menu@2x.png"; sourceTree = "<group>"; };
-		0C0FC8AF6E3F4CB18938A297 /* ic_menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ic_menu@3x.png"; path = "LosGorditosPlus/Resources/ic_menu@3x.png"; sourceTree = "<group>"; };
-		6F7434AE5C1C4FB9953D7E9B /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40.png"; path = "LosGorditosPlus/Resources/icon-40.png"; sourceTree = "<group>"; };
-		E7A09EA5E82645A08A431C9B /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40@2x.png"; path = "LosGorditosPlus/Resources/icon-40@2x.png"; sourceTree = "<group>"; };
-		3807D9E28F41458DA22DACA5 /* icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60.png"; path = "LosGorditosPlus/Resources/icon-60.png"; sourceTree = "<group>"; };
-		B356E71F40184F13867A13D1 /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60@2x.png"; path = "LosGorditosPlus/Resources/icon-60@2x.png"; sourceTree = "<group>"; };
-		28D79EF8D8F84372AEBFA60A /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "LosGorditosPlus/Resources/icon-72.png"; sourceTree = "<group>"; };
-		0985F428202A40D6B392BC11 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72@2x.png"; path = "LosGorditosPlus/Resources/icon-72@2x.png"; sourceTree = "<group>"; };
-		9336B738C86D4626BEFA386F /* icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76.png"; path = "LosGorditosPlus/Resources/icon-76.png"; sourceTree = "<group>"; };
-		F0FC0A2FE8A3468182BE6073 /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76@2x.png"; path = "LosGorditosPlus/Resources/icon-76@2x.png"; sourceTree = "<group>"; };
-		AAE5443A38C6486BAA779531 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = "LosGorditosPlus/Resources/icon.png"; sourceTree = "<group>"; };
+		D0953D1006F44D53B447404B /* TelerikAppFeedback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TelerikAppFeedback.framework; path = ../../lib/iOS/TelerikAppFeedback.framework; sourceTree = "<group>"; };
 		D933E5E6177945A9A24E6523 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "LosGorditosPlus/Resources/icon@2x.png"; sourceTree = "<group>"; };
-		D0953D1006F44D53B447404B /* TelerikAppFeedback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TelerikAppFeedback.framework; path = "../../lib/iOS/TelerikAppFeedback.framework"; sourceTree = "<group>"; };
-		1A2EE7B70B4D4F99B87698F2 /* TelerikUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TelerikUI.framework; path = "../../lib/iOS/TelerikUI.framework"; sourceTree = "<group>"; };
-		B5804EB464E94880AFF31010 /* TNSWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TNSWidgets.framework; path = "../../lib/iOS/TNSWidgets.framework"; sourceTree = "<group>"; };
+		D98427F7C31F4B2CB5AE5E1C /* Default-Landscape-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape-568h@2x.png"; path = "LosGorditosPlus/Resources/Default-Landscape-568h@2x.png"; sourceTree = "<group>"; };
+		E01D5D81A7AC4FEEB2220A1A /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x.png"; path = "LosGorditosPlus/Resources/Default-Portrait@2x.png"; sourceTree = "<group>"; };
+		E325B13DF73A41BD9CAD76BE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = LosGorditosPlus/Resources/Default.png; sourceTree = "<group>"; };
+		E7A09EA5E82645A08A431C9B /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40@2x.png"; path = "LosGorditosPlus/Resources/icon-40@2x.png"; sourceTree = "<group>"; };
+		E8F32942204C477698EBFE58 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "LosGorditosPlus/Resources/Icon-Small.png"; sourceTree = "<group>"; };
+		F0FC0A2FE8A3468182BE6073 /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76@2x.png"; path = "LosGorditosPlus/Resources/icon-76@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				816C4D09322146769476C44B /* TelerikAppFeedback.framework in Frameworks */,
 				4DECB23953E84FFCBF32A271 /* TelerikUI.framework in Frameworks */,
 				EFF79AD2F59942CDA5775903 /* TNSWidgets.framework in Frameworks */,
+				DC87BAB4560372A06CF43930 /* Pods_LosGorditosPlus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +137,7 @@
 				858B833718CA111C00AB12DE /* LosGorditosPlus */,
 				858B833018CA111C00AB12DE /* Frameworks */,
 				858B832F18CA111C00AB12DE /* Products */,
+				A5770AB5DE83A711424E5E11 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +156,7 @@
 				D0953D1006F44D53B447404B /* TelerikAppFeedback.framework */,
 				1A2EE7B70B4D4F99B87698F2 /* TelerikUI.framework */,
 				B5804EB464E94880AFF31010 /* TNSWidgets.framework */,
+				0AC80801AB41643E2FDBF891 /* Pods_LosGorditosPlus.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -177,6 +182,13 @@
 				858B833F18CA111C00AB12DE /* LosGorditosPlus-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5770AB5DE83A711424E5E11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		E070579D1B39A9D000214BF1 /* Resources */ = {
@@ -225,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 858B843018CA22B800AB12DE /* Build configuration list for PBXNativeTarget "LosGorditosPlus" */;
 			buildPhases = (
+				ED439C79F17ED4A78E94F5C9 /* [CP] Check Pods Manifest.lock */,
 				C97FD7AC1ADE5369004DB2A4 /* NativeScript PreBuild */,
 				858B83F218CA22B800AB12DE /* Sources */,
 				CD62955B1BB2651D00AE3A93 /* NativeScript PreLink */,
@@ -232,6 +245,8 @@
 				858B842C18CA22B800AB12DE /* Resources */,
 				85F5BDFC1A9363BE006B9701 /* Embed Frameworks */,
 				CD3EAD351B05FF060042DBFC /* NativeScript PostBuild */,
+				789AF54B55D010B1FF149B81 /* [CP] Embed Pods Frameworks */,
+				897DFDD188A0AEC257EA2E60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,6 +329,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		789AF54B55D010B1FF149B81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LosGorditosPlus/Pods-LosGorditosPlus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		897DFDD188A0AEC257EA2E60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LosGorditosPlus/Pods-LosGorditosPlus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C97FD7AC1ADE5369004DB2A4 /* NativeScript PreBuild */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,6 +402,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$SRCROOT/internal/nativescript-pre-link\"";
+			showEnvVarsInLog = 0;
+		};
+		ED439C79F17ED4A78E94F5C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -464,6 +524,12 @@
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_MODULES_AUTOLINK = NO;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"../../lib/iOS\"",
+					"\"../../lib/iOS\"",
+					"\"../../lib/iOS\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LosGorditosPlus/LosGorditosPlus-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -475,12 +541,6 @@
 				PRODUCT_NAME = LosGorditosPlus;
 				VALID_ARCHS = "armv7 arm64";
 				WRAPPER_EXTENSION = app;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"../../lib/iOS\"",
-					"\"../../lib/iOS\"",
-					"\"../../lib/iOS\"",
-				);
 			};
 			name = Debug;
 		};
@@ -492,6 +552,12 @@
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_MODULES_AUTOLINK = NO;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"../../lib/iOS\"",
+					"\"../../lib/iOS\"",
+					"\"../../lib/iOS\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LosGorditosPlus/LosGorditosPlus-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/LosGorditosPlus/LosGorditosPlus-Info.plist";
@@ -499,12 +565,6 @@
 				PRODUCT_NAME = LosGorditosPlus;
 				VALID_ARCHS = "armv7 arm64";
 				WRAPPER_EXTENSION = app;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"../../lib/iOS\"",
-					"\"../../lib/iOS\"",
-					"\"../../lib/iOS\"",
-				);
 			};
 			name = Release;
 		};

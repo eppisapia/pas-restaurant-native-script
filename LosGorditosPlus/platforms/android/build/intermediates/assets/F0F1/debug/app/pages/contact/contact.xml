@@ -1,0 +1,97 @@
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  loaded="loaded"
+  actionBarHidden="true">
+  <drawer:rad-side-drawer id="drawer">
+    <drawer:rad-side-drawer.mainContent>
+      <!-- About page contents -->
+      <stack-layout loaded="mainContentLoaded" class="white_bg">
+        <DockLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}">
+          <image dock="left" src="res://ic_menu" id="menu" tap="toggleDrawer" height="20" />
+          <Label dock="center" text="contacto" textWrap="true" class="title"/>
+        </DockLayout>
+
+        <StackLayout>
+          <StackLayout class="header_border">
+            <!-- Header -->
+            <DockLayout  tap="Principal" >
+              <StackLayout dock="left">
+                <Label text="General" class="header"/>
+              </StackLayout>
+              <StackLayout dock="right" marginRight="3">
+                <image src="{{header_principal == 0 ?'~/images/1_Icons/recursos-12.png':'~/images/1_Icons/recursos-11.png'}}" 
+                  horizontalAlignment="right" 
+                  class="{{header_principal == 0 ?'open':'close'}}"/>
+              </StackLayout>
+            </DockLayout>
+
+            <!-- Contenido del primer Header-->
+            <StackLayout height="{{header_principal == 0 ?'0':'auto'}}">
+              <DockLayout class="inf">
+                <Label dock="left" text="Gerente: " class="sub"/>
+                <Label dock="right" text="{{contact[0].gerente}}" textWrap="true" class="text" />
+              </DockLayout>
+              <DockLayout class="inf">
+                <Label dock="left" text="Oficina: " class="sub"/>
+                <Label dock="right" text="{{contact[0].fijo}}" textWrap="true" class="text"/>
+              </DockLayout>
+              <DockLayout class="inf">
+                <Label dock="left" text="Movil: " class="sub"/>
+                <Label dock="right" text="{{contact[0].movil}}" textWrap="true" class="text"/>
+              </DockLayout>
+              <Label text="Contactar" id="contactdetail" tap="navigate" class="boton"/>
+            </StackLayout>
+
+
+            <StackLayout>
+              <StackLayout class="separator" />
+              <!-- Header 2 -->
+              <DockLayout  tap="Sede">
+                <StackLayout dock="left">
+                  <Label text="{{sede}}" class="header" />
+                </StackLayout>
+                <StackLayout dock="right" marginRight="3">
+                  <image src="{{header_sede == 0 ?'~/images/1_Icons/recursos-12.png':'~/images/1_Icons/recursos-11.png'}}" 
+                    horizontalAlignment="right" class="{{header_sede == 0 ?'open':'close'}}"/>
+                </StackLayout>
+              </DockLayout>
+
+              <!-- Contenido del segundo Header-->
+
+                <ListView items="{{ contact }}" height="{{lszonas == 0 ?'0':'auto'}}">
+                  <ListView.itemTemplate >
+                    <Label text="{{zona}}" ger="{{gerente}}" movil="{{movil}}" fijo="{{fijo}}" class="list" tap="changeZona"/>
+                  </ListView.itemTemplate>
+                </ListView>
+
+                <StackLayout height="{{infzona == 0 ?'0':'auto'}}">
+                  <DockLayout class="inf">
+                    <Label dock="left" text="Gerente: " class="sub"/>
+                    <Label dock="right" text="{{sel_gerente}}" textWrap="true" class="text" />
+                  </DockLayout>
+                  <DockLayout class="inf">
+                    <Label dock="left" text="Oficina: " class="sub"/>
+                    <Label dock="right" text="{{sel_fijo}}" textWrap="true" class="text"/>
+                  </DockLayout>
+                  <DockLayout class="inf">
+                    <Label dock="left" text="Movil: " class="sub"/>
+                    <Label dock="right" text="{{sel_movil}}" textWrap="true" class="text"/>
+                  </DockLayout>
+                  <DockLayout horizontalAlignment="center">
+                    <Label dock="left" text="Zonas" class="{{infzona == 0 ?'':'boton'}}" marginRight="20" tap="Zonas"/>
+                    <Label dock="right" text="Contactar" id="contactdetail" tap="navigate" class="{{infzona == 0 ?'':'boton'}}"/>
+                  </DockLayout>
+                </StackLayout>
+              <StackLayout class="separator" />
+            </StackLayout>
+          </StackLayout>
+        </StackLayout>
+      </stack-layout>
+    </drawer:rad-side-drawer.mainContent>
+    <drawer:rad-side-drawer.drawerContent>
+      <widgets:drawer-content />
+    </drawer:rad-side-drawer.drawerContent>
+  </drawer:rad-side-drawer>
+</page>

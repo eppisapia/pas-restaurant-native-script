@@ -15,27 +15,27 @@
         </StackLayout>
 
         <StackLayout margin="15" >
-          <image src="~/images/1_Icons/recursos-23.png" id="0" tap="changeToList" width="46" />
+          <image src="~/images/1_Icons/recursos-23.png" id="fav" tap="changeToList" width="46" />
           <label text="favoritos" horizontalAlignment="center" />   
         </StackLayout>
         
         <StackLayout margin="15" >
-          <image src="~/images/1_Icons/recursos-24.png" id="1" tap="changeToList" width="46" />
+          <image src="~/images/1_Icons/recursos-24.png" id="pri" tap="changeToList" width="46" />
           <label text="principales" horizontalAlignment="center" />   
         </StackLayout>
         
         <StackLayout margin="15" >
-          <image src="~/images/1_Icons/recursos-25.png" id="2" tap="changeToList" width="46" />
+          <image src="~/images/1_Icons/recursos-25.png" id="ens" tap="changeToList" width="46" />
           <label text="ensaladas" horizontalAlignment="center" />   
         </StackLayout>
         
         <StackLayout margin="15" >
-          <image src="~/images/1_Icons/recursos-26.png" id="3" tap="changeToList" width="46" />
+          <image src="~/images/1_Icons/recursos-26.png" id="pos" tap="changeToList" width="46" />
           <label text="postres" horizontalAlignment="center" />   
         </StackLayout>
         
         <StackLayout margin="15" >
-          <image src="~/images/1_Icons/recursos-27.png" id="4" tap="changeToList" width="46" />
+          <image src="~/images/1_Icons/recursos-27.png" id="beb" tap="changeToList" width="46" />
           <label text="bebidas" horizontalAlignment="center" />   
         </StackLayout>
         

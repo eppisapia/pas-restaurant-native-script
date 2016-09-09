@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NativeScript</title>
+    <description>En la presente página se busca introducir el Framework de desarrollo móvil NativeScript, ilustrando la elaboración de una aplicación para familiarizar a los desarrolladores con el framework.
+</description>
+    <link>http://blog.synergy-gb.com/pas-restaurant-native-script/</link>
+    <atom:link href="http://blog.synergy-gb.com/pas-restaurant-native-script/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 09 Sep 2016 11:25:26 -0430</pubDate>
+    <lastBuildDate>Fri, 09 Sep 2016 11:25:26 -0430</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Primeros Pasos</title>
+        <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;1. Ambiente&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;NativeScript esta disponible como una librería javascript de &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node&lt;/a&gt; tras su instalación requiere ejecutar el comando “tns doctor”, el cual es propio del framework, para verificar la configuración del entorno y proceder a ejecutar el script de instalación asistida de los requerimientos para el uso del framework. Se siguió el proceso de instalación de la página oficial &lt;a href=&quot;http://docs.nativescript.org/angular/start/quick-setup.html&quot;&gt;Native Script - Set Up Your System&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Adicionalmente instalaremos Angular 2 con el comando&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  npm install angular2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;2. Crear una aplicación&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Abrimos el terminal o consola y nos dirigimos al directorio donde queremos crear la aplicación como usaremos Angular pasaremos la etiqueta “–ng” para que Native Script implemente la plantilla de angular al crear los directorios:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  tns create MyAppName --ng
+  cd MyAppName
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Si nos dirigimos adentro de la carpeta de la aplicación podremos ver la estructura que ha montado el framework&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/pas-restaurant-native-script/Images/Archivos_Iniciales.png&quot; alt=&quot;Archivos_Iniciales&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;app: Es la carpeta donde se desarrolla la aplicación, contiene todos los recursos para su construcción.&lt;/li&gt;
+  &lt;li&gt;hooks: Por defecto, contiene una serie de archivos que NativeScript utiliza para preprocesar las instrucciones en código JavaScript.&lt;/li&gt;
+  &lt;li&gt;node_modules: Carpeta estándar para los módulos de Node que utiliza el proyecto.&lt;/li&gt;
+  &lt;li&gt;platforms: Es el directorio que contiene la configuración para traducir las instrucciones JavasScript a las plataformas agregadas a la aplicación.&lt;/li&gt;
+  &lt;li&gt;package.json: Lista de módulos de Node que tiene el proyecto.&lt;/li&gt;
+  &lt;li&gt;references.d.ts: Este archivo lista todas las declaraciones del mecanografiado que utiliza la aplicación.&lt;/li&gt;
+  &lt;li&gt;tsconfig.json: Contiene la configuración para el mecanografiado de su aplicación.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Una vez creada la aplicación se debe agregar las plataformas en las que nuestro código sera interpretado, de lo contrario no podremos ejecutarlo en el dispositivo, para lo cual ejecutamos el siguiente código:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  (Para iOS)
+    tns platform add ios
+    
+  (Para Android)
+    tns platform add android
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Tras haber agregado la plataforma podremos ejecutar el ejemplo con el comando&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  (Para iOS)
+    tns run ios
+    
+  (Para Android)
+    tns run android
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/pas-restaurant-native-script/Images/Primera_Vista.png&quot; alt=&quot;Archivos_Iniciales&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 18 Jul 2016 13:52:50 -0430</pubDate>
+        <link>http://blog.synergy-gb.com/pas-restaurant-native-script/primeros_pasos/</link>
+        <guid isPermaLink="true">http://blog.synergy-gb.com/pas-restaurant-native-script/primeros_pasos/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Proyecto</title>
+        <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;1. Proposito&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;El siguiente proyecto busca presentar una guía ilustrada que sirva como base de inicio en NativeScript, determinando las características del framework a través de la elaboración de una aplicación móvil personalizada a un sitio de comida rápida.&lt;/p&gt;
+
+&lt;p&gt;La aplicación antes mencionada consta de las siguientes pantallas:&lt;/p&gt;
+
+&lt;p&gt;Pantalla de presentación de categorías
+Pantalla de Lista de platos
+Pantalla de Detalle del Plato
+Pantalla de Ubicación (Utilizando el API de Geolocalización)
+Pantalla de Detalle de Ubicación
+Pantalla de Contacto
+Pantalla para Contactar
+Pantalla de Información
+Splash para el inicio de la aplicación&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;2. Estructura&lt;/em&gt;&lt;/strong&gt; 
+&lt;br /&gt;
+&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt; 2.1. Patrón de diseño&lt;/Text&gt;&lt;/em&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Utilizaremos el patrón de diseño que ofrecen las plantillas de NativeScript el cual consta en manejar por carpetas el MVC de cada pantalla, es decir, cada pantalla representara una direccion en nuestra carpeta “app” la cual contendra sus respectivos archivos XML, JS y CSS (opcional).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt;2.2. Diseño de la aplicación&lt;/Text&gt;&lt;/em&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vista del Menú&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left; margin: 5px;&quot; src=&quot;/pas-restaurant-native-script/Images/Pantalla_menu.png&quot; /&gt;
+&lt;br /&gt;
+Todas las pantallas contendran un panel estático principal que tendrá el botón que accionara el menu o el retorno, seguido del titulo de la pantalla en la que se encuentre el usuario. 
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;El menú a utilizar será un SideMenu o DrawerMenu que se deslizara de izquierda a derecha en la pantalla mostrando las opciones de navegación.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pantalla de Presentación de Categorías&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left; margin: 5px;&quot; src=&quot;/pas-restaurant-native-script/Images/Pantalla_categorias.png&quot; /&gt;
+&lt;br /&gt;
+Será la pagina principal de la aplicación correspondiente al Menú, tendrá una imagen de fondo con 5 botones que representen las categorías del restaurante.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pantalla de Lista de Platos&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left; margin: 5px;&quot; src=&quot;/pas-restaurant-native-script/Images/Pantalla_platos.png&quot; /&gt;
+&lt;br /&gt;
+Consta de un navegador por tabs para la selección de las categorías y un ListView para mostrar la lista de platos.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cada plato será almacenado en un contenedor que mostrara el Nombre, imagen, precio y ranking del platillo. Adicionalmente se colocara un Burger menú como submenú de acciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pantalla de Detalle del Plato&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left; margin: 5px;&quot; src=&quot;/pas-restaurant-native-script/Images/Pantalla_detalle_p.png&quot; /&gt;
+&lt;br /&gt;
+En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un botón de retorno y el titulo de la pagina.
+&lt;br /&gt;
+Se mostrara una pantalla con el Nombre, imagen, precio, descripción, ranking del plato y tres botones que permitan al usuario realizar acciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pantalla de Información&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left; margin: 5px;&quot; src=&quot;/pas-restaurant-native-script/Images/Pantalla_informacion.png&quot; /&gt;
+&lt;br /&gt;
+Mostrara una imagen donde se puede colocar el logo o publicidad del sitio de comida rápida.
+&lt;br /&gt;
+Seguido por un acordeón, que contendrá la reseña del lugar y las zonas en donde se dispone un local.
+&lt;br /&gt;
+Se elaborara un contenedor que mostrara el nombre de la zona, hora de cierre y un botón para acceder a la ubicación del local respectivo.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pantalla de Ubicación&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left; margin: 5px;&quot; src=&quot;/pas-restaurant-native-script/Images/Pantalla_ubicacion.png&quot; /&gt;
+&lt;br /&gt;
+Consta de un mapa que abarca la pantalla en el cual se marcaran las sedes y se mostrara un mensaje para guiar al usuario en su siguiente acción.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pantalla de Detalle de Ubicación&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left; margin: 5px;&quot; src=&quot;/pas-restaurant-native-script/Images/Pantalla_comollegar.png&quot; /&gt;
+&lt;br /&gt;
+En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un general de retorno y el titulo de la pagina.
+&lt;br /&gt;
+Contendrá un pequeño mapa que marque la ubicación seguido de la dirección y contacto del local.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pantalla de Contacto&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left; margin: 5px;&quot; src=&quot;/pas-restaurant-native-script/Images/Pantalla_contacto.png&quot; /&gt;
+&lt;br /&gt;
+Tendrá un contenedor fijo que mostrara la información de contacto de la sede principal, nombre del gerente, teléfono fijo y móvil, junto a un botón para poder contactar con el gerente.
+&lt;br /&gt;
+Seguido por un ComboBox que contendrá las zonas donde hay locales y al seleccionar una se cargara el contenedor de contacto con la información respectiva.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pantalla para Contactar&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left; margin: 5px;&quot; src=&quot;/pas-restaurant-native-script/Images/Pantalla_contactar.png&quot; /&gt;
+&lt;br /&gt;
+En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un dirección de retorno y el titulo de la pagina.
+&lt;br /&gt;
+Se mostrara un formulario donde el usuario introducirá su nombre, correo electrónico y el cuerpo del mensaje a enviar.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Splash para el inicio de la aplicación&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left; margin: 5px;&quot; src=&quot;/pas-restaurant-native-script/Images/Pantalla_inicio.png&quot; /&gt;
+&lt;br /&gt;
+Se mostrara el logo del sitio de comida hasta que finalice la carga y renderización de la pantalla principal de la aplicación, Pantalla de lista de platos.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+ &lt;strong&gt;&lt;em&gt;3. Implementación del Proyecto&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt; 3.1. Desarrollo de la vista del Menú&lt;/Text&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt; 3.2. Desarrollo de la Pantalla de presentación de categorías&lt;/Text&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt; 3.3. Desarrollo de la Pantalla de Lista de platos&lt;/Text&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt; 3.4. Desarrollo de la Pantalla de Detalle del Plato&lt;/Text&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt; 3.5. Desarrollo de la Pantalla de Ubicación (Utilizando el API de Geolocalización)&lt;/Text&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt; 3.6. Desarrollo de la Pantalla de Detalle de Ubicación&lt;/Text&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt; 3.7. Desarrollo de la Pantalla de Contacto&lt;/Text&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt; 3.8. Desarrollo de la Pantalla para Contactar&lt;/Text&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt; 3.9. Desarrollo de la Pantalla de Información&lt;/Text&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt; 3.10. Desarrollo del Splash para el inicio de la aplicación&lt;/Text&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;Text style=&quot;text-decoration: underline; margin: 15px;&quot;&gt; 3.11. Instalación en el dispositivo&lt;/Text&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 18 Jul 2016 13:52:50 -0430</pubDate>
+        <link>http://blog.synergy-gb.com/pas-restaurant-native-script/proyecto/</link>
+        <guid isPermaLink="true">http://blog.synergy-gb.com/pas-restaurant-native-script/proyecto/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Introducción a Native Script</title>
+        <description>&lt;p&gt;Es un framework de desarrollo elaborado por Telerik que utiliza JavaScript, Cascade Style Sheet (CSS) y XML para la construcción de aplicaciones móviles nativas (iOS, Android)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Características:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Utiliza los componentes nativos de la plataforma móvil accediendo a estos con el uso de “NativeScript Modules Layer” que abstrae la interacción con estos componentes.&lt;/li&gt;
+  &lt;li&gt;Se pueden utilizar los lenguajes:
+ 	- JavaScript o TypeScript
+ 	- XML o HTML
+ 	- CSS&lt;/li&gt;
+  &lt;li&gt;Se puede utilizar la arquitectura de diseño &lt;a href=&quot;http://www.oracle.com/technetwork/articles/javase/index-142890.html&quot;&gt;Model View Controler (MVC)&lt;/a&gt; o &lt;a href=&quot;https://msdn.microsoft.com/en-us/library/hh848246.aspx&quot;&gt;Model View View-Model (MVVM)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Funciona como un mecanismo de traducción de instrucciones JavaScript en instrucciones nativas según la plataforma que ejecute la aplicación, esto lo logra ejecutando el código en un &lt;a href=&quot;http://developer.telerik.com/featured/a-guide-to-javascript-engines-for-idiots/&quot;&gt;JavaScript VM&lt;/a&gt;  que incluye los core para las plataformas:
+    &lt;ul&gt;
+      &lt;li&gt;JavaScriptCore en iOS.&lt;/li&gt;
+      &lt;li&gt;V8 en Android.&lt;/li&gt;
+      &lt;li&gt;JavaScriptCore en Windows.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Se basa en utilizar los componentes nativos de la plataforma.&lt;/li&gt;
+  &lt;li&gt;Se apoya en Angular para el desarrollo de aplicaciones.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Documentación:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Telerik provee de documentación para el uso de los componentes, acceso y librerías.&lt;/li&gt;
+  &lt;li&gt;Posee un foro que presenta un soporte autorizado para solucionar incidencias y bugs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Desempeño&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Interpreta a tiempo real el código js en el JavaVirtualMachine.&lt;/li&gt;
+  &lt;li&gt;Accede directamente a los componentes nativos del teléfono.&lt;/li&gt;
+  &lt;li&gt;Utiliza un renderizador propio para integrar las vistas como elementos visibles de nativescript.&lt;/li&gt;
+  &lt;li&gt;No utiliza &lt;a href=&quot;http://html.conclase.net/w3c/dom1-es/introduction.html&quot;&gt;DOM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Integración del Código&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Manejo automático del estilo de la pantalla al cambiar la orientación.&lt;/li&gt;
+  &lt;li&gt;Uso de widgets para la reutilización de plantillas/componentes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Incidencias&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Uso incompleto de CSS.&lt;/li&gt;
+  &lt;li&gt;Se considera inestable.&lt;/li&gt;
+  &lt;li&gt;Código diferente para iOS/Android&lt;/li&gt;
+  &lt;li&gt;“Bugs” al utilizar librerías/Api externos a telerik&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 18 Jul 2016 13:52:50 -0430</pubDate>
+        <link>http://blog.synergy-gb.com/pas-restaurant-native-script/introducción/</link>
+        <guid isPermaLink="true">http://blog.synergy-gb.com/pas-restaurant-native-script/introducción/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>

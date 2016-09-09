@@ -1,36 +1,36 @@
 <grid-layout class="drawer-content">
   <stack-layout>
-    <StackLayout orientation="horizontal" margin="{{ selectedPage == 'menu' ? '15' : '1' }}" >
-      <image src="{{ selectedPage == 'menu' ? 'res://ic_menu' : '' }}" tap="toggleDrawer" height="{{ selectedPage == 'menu' ? '20' : '1' }}" />
+    <StackLayout orientation="horizontal" margin="15" >
+      <image src="res://ic_menu" tap="toggleDrawer" height="13" />
     </StackLayout>
 
-  	<StackLayout orientation="horizontal" margin="10" paddingLeft="5">
-      <image src="~/images/1_Icons/recursos-02.png" height="37" tap="navigate"/>
-	    <label text="menú" id="menu" tap="navigate" marginLeft="10"/>
+  	<StackLayout orientation="horizontal" margin="10" id="menu" tap="navigate" paddingLeft="5">
+      <image src="~/images/1_Icons/recursos-02.png" height="37"/>
+	    <label text="menú" marginLeft="10"/>
       <image src="{{ selectedPage == 'menu' ? '~/images/1_Icons/recursos-06.png' : '' }}" class="activity-menu"/>
   	</StackLayout>
 
     <StackLayout class="line"/>
 
-  	<StackLayout orientation="horizontal" margin="10" paddingLeft="5">
-      <image src="~/images/1_Icons/recursos-03.png" height="37" tap="navigate"/>
-      <label text="información" id="about" tap="navigate" marginLeft="10"/>
+  	<StackLayout orientation="horizontal" margin="10" paddingLeft="5" id="about" tap="navigate">
+      <image src="~/images/1_Icons/recursos-03.png" height="37"/>
+      <label text="información" marginLeft="10"/>
       <image src="{{ selectedPage == 'about' ? '~/images/1_Icons/recursos-06.png' : '' }}" class="activity-about"/>
     </StackLayout>
 
     <StackLayout class="line"/>
 
-    <StackLayout orientation="horizontal" margin="10" paddingLeft="5">
-      <image src="~/images/1_Icons/recursos-04.png" height="27"/>
-      <label text="contacto" id="contact" marginLeft="10"/>
+    <StackLayout orientation="horizontal" margin="10" id="contact" tap="navigate" paddingLeft="5">
+      <image src="~/images/1_Icons/recursos-04.png" id="contact" height="27"/>
+      <label text="contacto"  marginLeft="10"/>
       <image src="{{ selectedPage == 'contact' ? '~/images/1_Icons/recursos-06.png' : '' }}" class="activity-contact" />
     </StackLayout>
 
     <StackLayout class="line"/>
 
-    <StackLayout orientation="horizontal" margin="10" paddingLeft="5">
-      <image src="~/images/1_Icons/recursos-05.png" height="37" marginLeft="7"/>
-      <label text="ubicaciones" id="location" marginLeft="17"/>
+    <StackLayout orientation="horizontal" margin="10" paddingLeft="5" id="location">
+      <image src="~/images/1_Icons/recursos-05.png" id="location" height="37" marginLeft="7"/>
+      <label text="ubicaciones" marginLeft="17"/>
       <image src="{{ selectedPage == 'location' ? '~/images/1_Icons/recursos-06.png' : '' }}" class="activity-location" />
     </StackLayout>
 

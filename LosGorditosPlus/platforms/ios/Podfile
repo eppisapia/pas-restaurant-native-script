@@ -1,0 +1,8 @@
+use_frameworks!
+
+target "LosGorditosPlus" do
+# Begin Podfile - /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/node_modules/nativescript-google-maps-sdk/platforms/ios/Podfile 
+ pod 'GoogleMaps' 
+ # End Podfile 
+
+end
