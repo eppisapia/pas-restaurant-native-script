@@ -41,7 +41,7 @@
                 <Label dock="left" text="Movil: " class="sub"/>
                 <Label dock="right" text="{{contact[0].movil}}" textWrap="true" class="text"/>
               </DockLayout>
-              <Label text="Contactar" class="boton"/>
+              <Label text="Contactar" id="contactdetail" tap="navigate" class="boton"/>
             </StackLayout>
 
 
@@ -81,7 +81,7 @@
                   </DockLayout>
                   <DockLayout horizontalAlignment="center">
                     <Label dock="left" text="Zonas" class="{{infzona == 0 ?'':'boton'}}" marginRight="20" tap="Zonas"/>
-                    <Label dock="right" text="Contactar" class="{{infzona == 0 ?'':'boton'}}"/>
+                    <Label dock="right" text="Contactar" id="contactdetail" tap="navigate" class="{{infzona == 0 ?'':'boton'}}"/>
                   </DockLayout>
                 </StackLayout>
               <StackLayout class="separator" />

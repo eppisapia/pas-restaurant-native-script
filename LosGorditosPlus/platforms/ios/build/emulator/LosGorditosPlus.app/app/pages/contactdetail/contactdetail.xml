@@ -1,0 +1,13 @@
+ <Page loaded="pageLoaded"
+ 	 actionBarHidden="true">
+ 	 <stack-layout loaded="mainContentLoaded">
+        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" >
+          <image src="~/images/1_Icons/recursos-10.png" id="menu" tap="back" height="20" />
+          <Label text="contactar" textWrap="true" class="title"/>
+        </StackLayout>
+        <StackLayout orientation="vertical">
+		    <TextView text="Hola" />
+		    <TextView text="heyt" />
+	    </StackLayout>
+      </stack-layout>
+ </Page>

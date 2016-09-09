@@ -13,10 +13,35 @@ let vm = new Observable({
         { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49", rank: "~/images/Recursos/componente-04", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
         { name: "eggs", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-03", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
     ]),
-    active: 0,
-    titleTab: "",
-    width: screen.mainScreen.widthDIPs,
-    height: screen.mainScreen.heightDIPs
+  principalesList:([
+    { name: "principales", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-02", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso."},
+        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49", rank: "~/images/Recursos/componente-04", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
+        { name: "eggs", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-03", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
+  ]),
+  favoritosList:([
+        { name: "favoritos", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-02", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso."},
+        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49", rank: "~/images/Recursos/componente-04", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
+        { name: "eggs", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-03", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
+  ]),
+  ensaladasList:([
+        { name: "ensaladas", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-02", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso."},
+        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49", rank: "~/images/Recursos/componente-04", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
+        { name: "eggs", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-03", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
+  ]),
+  postresList:([
+        { name: "postres", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-02", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso."},
+        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49", rank: "~/images/Recursos/componente-04", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
+        { name: "eggs", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-03", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
+  ]),
+  bebidasList:([
+      { name: "bebidas", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-02", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso."},
+      { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49", rank: "~/images/Recursos/componente-04", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
+      { name: "eggs", img: "~/images/7_Others/recursos-48", rank: "~/images/Recursos/componente-03", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
+  ]),
+  active: 0,
+  titleTab: "",
+  width: screen.mainScreen.widthDIPs,
+  height: screen.mainScreen.heightDIPs
  });
 
 class MenuListPage extends BasePage{
@@ -29,10 +54,29 @@ class MenuListPage extends BasePage{
     
     onNavigatingTo(args) {
     	var page = args.object;
-        var gotData=page.navigationContext;
-        vm.set("titleTab", gotData.title);
-        vm.set("active", gotData.tab);
-
+      var gotData=page.navigationContext;
+      switch (gotData.tab) 
+        { 
+        case 0: 
+          vm.set("groceryList", vm.get("favoritosList"));
+          break; 
+        case 1: 
+          vm.set("groceryList", vm.get("principalesList"));
+          break; 
+        case 2: 
+          vm.set("groceryList", vm.get("ensaladasList"));
+          break; 
+        case 3: 
+          vm.set("groceryList", vm.get("postresList"));
+          break; 
+        case 4: 
+          vm.set("groceryList", vm.get("bebidasList"));
+          break; 
+        default: 
+          vm.set("groceryList", vm.get("bebidasList"));
+        } 
+      vm.set("titleTab", gotData.title);
+      vm.set("active", gotData.tab);
 	}
 
     tabChange(args){
@@ -44,26 +88,33 @@ class MenuListPage extends BasePage{
         case'favoritos': 
           tabActive=0;
           tabTitle='favoritos';
+          vm.set("groceryList", vm.get("favoritosList"));
           break; 
         case'principales': 
           tabActive=1;
-          tabTitle='principales'; 
+          tabTitle='principales';
+          vm.set("groceryList", vm.get("principalesList")); 
           break; 
         case'ensaladas': 
           tabActive=2;
           tabTitle='ensaladas';
+          vm.set("groceryList", vm.get("ensaladasList"));
           break; 
         case'postres': 
           tabActive=3;
           tabTitle='postres';
+          vm.set("groceryList", vm.get("postresList"));
           break; 
         case'bebidas': 
           tabActive=4;
           tabTitle='bebidas';
+          vm.set("groceryList", vm.get("bebidasList"));
           break; 
         default: 
           tabActive=0;
-          tabTitle='favoritos'; 
+          tabTitle='favoritos';
+          vm.set("groceryList", vm.get("favoritosList"));
+          break; 
         } 
         vm.set("active", tabActive);
         vm.set("titleTab", tabTitle);
