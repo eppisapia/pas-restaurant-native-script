@@ -21,6 +21,7 @@
           tilt="{{ tilt }}" mapReady="OnMapReady"  
           markerSelect="onMarkerSelect" 
           height="{{height}}" width="{{width}}" />
+          <Label top="0" left="0" text="Seleccione un Establecimiento" width="{{width}}" class="helper" />
 
         </AbsoluteLayout>
       </stack-layout>
