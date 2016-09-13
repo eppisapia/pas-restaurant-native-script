@@ -1,0 +1,11 @@
+.helper {
+	font-size: 18;
+	margin-top: 5;
+    color: white;
+    padding: 5;
+    background-color: #ffc300;
+    opacity: 0.80;
+    font-weight: bold;
+    text-align: center;
+
+}

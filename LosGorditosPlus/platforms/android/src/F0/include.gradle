@@ -1,12 +1,12 @@
-android {
+android { 
 	productFlavors {
-		"nativescript-telerik-ui" {
-			dimension "nativescript-telerik-ui"
+		"nativescript-google-maps-sdk" {
+			dimension "nativescriptgooglemapssdk"
 		}
 	}
 }
 
 dependencies {
-	compile "com.android.support:appcompat-v7:23.1.0"
-	compile "com.android.support:recyclerview-v7:23.1.0"
+	def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : '+'
+	compile "com.google.android.gms:play-services-maps:$googlePlayServicesVersion"
 }

@@ -8,9 +8,9 @@
     <drawer:rad-side-drawer.mainContent>
       <!-- About page contents -->
       <stack-layout loaded="mainContentLoaded" class="white_bg">
-        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" >
-          <image src="res://ic_menu" id="menu" tap="toggleDrawer" height="13" />
-          <Label text="información" textWrap="true" class="title"/>
+        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}" >
+          <image src="res://ic_menu" id="menu" tap="toggleDrawer" class="barmenu"/>
+          <Label text="información" width="{{width - 60}}" class="title"/>
         </StackLayout>
         <StackLayout>
           <StackLayout class="yellow_bar" height="{{height*0.25}}" verticalAlignment="center">

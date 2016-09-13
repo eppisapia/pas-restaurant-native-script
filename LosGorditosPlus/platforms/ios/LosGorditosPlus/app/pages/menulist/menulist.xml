@@ -6,14 +6,15 @@
   loaded="loaded"
   navigatingTo="onNavigatingTo"
   actionBarHidden="true"
+  class="menu-background"
   >
   <drawer:rad-side-drawer id="drawer">
     <drawer:rad-side-drawer.mainContent>
       <!-- Home page contents -->
-      <stack-layout loaded="mainContentLoaded" class="menu-background">
-        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" >
-          <image src="res://ic_menu" id="menu" tap="toggleDrawer" height="13" />
-          <Label text="{{titleTab}}" textWrap="true" class="title"/>
+      <stack-layout loaded="mainContentLoaded" >
+        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}" >
+          <image src="res://ic_menu" id="menu" tap="toggleDrawer" class="barmenu"/>
+          <Label text="{{titleTab}}" class="title" width="{{width - 60}}"/>
         </StackLayout>
         <StackLayout orientation="horizontal" marginTop="3">
           <StackLayout>
@@ -61,10 +62,16 @@
             <ListView items="{{ groceryList }}" id="groceryList" height="{{height*0.69}}">
                 <ListView.itemTemplate>
                   <StackLayout marginBottom= "5">
-                    <image src="{{img}}" height="{{height*0.15}}" />
+                    <image src="{{img}}" height="{{height*0.15}}" 
+                        name="{{ name }}"
+                        price="{{ price }}" 
+                        rank="{{rank}}" 
+                        description="{{description}}"
+                        img="{{img}}"
+                        tap="changeToDetail" />
                     <DockLayout class="DishBar">
                       <StackLayout dock="left">
-                        <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center" class="DishName"/>
+                        <Label text="{{ name }}" textWrap="true" horizontalAlignment="left" verticalAlignment="center" class="DishName"/>
                         <Label text="{{ price }}" horizontalAlignment="left" verticalAlignment="center" class="DishPrice"/>
                       </StackLayout>
                       <StackLayout dock="right" marginRight="3">

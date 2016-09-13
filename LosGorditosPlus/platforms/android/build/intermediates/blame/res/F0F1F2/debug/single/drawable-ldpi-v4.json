@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/res/merged/F0F1F2/debug/drawable-ldpi-v4/background.png",
+        "source": "/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/src/main/res/drawable-ldpi/background.png"
+    },
+    {
+        "merged": "/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/res/merged/F0F1F2/debug/drawable-ldpi-v4/common_ic_googleplayservices.png",
+        "source": "/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/res/drawable-ldpi-v4/common_ic_googleplayservices.png"
+    },
+    {
+        "merged": "/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/res/merged/F0F1F2/debug/drawable-ldpi-v4/logo.png",
+        "source": "/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/src/main/res/drawable-ldpi/logo.png"
+    },
+    {
+        "merged": "/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/res/merged/F0F1F2/debug/drawable-ldpi-v4/icon.png",
+        "source": "/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/src/main/res/drawable-ldpi/icon.png"
+    }
+]

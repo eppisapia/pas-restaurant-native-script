@@ -1,5 +1,6 @@
 <page
   xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns="http://www.nativescript.org/tns.xsd" 
   xmlns:drawer="nativescript-telerik-ui/sidedrawer"
   xmlns:widgets="shared/widgets"
   loaded="loaded"
@@ -8,10 +9,10 @@
     <drawer:rad-side-drawer.mainContent>
       <!-- About page contents -->
       <stack-layout loaded="mainContentLoaded" class="white_bg">
-        <DockLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}">
-          <image dock="left" src="res://ic_menu" id="menu" tap="toggleDrawer" height="20" />
-          <Label dock="center" text="contacto" textWrap="true" class="title"/>
-        </DockLayout>
+        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}" >
+          <image src="res://ic_menu" id="menu" tap="toggleDrawer" class="barmenu"/>
+          <Label text="contacto" width="{{width - 60}}" class="title"/>
+        </StackLayout>
 
         <StackLayout>
           <StackLayout class="header_border">

@@ -4,11 +4,6 @@ import {View} from "ui/core/view";
 import {topmost} from "ui/frame";
 import {screen} from "platform";
 import {Page} from "ui/page";
-import frame = require("ui/frame");
-import { GestureTypes, GestureEventData } from "ui/gestures";
-import labelModule = require("ui/label");
-
-
 
 let vm = new Observable({
 	header_principal: 0,
@@ -34,7 +29,14 @@ let vm = new Observable({
           zona: "Carrizal"}
     ]),
 	width: screen.mainScreen.widthDIPs,
-    height: screen.mainScreen.heightDIPs}
+  height: screen.mainScreen.heightDIPs,
+  latitude: -33.86,
+  longitude: 151.20,
+  zoom: 8,
+  bearing: 0,
+  tilt: 0,
+  padding: 40,
+  }
 );
 
 class ContactPage extends BasePage{
@@ -85,6 +87,7 @@ class ContactPage extends BasePage{
       vm.set("lszonas",0);
       vm.set("infzona",1);
     }
+
 }
 
 export = new ContactPage();

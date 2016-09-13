@@ -3,10 +3,6 @@ import {Observable, EventData} from "data/observable";
 import {View} from "ui/core/view";
 import {screen} from "platform";
 import {Page} from "ui/page";
-import frame = require("ui/frame");
-import { GestureTypes, GestureEventData } from "ui/gestures";
-import labelModule = require("ui/label");
-
 
 
 let vm = new Observable({

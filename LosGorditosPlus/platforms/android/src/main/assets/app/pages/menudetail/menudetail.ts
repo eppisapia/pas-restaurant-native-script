@@ -2,7 +2,6 @@ import {BasePage} from "../../shared/BasePage";
 import {topmost} from "ui/frame";
 import {Observable, EventData} from "data/observable";
 import {View} from "ui/core/view";
-import segmentedBarModule = require("ui/segmented-bar");
 import {screen} from "platform"
 import {Page} from "ui/page";
 import buttonModule = require("ui/button");

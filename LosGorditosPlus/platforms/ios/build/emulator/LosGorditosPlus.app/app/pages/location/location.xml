@@ -1,16 +1,29 @@
 <page
   xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:maps="nativescript-google-maps-sdk"
   xmlns:drawer="nativescript-telerik-ui/sidedrawer"
   xmlns:widgets="shared/widgets"
   xmlns:statusbar="nativescript-statusbar"
   loaded="loaded"
-  navigatingTo="onNavigatingTo"
   actionBarHidden="true"
   >
   <drawer:rad-side-drawer id="drawer">
     <drawer:rad-side-drawer.mainContent>
       <stack-layout loaded="mainContentLoaded">
-  
+        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}" >
+          <image src="res://ic_menu" id="menu" tap="toggleDrawer" class="barmenu"/>
+          <Label text="ubicación" textWrap="true" class="title"/>
+        </StackLayout>
+        <AbsoluteLayout height="{{height}}" width="{{width}}" >
+
+          <maps:mapView latitude="9.2" longitude="-67" 
+          zoom="7" bearing="{{ bearing }}" 
+          tilt="{{ tilt }}" mapReady="OnMapReady"  
+          markerSelect="onMarkerSelect" 
+          height="{{height}}" width="{{width}}" />
+          <Label top="0" left="0" text="Seleccione un Establecimiento" width="{{width}}" class="helper" />
+
+        </AbsoluteLayout>
       </stack-layout>
     </drawer:rad-side-drawer.mainContent>
     <drawer:rad-side-drawer.drawerContent>

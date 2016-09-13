@@ -1,0 +1,39 @@
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:maps="nativescript-google-maps-sdk"
+  loaded="loaded"
+  navigatingTo="onNavigatingTo"
+  actionBarHidden="true"
+  class="white_bg"
+  >
+      <stack-layout loaded="mainContentLoaded" >
+        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}">
+          <image src="~/images/1_Icons/recursos-10.png" id="menu" tap="back" height="20" />
+          <Label text="como llegar" width="{{width - 60}}" class="title"/>
+        </StackLayout>
+        <maps:mapView latitude="{{mark.latitude}}" longitude="{{mark.longitude}}" 
+          zoom="7" bearing="{{ bearing }}" 
+          tilt="{{ tilt }}" mapReady="OnMapReady"  
+          height="{{height*0.33}}" width="{{width}}" marginTop="5" marginBottom="5" />
+        <StackLayout class="container">
+          <Label text="Dirección:" class="titulo"/>
+          <label text="{{mark.dir}}" textWrap="true" class="contenido"/>
+        </StackLayout>
+        <StackLayout class="container">
+          <Label text="Información de Contacto:" class="titulo"/>
+          <DockLayout padding="5" width="{{width}}">
+            <Label dock="left" text="Gerente: " class="sub"/>
+            <Label dock="right" text="{{mark.gerente}}" textWrap="true" class="contenido" />
+          </DockLayout>
+          <DockLayout padding="5" width="{{width}}">
+            <Label dock="left" text="Oficina: " class="sub"/>
+            <Label dock="right" text="{{mark.fijo}}" textWrap="true" class="contenido"/>
+          </DockLayout>
+          <DockLayout padding="5" width="{{width}}">
+            <Label dock="left" text="Movil: " class="sub"/>
+            <Label dock="right" text="{{mark.movil}}" textWrap="true" class="contenido"/>
+          </DockLayout>
+          <Label text="Contactar" id="contactdetail" tap="navigate" class="boton"/>
+        </StackLayout>
+      </stack-layout>
+</page>

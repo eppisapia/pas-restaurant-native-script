@@ -48,6 +48,7 @@
 		F1CD0BCD417D45E78BF98ACD /* Default-Landscape-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D98427F7C31F4B2CB5AE5E1C /* Default-Landscape-568h@2x.png */; };
 		F29163FE5F784D57AB85DF39 /* TNSWidgets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5804EB464E94880AFF31010 /* TNSWidgets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5560C19E62C42EE90BCD1EA /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 937A79E912B647E5B345B4AE /* Default-736h@3x.png */; };
+		768DD22AF0FA40DB91F52DD2 /* recursos-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1631601642754EA8B19E8BC8 /* recursos-50.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,6 +114,7 @@
 		E7A09EA5E82645A08A431C9B /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-40@2x.png"; path = "LosGorditosPlus/Resources/icon-40@2x.png"; sourceTree = "<group>"; };
 		E8F32942204C477698EBFE58 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "LosGorditosPlus/Resources/Icon-Small.png"; sourceTree = "<group>"; };
 		F0FC0A2FE8A3468182BE6073 /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76@2x.png"; path = "LosGorditosPlus/Resources/icon-76@2x.png"; sourceTree = "<group>"; };
+		1631601642754EA8B19E8BC8 /* recursos-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recursos-50.png"; path = "LosGorditosPlus/Resources/recursos-50.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 				F0FC0A2FE8A3468182BE6073 /* icon-76@2x.png */,
 				AAE5443A38C6486BAA779531 /* icon.png */,
 				D933E5E6177945A9A24E6523 /* icon@2x.png */,
+				1631601642754EA8B19E8BC8 /* recursos-50.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				7A9E0372D69A4703830E6CEF /* icon-76@2x.png in Resources */,
 				3A0EFF0BA603454B93196DEC /* icon.png in Resources */,
 				7712F1E14E1A48DAA9E34BEA /* icon@2x.png in Resources */,
+				768DD22AF0FA40DB91F52DD2 /* recursos-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

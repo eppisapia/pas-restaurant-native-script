@@ -17,29 +17,36 @@ var MenuPage = (function (_super) {
     MenuPage.prototype.changeToList = function (args) {
         var tabNumber = args.view.id;
         var tabTitle;
+        var tabActive;
         switch (tabNumber) {
             case "fav":
                 tabTitle = "favoritos";
+                tabActive = 0;
                 break;
             case "pri":
                 tabTitle = "principales";
+                tabActive = 1;
                 break;
             case "ens":
                 tabTitle = "ensaladas";
+                tabActive = 2;
                 break;
             case "pos":
                 tabTitle = "postres";
+                tabActive = 3;
                 break;
             case "beb":
                 tabTitle = "bebidas";
+                tabActive = 4;
                 break;
             default:
                 tabTitle = "favoritos";
+                tabActive = 0;
                 break;
         }
         var navigationOptions = {
             moduleName: 'pages/menulist/menulist',
-            context: { tab: tabNumber,
+            context: { tab: tabActive,
                 title: tabTitle
             }
         };

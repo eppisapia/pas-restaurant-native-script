@@ -26,7 +26,14 @@ var vm = new observable_1.Observable({
             zona: "Carrizal" }
     ]),
     width: platform_1.screen.mainScreen.widthDIPs,
-    height: platform_1.screen.mainScreen.heightDIPs });
+    height: platform_1.screen.mainScreen.heightDIPs,
+    latitude: -33.86,
+    longitude: 151.20,
+    zoom: 8,
+    bearing: 0,
+    tilt: 0,
+    padding: 40,
+});
 var ContactPage = (function (_super) {
     __extends(ContactPage, _super);
     function ContactPage() {

@@ -28,8 +28,8 @@
 
     <StackLayout class="line"/>
 
-    <StackLayout orientation="horizontal" margin="10" paddingLeft="5" id="location">
-      <image src="~/images/1_Icons/recursos-05.png" id="location" height="37" marginLeft="7"/>
+    <StackLayout orientation="horizontal" margin="10" paddingLeft="5" id="location" tap="navigate">
+      <image src="~/images/1_Icons/recursos-05.png" height="37" marginLeft="7"/>
       <label text="ubicaciones" marginLeft="17"/>
       <image src="{{ selectedPage == 'location' ? '~/images/1_Icons/recursos-06.png' : '' }}" class="activity-location" />
     </StackLayout>

@@ -2,102 +2,130 @@
 <items version="2" >
 
     <item
-        jar="/usr/local/Cellar/android-sdk/24.4/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/support-annotations-23.4.0_fbe609fa7ea902f23223354f6d3a62d8fd5983cf.jar" />
-    </item>
-    <item
-        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/LosGorditosPlus/binding-generator/unspecified/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="cd7dd3d8b3faa7a457003b040d45b12c7e268dc6">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/LosGorditosPlus-binding-generator-unspecified_036abe979082f5101fb498771b2ba7bf52f07090.jar" />
-    </item>
-    <item
-        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-v4-23.4.0_b5e47f71c73dfaa56a0b8d4725ab5e34541e98e0.jar" />
-    </item>
-    <item
-        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/List-2016.2.811-dev-release/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="cd03fbbc9b1001fb9b5b2421ed0510ad768fb920">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-List-2016.2.811-dev-release_b840633eff6247255ae4f407ad4da3f4ef409a92.jar" />
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/com.android.support-recyclerview-v7-23.1.0_0783b65021a9496e2f8501c1fe0f3791e5cc6cbf.jar" />
     </item>
     <item
         jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/widgets-release/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="89f0a1f737477abeda61c0072529d5158b1ebe81">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-widgets-release_404598bc846e893876c2fe30e461c3030b88dd59.jar" />
-    </item>
-    <item
-        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-appcompat-v7-23.4.0_d6d5e081bdb9f275152095aae0a73c0e1cee70b6.jar" />
-    </item>
-    <item
-        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-animated-vector-drawable-23.4.0_21d827d9265710ad617e14d6da8a65bd7b552a2f.jar" />
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/intermediates-exploded-aar-widgets-release_404598bc846e893876c2fe30e461c3030b88dd59.jar" />
     </item>
     <item
         jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/Common-2016.2.811-dev-release/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="ecc99f35a01ac02f1734fe396e8ff4f650dd733f">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-Common-2016.2.811-dev-release_fa4a5168dc42e7cac09fb8d4c8a0b4c66393c8d7.jar" />
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/intermediates-exploded-aar-Common-2016.2.811-dev-release_fa4a5168dc42e7cac09fb8d4c8a0b4c66393c8d7.jar" />
+    </item>
+    <item
+        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="6b896c1067633db41e9c10a3a5d0919c5c4cfc8c">
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/com.google.android.gms-play-services-basement-9.2.1_18febfbec1591f3f98e2efc5d0f5bbe41983536f.jar" />
+    </item>
+    <item
+        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="bbd51be332bace144b3d16501ec0af379c3c8750">
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/com.google.android.gms-play-services-maps-9.2.1_7d126d1a2388c3f449fc6db1f9072f5fb0ffb8b3.jar" />
+    </item>
+    <item
+        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/LosGorditosPlus/binding-generator/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="cd7dd3d8b3faa7a457003b040d45b12c7e268dc6">
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/LosGorditosPlus-binding-generator-unspecified_036abe979082f5101fb498771b2ba7bf52f07090.jar" />
+    </item>
+    <item
+        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="421b36cf4f0d3bbd75e8f28647fccf36674ef049">
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/com.google.android.gms-play-services-base-9.2.1_0fd381a3eaec705308ebe02e401f7499210ed228.jar" />
     </item>
     <item
         jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/Primitives-2016.2.811-dev-release/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="3e713ddf537b00dfdae38eb5ac905d8a8fb7c372">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-Primitives-2016.2.811-dev-release_dfef12400062742f6bf312d1ea6ce3a5a048fc74.jar" />
-    </item>
-    <item
-        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/internal_impl-23.4.0_d5fc5eed745f72216331cb3dcb592b6041b5bfd9.jar" />
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/intermediates-exploded-aar-Primitives-2016.2.811-dev-release_dfef12400062742f6bf312d1ea6ce3a5a048fc74.jar" />
     </item>
     <item
         jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/LosGorditosPlus/runtime/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="f8c8ebc987f6538a65f5cfd308d5984746999d79">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/LosGorditosPlus-runtime-unspecified_b3444969c2ba5bfa871bc795db7596f177621b81.jar" />
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/LosGorditosPlus-runtime-unspecified_b3444969c2ba5bfa871bc795db7596f177621b81.jar" />
+    </item>
+    <item
+        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/internal_impl-23.4.0_d5fc5eed745f72216331cb3dcb592b6041b5bfd9.jar" />
     </item>
     <item
         jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-support-vector-drawable-23.4.0_a43d228ff19e3ebf16c1775f866bc85d03ae501d.jar" />
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/com.android.support-support-vector-drawable-23.4.0_a43d228ff19e3ebf16c1775f866bc85d03ae501d.jar" />
     </item>
     <item
-        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/com.android.support-recyclerview-v7-23.1.0_0783b65021a9496e2f8501c1fe0f3791e5cc6cbf.jar" />
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/com.android.support-appcompat-v7-23.4.0_d6d5e081bdb9f275152095aae0a73c0e1cee70b6.jar" />
+    </item>
+    <item
+        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/com.android.support-support-v4-23.4.0_b5e47f71c73dfaa56a0b8d4725ab5e34541e98e0.jar" />
+    </item>
+    <item
+        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/List-2016.2.811-dev-release/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="cd03fbbc9b1001fb9b5b2421ed0510ad768fb920">
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/intermediates-exploded-aar-List-2016.2.811-dev-release_b840633eff6247255ae4f407ad4da3f4ef409a92.jar" />
+    </item>
+    <item
+        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="819c2c3a4fb135e085445d11131d069cf9c32b2a">
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/com.google.android.gms-play-services-tasks-9.2.1_4c073b5fd0d63d55f1b1d0ffc1b3eddf4d5cb150.jar" />
     </item>
     <item
         jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/Data-2016.2.811-dev-release/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="ebc3f95b72612dc61a2411fa31dc74c316c78545">
-        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1/debug/intermediates-exploded-aar-Data-2016.2.811-dev-release_b0e79fd0fa0df54078ccee7ade47e9bb294c67cf.jar" />
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/intermediates-exploded-aar-Data-2016.2.811-dev-release_b0e79fd0fa0df54078ccee7ade47e9bb294c67cf.jar" />
+    </item>
+    <item
+        jar="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/com.android.support-animated-vector-drawable-23.4.0_21d827d9265710ad617e14d6da8a65bd7b552a2f.jar" />
+    </item>
+    <item
+        jar="/usr/local/Cellar/android-sdk/24.4/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/android/build/intermediates/pre-dexed/F0F1F2/debug/support-annotations-23.4.0_fbe609fa7ea902f23223354f6d3a62d8fd5983cf.jar" />
     </item>
 
 </items>

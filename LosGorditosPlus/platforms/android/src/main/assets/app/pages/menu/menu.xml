@@ -11,7 +11,7 @@
       <!-- Home page contents -->
       <stack-layout loaded="mainContentLoaded" class="menu-background">
         <StackLayout orientation="horizontal" margin="15" >
-          <image src="res://ic_menu" id="menu" tap="toggleDrawer" height="20" />
+          <image src="res://ic_menu" id="menu" tap="toggleDrawer" class="barmenu"/>
         </StackLayout>
 
         <StackLayout margin="15" >

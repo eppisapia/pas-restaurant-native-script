@@ -4,11 +4,6 @@ import {View} from "ui/core/view";
 import {topmost} from "ui/frame";
 import {screen} from "platform";
 import {Page} from "ui/page";
-import frame = require("ui/frame");
-import { GestureTypes, GestureEventData } from "ui/gestures";
-import labelModule = require("ui/label");
-
-
 
 let vm = new Observable({
 	header_principal: 0,
@@ -92,10 +87,7 @@ class ContactPage extends BasePage{
       vm.set("lszonas",0);
       vm.set("infzona",1);
     }
-    onMapReady(args) {
-      console.log("onMapReady");
-      var mapView = args.object;
-    }
+
 }
 
 export = new ContactPage();

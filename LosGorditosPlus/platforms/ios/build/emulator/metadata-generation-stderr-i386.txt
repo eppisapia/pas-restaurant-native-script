@@ -53,31 +53,31 @@ ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platf
  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.0.sdk/usr/include
  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator9.0.sdk/System/Library/Frameworks (framework directory)
 End of search list.
-In file included from umbrella.h:605:
+In file included from umbrella.h:790:
 In file included from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TelerikUI.h:77:
 /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TKChartAxis.h:182:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
 @property (nonatomic) TKRange * __nonnull zoomRange;
 ^
 /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TKChartAxis.h:182:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
-In file included from umbrella.h:605:
+In file included from umbrella.h:790:
 In file included from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TelerikUI.h:270:
 /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TKEntityProperty.h:88:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
 @property (nonatomic) NSString *groupName;
 ^
 /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TKEntityProperty.h:88:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
-In file included from umbrella.h:605:
+In file included from umbrella.h:790:
 In file included from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TelerikUI.h:274:
 /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TKDataFormEditor.h:83:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
 @property (nonatomic, nullable) id value;
 ^
 /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TKDataFormEditor.h:83:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
-In file included from umbrella.h:605:
+In file included from umbrella.h:790:
 In file included from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TelerikUI.h:296:
 /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TKEntityPropertyGroupEditorsView.h:19:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
 @property (nonatomic) id<TKLayout> layout;
 ^
 /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TKEntityPropertyGroupEditorsView.h:19:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
-In file included from umbrella.h:605:
+In file included from umbrella.h:790:
 In file included from /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TelerikUI.h:357:
 /Users/synergyqa/Documents/PasantiaReactNative/NativeScript/pas-restaurant-native-script/LosGorditosPlus/platforms/ios/../../lib/iOS/TelerikUI.framework/Headers/TKGridLayoutCellDefinition.h:87:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
 @property (nonatomic) NSNumber *row;

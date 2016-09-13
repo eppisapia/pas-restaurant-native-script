@@ -1,9 +1,9 @@
  <Page loaded="pageLoaded"
  	 actionBarHidden="true">
  	 <stack-layout loaded="mainContentLoaded" class="white_bg">
-        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" >
-          <image src="~/images/1_Icons/recursos-10.png" id="menu" tap="back" height="20" />
-          <Label text="contactar" textWrap="true" class="title"/>
+         <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}">
+      		<image src="~/images/1_Icons/recursos-10.png" id="menu" tap="back" height="20" />
+          	<Label text="contactar" textWrap="true" class="title"/>
         </StackLayout>
         <StackLayout orientation="vertical" margin="10">
 		    <TextView hint="Nombre" class="text"/>

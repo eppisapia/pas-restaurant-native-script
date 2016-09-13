@@ -5,7 +5,6 @@ import {View} from "ui/core/view";
 import segmentedBarModule = require("ui/segmented-bar");
 import {screen} from "platform"
 import {Page} from "ui/page";
-import dialogs = require("ui/dialogs");
 
 let vm = new Observable({ 
 	groceryList:([

@@ -84,10 +84,6 @@ var ContactPage = (function (_super) {
         vm.set("lszonas", 0);
         vm.set("infzona", 1);
     };
-    ContactPage.prototype.onMapReady = function (args) {
-        console.log("onMapReady");
-        var mapView = args.object;
-    };
     return ContactPage;
 }(BasePage_1.BasePage));
 module.exports = new ContactPage();
