@@ -315,14 +315,12 @@ Creamos el proyecto con nuestra plantilla basada en TypeScript (si quitamos la e
 
 ```
 tns create LosGorditosPlus --template nativescript-template-drawer-ts
-
 ```
 
 En el archivo "app/shared/BasePage.ts" observamos la clase abstracta BasePage que contiene las funciones para la navegación entre paginas, conseguimos la definición del modelo de la clase con el atributo "selectedPage" que indica la pagina actual de la aplicación.
 
 ```
 let appViewModel = new Observable({selectedPage: "menu"});
-
 ```
 
 Mientras que la clase posee las siguientes funciones:
@@ -338,10 +336,34 @@ navigate(args){
     appViewModel.set("selectedPage", pageName);
     topmost().navigate("pages/" + pageName + "/" + pageName);
 }	
-
 ```
 
 Mientras que en el archivo "./app/shared/widgets/drawer-content.xml" tenemos la definición del diseño del de Drawer Menu.
+
+Para utilizarlo en las paginas que crearemos es necesario importar el los archivos TypeScript el BasePage y declarar los XML de la siguiente manera:
+
+```
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  xmlns:statusbar="nativescript-statusbar"
+  loaded="loaded"
+  actionBarHidden="true">
+    <drawer:rad-side-drawer id="drawer">
+        <drawer:rad-side-drawer.mainContent>
+            <stack-layout loaded="mainContentLoaded">
+                <!-- Contenido de la Pagina -->
+            </stack-layout>
+        </drawer:rad-side-drawer.mainContent>
+        <drawer:rad-side-drawer.drawerContent>
+            <widgets:drawer-content />
+        </drawer:rad-side-drawer.drawerContent>
+    </drawer:rad-side-drawer>
+</page>
+```
+
+La etiqueta 'actionBarHidden' por defecto trae el valor de 'false' cuando no se quiera utilizar la bara de navegacion nativa colocamos su valor en 'true' 
 
 Eliminaremos el contenido de la carpeta "./app/pages/" ya que por defecto trae 3 paginas generadas.
 <br>
@@ -365,7 +387,6 @@ Se declararía dentro del "stack-layout" cada una de las opciones del menú de l
   	</StackLayout>
 
 </grid-layout>
-
 ```
 
 Cambiamos en la función 'navigate' en './app/shared/BasePage.ts' la navegación según el texto por el ID del componente que genero la acción. También agregaremos la función 'back' que nos navegara a la ventana anterior a la actual.
@@ -376,7 +397,6 @@ import {topmost} from "ui/frame";
 import {Page} from "ui/page";
 import {Observable, EventData} from "data/observable";
 import {View} from "ui/core/view";
-
 
 let appViewModel = new Observable({selectedPage: "menu"});
 
@@ -406,10 +426,103 @@ export abstract class BasePage {
 }
 ```  
 
+
+
 *<Text style="text-decoration: underline; margin: 15px;"> 3.2. Desarrollo de la Pantalla de presentación de categorías</Text>*
+
+Creamos la pagina de la pantalla recordando que debe tener el mismo nombre que el ID de navegacion del menú y colocaremos el código base en estas para su funcionamiento.
+
+``` 
+mkdir app/pages/menu
+touch app/pages/menu/menu.xml
+touch app/pages/menu/menu.ts
+touch app/pages/menu/menu.css
+```
+
+Como es la pantalla de inicio modificaremos debemos indicarlo en el archivo './app/app.ts'
+
+```
+import * as application from "application";
+
+application.start({ moduleName: "pages/menu/menu" });
+```
+
+Si ejecutamos la aplicación en este momento cargara la pantalla y al deslizar el dedo de izquierda a derecha podremos acceder al DrawerMenu. Ahora colocaremos el contenido en nuestra pantalla, al haber importado el archivo 'BasePage' podemos utilizar sus funciones, agregaremos el botón que facilite al usuario la apertura del DrawerMenu y los cinco botones que representan las categorías de platos de "Los Gorditos Plus", cada uno de estos botones ira asociado a la función 'changeToList' que se encargara de hacer la navegación a la lista de platos.
+
+Declaración del botón para el DrawerMenu:
+
+```
+<StackLayout orientation="horizontal" margin="15" >
+    <image src="res://ic_menu" id="menu" tap="toggleDrawer" height="20" />
+</StackLayout>
+```
+
+Declaracion del botón para categorías: 
+
+```
+<StackLayout margin="15" >
+  <image src="Dirección_de_la_Imagen" id="id_categoría" tap="changeToList" width="46" />
+  <label text="Nombre_Categoría" horizontalAlignment="center" />   
+</StackLayout>
+```
+
+Declaramos la función changeToList, esta tomara el numero del tab según el "id" establecido en el botón y en base a su valor colocaremos el titulo a pasar en la navegación.
+
+```
+<!-- .app/pages/menu/menu.ts -->
+changeToList(args) {
+    let tabNumber = args.view.id;
+    let tabTitle;
+    let tabActive;
+    switch (tabNumber){
+        case "fav": 
+            tabTitle = "favoritos" ;
+            tabActive= 0;
+            break;
+        case "pri":
+            tabTitle = "principales";
+            tabActive= 1;
+            break;
+        case "ens":
+            tabTitle = "ensaladas";
+            tabActive= 2;
+            break;
+        case "pos":
+            tabTitle = "postres";
+            tabActive= 3;
+            break;
+        case "beb":
+            tabTitle = "bebidas";
+            tabActive= 4;
+            break;
+        default: 
+            tabTitle = "favoritos";
+            tabActive= 0;
+            break;
+        }
+
+    var navigationOptions={
+        moduleName:'pages/menulist/menulist',
+        context:{tab: tabActive,
+                title: tabTitle
+                }
+    }
+    topmost().navigate(navigationOptions);
+}
+```
+
+En el código anterior se establece unas opciones de navegación que nos redirigen a la pantalla 'menulist' con un contexto que posee el Tab que estará activo y su titulo.
 
 *<Text style="text-decoration: underline; margin: 15px;"> 3.3. Desarrollo de la Pantalla de Lista de platos</Text>*
 
+Creamos la pagina de la pantalla recordando que debe tener el mismo nombre que colocamos en las opciones de navegación de la función 'changeToList' de la pantalla anterior. Colocaremos el código base en estas para su funcionamiento.
+
+``` 
+mkdir app/pages/menulist
+touch app/pages/menulist/menulist.xml
+touch app/pages/menulist/menulist.ts
+touch app/pages/menulist/menulist.css
+```
 *<Text style="text-decoration: underline; margin: 15px;"> 3.4. Desarrollo de la Pantalla de Detalle del Plato</Text>*
 
 *<Text style="text-decoration: underline; margin: 15px;"> 3.5. Desarrollo de la Pantalla de Ubicación (Utilizando el API de Geolocalización)</Text>*

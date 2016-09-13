@@ -47,6 +47,7 @@ Es un framework de desarrollo elaborado por Telerik que utiliza JavaScript, Casc
 - Se considera inestable.
 - Código diferente para iOS/Android
 - "Bugs" al utilizar librerías/Api externos a telerik
+- En la plataforma Android los 'taps' fallan.
 
 ***Conceptos Base***
 
