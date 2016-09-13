@@ -47,3 +47,13 @@ Es un framework de desarrollo elaborado por Telerik que utiliza JavaScript, Casc
 - Se considera inestable.
 - Código diferente para iOS/Android
 - "Bugs" al utilizar librerías/Api externos a telerik
+
+***Conceptos Base***
+
+- Funciones que se ejecutan durante eventos de carga de las paginas
+	- loaded: Se ejecuta tras haber montado el componente y enlaza el modelo con la vista. 
+	- mainContentLoaded: Adjunta el contexto o modelo al contenido principal de la pagina.
+
+- Parámetros args: Son aquellos que van asociados al componente que genera el evento.
+
+- Layout: 

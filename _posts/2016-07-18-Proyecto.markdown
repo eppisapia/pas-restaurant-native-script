@@ -12,15 +12,21 @@ El siguiente proyecto busca presentar una guía ilustrada que sirva como base de
 
 La aplicación antes mencionada consta de las siguientes pantallas:
 
-Pantalla de presentación de categorías
-Pantalla de Lista de platos
-Pantalla de Detalle del Plato
-Pantalla de Ubicación (Utilizando el API de Geolocalización)
-Pantalla de Detalle de Ubicación
-Pantalla de Contacto
-Pantalla para Contactar
-Pantalla de Información
-Splash para el inicio de la aplicación
+- Pantalla de presentación de categorías
+- Pantalla de Lista de platos
+- Pantalla de Detalle del Plato
+- Pantalla de Ubicación (Utilizando el API de Geolocalización)
+- Pantalla de Detalle de Ubicación
+- Pantalla de Contacto
+- Pantalla para Contactar
+- Pantalla de Información
+- Splash para el inicio de la aplicación
+
+A consideración:
+
+- Se explicara el uso de los widget y de las funciones en los elementos XML mas no se explicara todo el contenido XML.
+- Como se quiere investigar el framework no se hará uso de Angular y sus componentes, sin embargo, el ambiente de la aplicación contendrá angular por defecto.
+- El código a explicar esta escrito en el lenguaje TypeScript.
 
  ***2. Estructura*** 
 <br>
@@ -28,17 +34,18 @@ Splash para el inicio de la aplicación
 <br>
 
 Utilizaremos el patrón de diseño que ofrecen las plantillas de NativeScript el cual consta en manejar por carpetas el MVC de cada pantalla, es decir, cada pantalla representara una direccion en nuestra carpeta "app" la cual contendra sus respectivos archivos XML, JS y CSS (opcional).
-
 <br>
-
 <br>
 *<Text style="text-decoration: underline; margin: 15px;">2.2. Diseño de la aplicación</Text>*
 <br>
 
-Vista del Menú
+
 
 <img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_menu.png">
 <br>
+Vista del Menú
+
+
 Todas las pantallas contendran un panel estático principal que tendrá el botón que accionara el menu o el retorno, seguido del titulo de la pantalla en la que se encuentre el usuario. 
 <br>
 
@@ -59,10 +66,12 @@ El menú a utilizar será un SideMenu o DrawerMenu que se deslizara de izquierda
 <br>
 <br>
 
-Pantalla de Presentación de Categorías
 
 <img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_categorias.png">
 <br>
+Pantalla de Presentación de Categorías
+
+
 Será la pagina principal de la aplicación correspondiente al Menú, tendrá una imagen de fondo con 5 botones que representen las categorías del restaurante. 
 
 <br>
@@ -84,10 +93,12 @@ Será la pagina principal de la aplicación correspondiente al Menú, tendrá un
 <br>
 <br>
 
-Pantalla de Lista de Platos	
 
 <img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_platos.png">
 <br>
+Pantalla de Lista de Platos	
+
+
 Consta de un navegador por tabs para la selección de las categorías y un ListView para mostrar la lista de platos.
 <br>
 
@@ -108,10 +119,12 @@ Cada plato será almacenado en un contenedor que mostrara el Nombre, imagen, pre
 <br>
 <br>
 
-Pantalla de Detalle del Plato
 
 <img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_detalle_p.png">
 <br>
+Pantalla de Detalle del Plato
+
+
 En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un botón de retorno y el titulo de la pagina.
 <br>
 Se mostrara una pantalla con el Nombre, imagen, precio, descripción, ranking del plato y tres botones que permitan al usuario realizar acciones.
@@ -131,10 +144,12 @@ Se mostrara una pantalla con el Nombre, imagen, precio, descripción, ranking de
 <br>
 <br>
 
-Pantalla de Información
 
 <img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_informacion.png">
 <br>
+Pantalla de Información
+
+
 Mostrara una imagen donde se puede colocar el logo o publicidad del sitio de comida rápida.
 <br>
 Seguido por un acordeón, que contendrá la reseña del lugar y las zonas en donde se dispone un local.
@@ -156,10 +171,12 @@ Se elaborara un contenedor que mostrara el nombre de la zona, hora de cierre y u
 <br>
 <br>
 
-Pantalla de Ubicación
 
 <img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_ubicacion.png">
 <br>
+Pantalla de Ubicación
+
+
 Consta de un mapa que abarca la pantalla en el cual se marcaran las sedes y se mostrara un mensaje para guiar al usuario en su siguiente acción.
 
 <br>
@@ -180,10 +197,13 @@ Consta de un mapa que abarca la pantalla en el cual se marcaran las sedes y se m
 <br>
 <br>
 
-Pantalla de Detalle de Ubicación
+
 
 <img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_comollegar.png">
 <br>
+Pantalla de Detalle de Ubicación
+
+
 En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un general de retorno y el titulo de la pagina.
 <br>
 Contendrá un pequeño mapa que marque la ubicación seguido de la dirección y contacto del local.
@@ -204,10 +224,13 @@ Contendrá un pequeño mapa que marque la ubicación seguido de la dirección y 
 <br>
 <br>
 
-Pantalla de Contacto
+
 
 <img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_contacto.png">
 <br>
+Pantalla de Contacto
+
+
 Tendrá un contenedor fijo que mostrara la información de contacto de la sede principal, nombre del gerente, teléfono fijo y móvil, junto a un botón para poder contactar con el gerente.
 <br>
 Seguido por un ComboBox que contendrá las zonas donde hay locales y al seleccionar una se cargara el contenedor de contacto con la información respectiva.
@@ -227,10 +250,12 @@ Seguido por un ComboBox que contendrá las zonas donde hay locales y al seleccio
 <br>
 <br>
 
-Pantalla para Contactar
+
 
 <img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_contactar.png">
 <br>
+Pantalla para Contactar
+
 En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un dirección de retorno y el titulo de la pagina.
 <br>
 Se mostrara un formulario donde el usuario introducirá su nombre, correo electrónico y el cuerpo del mensaje a enviar.
@@ -252,10 +277,13 @@ Se mostrara un formulario donde el usuario introducirá su nombre, correo electr
 <br>
 <br>
 
-Splash para el inicio de la aplicación					
+				
 
 <img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_inicio.png">
 <br>
+Splash para el inicio de la aplicación
+
+
 Se mostrara el logo del sitio de comida hasta que finalice la carga y renderización de la pantalla principal de la aplicación, Pantalla de lista de platos.
 
 <br>
@@ -278,7 +306,105 @@ Se mostrara el logo del sitio de comida hasta que finalice la carga y renderizac
 <br>
  ***3. Implementación del Proyecto***
 
+Se utilizara la plantilla de NativeScript para la navegacion e implementacion del DrawerMenu, [NativeScript Drawer Template](https://github.com/ignaciofuentes/nativescript-template-drawer-ts), nos dará la estructura de la aplicación con las carpetas 'pages' y 'shared'.
+
+- app/pages/: Dirección donde se ubican las paginas de la aplicación.
+- app/shared/: Dirección que contiene los componentes compartidos en la aplicación, es decir, aquellos componentes que se reutilizan.
+
+Creamos el proyecto con nuestra plantilla basada en TypeScript (si quitamos la etiqueta -ts se genera el proyecto con JavaScript)
+
+```
+tns create LosGorditosPlus --template nativescript-template-drawer-ts
+
+```
+
+En el archivo "app/shared/BasePage.ts" observamos la clase abstracta BasePage que contiene las funciones para la navegación entre paginas, conseguimos la definición del modelo de la clase con el atributo "selectedPage" que indica la pagina actual de la aplicación.
+
+```
+let appViewModel = new Observable({selectedPage: "menu"});
+
+```
+
+Mientras que la clase posee las siguientes funciones:
+
+- toogleDrawer: Sobrepone o quita el componente "drawer" sobre la pantalla actual.
+- navigate: Realiza la navegación entre paginas, carga la información de la ruta a navegar obteniendo el nombre de la pagina de la etiqueta "text" del componente donde se realiza la función, seguidamente, actualiza el modelo de la clase y realiza la navegación sobreponiendo la pagina seleccionada. 
+
+Para el manejo de la ruta de navegación se concatena la dirección de la pagina a mostrar, adjuntando el directorio y archivo de la pagina, en este caso ambos deben poseer el mismo nombre.
+
+```
+navigate(args){
+    let pageName = args.view.text.toLowerCase();
+    appViewModel.set("selectedPage", pageName);
+    topmost().navigate("pages/" + pageName + "/" + pageName);
+}	
+
+```
+
+Mientras que en el archivo "./app/shared/widgets/drawer-content.xml" tenemos la definición del diseño del de Drawer Menu.
+
+Eliminaremos el contenido de la carpeta "./app/pages/" ya que por defecto trae 3 paginas generadas.
+<br>
+<br>
 *<Text style="text-decoration: underline; margin: 15px;"> 3.1. Desarrollo de la vista del Menú</Text>*
+<br>
+<br>
+
+Iniciaremos editando el archivo 'drawer-content.xml' con el menu que queremos mostrar.
+
+En cada opción del menú utilizaremos la etiqueta "id" que utilizaremos para la navegación y colocaremos el tap en todo Layout en lugar de solo el texto.
+
+Se declararía dentro del "stack-layout" cada una de las opciones del menú de la siguiente manera
+
+```
+<grid-layout class="drawer-content">
+  <stack-layout>
+
+  	<StackLayout id="menu" tap="navigate">
+  		<!-- Contenido de la opcion -->
+  	</StackLayout>
+
+</grid-layout>
+
+```
+
+Cambiamos en la función 'navigate' en './app/shared/BasePage.ts' la navegación según el texto por el ID del componente que genero la acción. También agregaremos la función 'back' que nos navegara a la ventana anterior a la actual.
+
+
+```   
+import {topmost} from "ui/frame";
+import {Page} from "ui/page";
+import {Observable, EventData} from "data/observable";
+import {View} from "ui/core/view";
+
+
+let appViewModel = new Observable({selectedPage: "menu"});
+
+export abstract class BasePage {
+    //implement this function in the inheriting pages to set their specific binding context
+    abstract mainContentLoaded(args:EventData);
+    
+    loaded(args){
+        let page = <Page>args.object;
+        page.bindingContext = appViewModel;   
+    }
+    
+    back(){
+        topmost().goBack();
+    }
+
+    toggleDrawer(){
+        let page = <Page>topmost().currentPage;
+        let drawer = <any>page.getViewById("drawer");
+        drawer.toggleDrawerState();
+    }
+    navigate(args){
+        let pageName = args.view.id.toLowerCase();
+        appViewModel.set("selectedPage", pageName);
+        topmost().navigate("pages/" + pageName + "/" + pageName);
+    }
+}
+```  
 
 *<Text style="text-decoration: underline; margin: 15px;"> 3.2. Desarrollo de la Pantalla de presentación de categorías</Text>*
 
