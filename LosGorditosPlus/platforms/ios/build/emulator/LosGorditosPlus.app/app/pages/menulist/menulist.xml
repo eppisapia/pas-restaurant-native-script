@@ -14,7 +14,7 @@
       <stack-layout loaded="mainContentLoaded" >
         <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}" >
           <image src="res://ic_menu" id="menu" tap="toggleDrawer" class="barmenu"/>
-          <Label text="{{titleTab}}" textWrap="true" class="title"/>
+          <Label text="{{titleTab}}" class="title" width="{{width - 60}}"/>
         </StackLayout>
         <StackLayout orientation="horizontal" marginTop="3">
           <StackLayout>
@@ -71,7 +71,7 @@
                         tap="changeToDetail" />
                     <DockLayout class="DishBar">
                       <StackLayout dock="left">
-                        <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center" class="DishName"/>
+                        <Label text="{{ name }}" textWrap="true" horizontalAlignment="left" verticalAlignment="center" class="DishName"/>
                         <Label text="{{ price }}" horizontalAlignment="left" verticalAlignment="center" class="DishPrice"/>
                       </StackLayout>
                       <StackLayout dock="right" marginRight="3">

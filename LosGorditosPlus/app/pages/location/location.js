@@ -53,7 +53,6 @@ var LocationPage = (function (_super) {
     };
     LocationPage.prototype.OnMapReady = function (args) {
         var mapView = args.object;
-        console.log("Setting a marker...");
         var marcas = vm.get("marks");
         for (var i = 0; i < marcas.length; i++) {
             var marker = new mapsModule.Marker();
@@ -64,7 +63,6 @@ var LocationPage = (function (_super) {
         }
     };
     LocationPage.prototype.onMarkerSelect = function (args) {
-        console.log("Clicked on " + args.marker.data.dir);
         var inf = args.marker.data;
         var navigationOptions = {
             moduleName: 'pages/locationdetail/locationdetail',

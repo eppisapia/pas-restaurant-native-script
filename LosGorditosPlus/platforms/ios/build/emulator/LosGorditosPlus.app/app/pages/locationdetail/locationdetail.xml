@@ -9,7 +9,7 @@
       <stack-layout loaded="mainContentLoaded" >
         <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}">
           <image src="~/images/1_Icons/recursos-10.png" id="menu" tap="back" height="20" />
-          <Label text="como llegar" textWrap="true" class="title"/>
+          <Label text="como llegar" width="{{width - 60}}" class="title"/>
         </StackLayout>
         <maps:mapView latitude="{{mark.latitude}}" longitude="{{mark.longitude}}" 
           zoom="7" bearing="{{ bearing }}" 

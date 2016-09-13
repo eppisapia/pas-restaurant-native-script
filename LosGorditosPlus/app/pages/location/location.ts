@@ -54,7 +54,6 @@ class LocationPage extends BasePage{
 
   OnMapReady(args) {
     var mapView = args.object;
-    console.log("Setting a marker...");
     let marcas=vm.get("marks");
     for (let i=0; i<marcas.length; i++){
         var marker = new mapsModule.Marker();
@@ -66,7 +65,6 @@ class LocationPage extends BasePage{
   }
    
   onMarkerSelect(args) {
-    console.log("Clicked on " +args.marker.data.dir);
     let inf=args.marker.data;
     var navigationOptions={
         moduleName:'pages/locationdetail/locationdetail',

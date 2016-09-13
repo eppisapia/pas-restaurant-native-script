@@ -12,7 +12,7 @@
           <Label text="como llegar" width="{{width - 60}}" class="title"/>
         </StackLayout>
         <maps:mapView latitude="{{mark.latitude}}" longitude="{{mark.longitude}}" 
-          zoom="7" bearing="{{ bearing }}" 
+          zoom="13" bearing="{{ bearing }}" 
           tilt="{{ tilt }}" mapReady="OnMapReady"  
           height="{{height*0.33}}" width="{{width}}" marginTop="5" marginBottom="5" />
         <StackLayout class="container">

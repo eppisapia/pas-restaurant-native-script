@@ -11,7 +11,7 @@
       <stack-layout loaded="mainContentLoaded" class="white_bg">
         <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}" >
           <image src="res://ic_menu" id="menu" tap="toggleDrawer" class="barmenu"/>
-          <Label text="contacto" textWrap="true" class="title"/>
+          <Label text="contacto" width="{{width - 60}}" class="title"/>
         </StackLayout>
 
         <StackLayout>

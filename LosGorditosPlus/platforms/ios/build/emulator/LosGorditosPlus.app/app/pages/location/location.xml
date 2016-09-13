@@ -12,7 +12,7 @@
       <stack-layout loaded="mainContentLoaded">
         <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}" >
           <image src="res://ic_menu" id="menu" tap="toggleDrawer" class="barmenu"/>
-          <Label text="ubicación" textWrap="true" class="title"/>
+          <Label text="ubicación" width="{{width - 60}}" class="title"/>
         </StackLayout>
         <AbsoluteLayout height="{{height}}" width="{{width}}" >
 
