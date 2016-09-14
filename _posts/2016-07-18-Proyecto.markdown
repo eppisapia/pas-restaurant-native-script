@@ -94,7 +94,7 @@ Será la pagina principal de la aplicación correspondiente al Menú, tendrá un
 <br>
  
 
-<img style="float: left; margin: 5px;" src="{{site.baseurl}}/Images/Pantalla_platos.png">
+<img style="float: left; margin: 5px;" src="/Images/Pantalla_platos.png">
 <br>
 Pantalla de Lista de Platos	
 
@@ -145,7 +145,7 @@ Se mostrara una pantalla con el Nombre, imagen, precio, descripción, ranking de
 <br>
 
 
-<img style="float: left; margin: 5px;" src="{{site.baseurl}}/Images/Pantalla_informacion.png">
+<img style="float: left; margin: 5px;" src="{{site.url}}/Images/Pantalla_informacion.png">
 <br>
 Pantalla de Información
 
