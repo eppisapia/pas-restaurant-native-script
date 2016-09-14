@@ -41,7 +41,7 @@ Utilizaremos el patrón de diseño que ofrecen las plantillas de NativeScript el
 
 
 
-<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_menu.png">
+<img style="float: left; margin: 5px;" src="{{site.baseurl}}/Images/Pantalla_menu.png">
 <br>
 Vista del Menú
 
@@ -67,7 +67,7 @@ El menú a utilizar será un SideMenu o DrawerMenu que se deslizara de izquierda
 <br>
 
 
-<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_categorias.png">
+<img style="float: left; margin: 5px;" src="{{site.baseurl}}/Images/Pantalla_categorias.png">
 <br>
 Pantalla de Presentación de Categorías
 
@@ -92,9 +92,9 @@ Será la pagina principal de la aplicación correspondiente al Menú, tendrá un
 <br>
 <br>
 <br>
+ 
 
-
-<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_platos.png">
+<img style="float: left; margin: 5px;" src="{{site.baseurl}}/Images/Pantalla_platos.png">
 <br>
 Pantalla de Lista de Platos	
 
@@ -120,7 +120,7 @@ Cada plato será almacenado en un contenedor que mostrara el Nombre, imagen, pre
 <br>
 
 
-<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_detalle_p.png">
+<img style="float: left; margin: 5px;" src="{{site.baseurl}}/Images/Pantalla_detalle_p.png">
 <br>
 Pantalla de Detalle del Plato
 
@@ -145,7 +145,7 @@ Se mostrara una pantalla con el Nombre, imagen, precio, descripción, ranking de
 <br>
 
 
-<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_informacion.png">
+<img style="float: left; margin: 5px;" src="{{site.baseurl}}/Images/Pantalla_informacion.png">
 <br>
 Pantalla de Información
 
@@ -172,7 +172,7 @@ Se elaborara un contenedor que mostrara el nombre de la zona, hora de cierre y u
 <br>
 
 
-<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_ubicacion.png">
+<img style="float: left; margin: 5px;" src="{{site.baseurl}}/Images/Pantalla_ubicacion.png">
 <br>
 Pantalla de Ubicación
 
@@ -199,7 +199,7 @@ Consta de un mapa que abarca la pantalla en el cual se marcaran las sedes y se m
 
 
 
-<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_comollegar.png">
+<img style="float: left; margin: 5px;" src="{{site.baseurl}}/Images/Pantalla_comollegar.png">
 <br>
 Pantalla de Detalle de Ubicación
 
@@ -226,7 +226,7 @@ Contendrá un pequeño mapa que marque la ubicación seguido de la dirección y 
 
 
 
-<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_contacto.png">
+<img style="float: left; margin: 5px;" src="{{site.baseurl}}/Images/Pantalla_contacto.png">
 <br>
 Pantalla de Contacto
 
@@ -252,7 +252,7 @@ Seguido por un ComboBox que contendrá las zonas donde hay locales y al seleccio
 
 
 
-<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_contactar.png">
+<img style="float: left; margin: 5px;" src="{{site.baseurl}}/Images/Pantalla_contactar.png">
 <br>
 Pantalla para Contactar
 
@@ -279,7 +279,7 @@ Se mostrara un formulario donde el usuario introducirá su nombre, correo electr
 
 				
 
-<img style="float: left; margin: 5px;" src="/pas-restaurant-native-script/Images/Pantalla_inicio.png">
+<img style="float: left; margin: 5px;" src="{{site.baseurl}}/Images/Pantalla_inicio.png">
 <br>
 Splash para el inicio de la aplicación
 
