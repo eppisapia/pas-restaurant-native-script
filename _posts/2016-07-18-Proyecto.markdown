@@ -279,7 +279,7 @@ Se mostrara un formulario donde el usuario introducirá su nombre, correo electr
 
 				
 
-<img style="float: left; margin: 5px;" src="{{site.url}}/Images/Pantalla_inicio.png">
+<img style="float: left; margin: 5px;" src="/Images/Pantalla_inicio.png">
 <br>
 Splash para el inicio de la aplicación
 
