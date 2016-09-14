@@ -25,7 +25,7 @@ La aplicación antes mencionada consta de las siguientes pantallas:
 A consideración:
 
 - Se explicara el uso de los widget y de las funciones en los elementos XML mas no se explicara todo el contenido XML.
-- Como se quiere investigar el framework no se hará uso de Angular y sus componentes, sin embargo, el ambiente de la aplicación contendrá angular por defecto.
+- Como se quiere investigar el framework se evitara o reducirá el uso de herramientas externas.
 - El código a explicar esta escrito en el lenguaje TypeScript.
 
  ***2. Estructura*** 
@@ -1104,6 +1104,104 @@ En nuestra función 'OnMapReady' copiamos el array 'marks' para que sea recorrid
 <br>
 <br>
 
+El acceso a esta pantalla sera por el marker de la pantalla de Ubicación, generaremos la barra de navegación con el botón para retornar a la pagina anterior por medio de la acción 'back' por lo que no utilizaremos el DrawerMenu.
+
+Creamos los archivos para la pagina
+
+```
+mkdir ./app/pages/locationdetail
+touch ./app/pages/locationdetail/locationdetail.ts
+touch ./app/pages/locationdetail/locationdetail.xml
+touch ,/app/pages/locationdetail/locationdetail.css
+```
+
+Como es una pagina que le estamos pasando parametros en la navegación debemos declarar la función 'onNavigatingTo' e implementarla en el XML como hemos realizamos previamente.
+
+```
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:maps="nativescript-google-maps-sdk"
+  loaded="loaded"
+  navigatingTo="onNavigatingTo"
+  actionBarHidden="true"
+  class="white_bg"
+  >
+  <stack-layout loaded="mainContentLoaded" >
+    <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}">
+      <image src="~/images/1_Icons/recursos-10.png" id="menu" tap="back" height="20" />
+      <Label text="como llegar" width="{{width - 60}}" class="title"/>
+    </StackLayout>
+    <maps:mapView latitude="{{mark.latitude}}" longitude="{{mark.longitude}}" 
+      zoom="13" bearing="{{ bearing }}" 
+      tilt="{{ tilt }}" mapReady="OnMapReady"  
+      height="{{height*0.33}}" width="{{width}}" marginTop="5" marginBottom="5" />
+    <StackLayout class="container">
+      <Label text="Dirección:" class="titulo"/>
+      <label text="{{mark.dir}}" textWrap="true" class="contenido"/>
+    </StackLayout>
+    <StackLayout class="container">
+      <Label text="Información de Contacto:" class="titulo"/>
+      <DockLayout padding="5" width="{{width}}">
+        <Label dock="left" text="Gerente: " class="sub"/>
+        <Label dock="right" text="{{mark.gerente}}" textWrap="true" class="contenido" />
+      </DockLayout>
+      <DockLayout padding="5" width="{{width}}">
+        <Label dock="left" text="Oficina: " class="sub"/>
+        <Label dock="right" text="{{mark.fijo}}" textWrap="true" class="contenido"/>
+      </DockLayout>
+      <DockLayout padding="5" width="{{width}}">
+        <Label dock="left" text="Movil: " class="sub"/>
+        <Label dock="right" text="{{mark.movil}}" textWrap="true" class="contenido"/>
+      </DockLayout>
+      <Label text="Contactar" id="contactdetail" tap="navigate" class="boton"/>
+    </StackLayout>
+  </stack-layout>
+</page>
+```
+
+Declaración del componente
+
+```
+import {BasePage} from "../../shared/BasePage";
+import {Observable, EventData} from "data/observable";
+import {View} from "ui/core/view";
+import {screen} from "platform";
+import {Page} from "ui/page";
+
+var mapsModule = require("nativescript-google-maps-sdk");
+
+let vm = new Observable({ 
+    width: screen.mainScreen.widthDIPs,
+    height: screen.mainScreen.heightDIPs,
+    mark: null
+ });
+
+
+class LocationDetailPage extends BasePage{
+    mainContentLoaded(args:EventData){
+        let view = <View>args.object;
+        view.bindingContext = vm;
+    }
+
+  OnMapReady(args) {
+    var mapView = args.object;
+    let marca=vm.get("mark");
+    var marker = new mapsModule.Marker();
+    marker.position = mapsModule.Position.positionFromLatLng(marca.latitude, marca.longitude);
+    marker.userData = { index : 1};
+    mapView.addMarker(marker);
+  }
+   
+  onNavigatingTo(args) {
+    var page = args.object;
+    var gotData=page.navigationContext;
+    vm.set("mark", gotData.mark);
+    }
+
+}
+export = new LocationDetailPage();
+```
+
 <br>
 <br>
 <br>
@@ -1111,12 +1209,313 @@ En nuestra función 'OnMapReady' copiamos el array 'marks' para que sea recorrid
 <br>
 <br>
 
+Ahora elaboraremos la pagina respectiva al id de Contacto del DrawerMenu, primero crearemos los archivos con el código básico con los siguientes atributos:
+
+- header_principal: Lo utilizaremos como el controlador del primer header de nuestro acordeón.
+- header_sede: Lo utilizaremos como el controlador del segundo header de nuestro acordeón.
+- sede: Titulo a mostrar en el segundo acordeón.
+- lszonas: Controlador para el contenido del segundo header, muestra la lista de zonas.
+- infzona: Controlador para el contenido del segundo header, muestra la información de una zona.
+- sel_gerente: Gerente de la zona seleccionada.
+- sel_fijo: Numero de teléfono fijo de la zona seleccionada.
+- sel_movil: Numero de teléfono móvil de la zona seleccionada.
+- contact: Array que contiene la información de contacto de las zonas.
+
+```
+mkdir ./app/pages/contact
+touch ./app/pages/contact/contact.xml
+touch ./app/pages/contact/contact.ts
+touch ./app/pages/contact/contact.css
+```
+
+Declaración de la clase 'contact.ts'
+
+```
+import {BasePage} from "../../shared/BasePage";
+import {Observable, EventData} from "data/observable";
+import {View} from "ui/core/view";
+import {topmost} from "ui/frame";
+import {screen} from "platform";
+import {Page} from "ui/page";
+
+let vm = new Observable({
+  header_principal: 0,
+  header_sede: 0,
+  sede: "Selección de sede",
+  lszonas: 0,
+  infzona: 0,
+  sel_gerente: "",
+  sel_fijo: "",
+  sel_movil: "",
+  contact:([
+        { gerente: "Alexander Ramirez",
+          fijo: "0212-1234567",
+          movil: "0414-1112233",
+          zona: "Altamira"},
+      { gerente: "Ali Suarez",
+          fijo: "0212-1234567",
+          movil: "0414-1112233",
+          zona: "Chacao"},
+      { gerente: "Alexander Ramirez",
+          fijo: "0212-1234567",
+          movil: "0414-1112233",
+          zona: "Carrizal"}
+    ]),
+  width: screen.mainScreen.widthDIPs,
+  height: screen.mainScreen.heightDIPs,
+  }
+);
+
+class ContactPage extends BasePage{
+    mainContentLoaded(args:EventData){
+        //set the bindingContext for the AboutPage content here
+        let view = <View>args.object;
+        view.bindingContext = vm;
+    }
+}
+
+export = new ContactPage();
+```
+
+Declaración del diseño con nuestra barra de navegación
+
+```
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns="http://www.nativescript.org/tns.xsd" 
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  loaded="loaded"
+  actionBarHidden="true">
+  <drawer:rad-side-drawer id="drawer">
+    <drawer:rad-side-drawer.mainContent>
+      <stack-layout loaded="mainContentLoaded" class="white_bg">
+
+        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}" >
+          <image src="res://ic_menu" id="menu" tap="toggleDrawer" class="barmenu"/>
+          <Label text="contacto" width="{{width - 60}}" class="title"/>
+        </StackLayout>
+
+    </drawer:rad-side-drawer.mainContent>
+    <drawer:rad-side-drawer.drawerContent>
+      <widgets:drawer-content />
+    </drawer:rad-side-drawer.drawerContent>
+  </drawer:rad-side-drawer>
+</page>
+```
+Para la implementación del Acordeón, NativeScript no ofrece un componente per se lo simularemos jugando con la altura de los componentes.
+
+Comenzaremos realizando el primer Header con su contenido en el archivo XML, el cual mostrara la información general de contacto de 'Los Gorditos Plus' y podremos accionar el botón de 'Contactar' que realizara la navegación a nuestra ventana para enviar el mensaje, como no pasaremos algún parametro en la navegación podemos utilizar la función 'navigate' con un id.
+
+```
+<StackLayout>
+  <StackLayout class="header_border">
+    <!-- Header -->
+    <DockLayout  tap="Principal" >
+      <StackLayout dock="left">
+        <Label text="General" class="header"/>
+      </StackLayout>
+      <StackLayout dock="right" marginRight="3">
+        <image src="{{header_principal == 0 ?'~/images/1_Icons/recursos-12.png':'~/images/1_Icons/recursos-11.png'}}" 
+          horizontalAlignment="right" 
+          class="{{header_principal == 0 ?'open':'close'}}"/>
+      </StackLayout>
+    </DockLayout>
+
+    <!-- Contenido del primer Header-->
+
+    <StackLayout height="{{header_principal == 0 ?'0':'auto'}}">
+      <DockLayout class="inf">
+        <Label dock="left" text="Gerente: " class="sub"/>
+        <Label dock="right" text="{{contact[0].gerente}}" textWrap="true" class="text" />
+      </DockLayout>
+      <DockLayout class="inf">
+        <Label dock="left" text="Oficina: " class="sub"/>
+        <Label dock="right" text="{{contact[0].fijo}}" textWrap="true" class="text"/>
+      </DockLayout>
+      <DockLayout class="inf">
+        <Label dock="left" text="Movil: " class="sub"/>
+        <Label dock="right" text="{{contact[0].movil}}" textWrap="true" class="text"/>
+      </DockLayout>
+      <Label text="Contactar" id="contactdetail" tap="navigate" class="boton"/>
+    </StackLayout>
+
+    <!-- Segundo Header -->
+  </StackLayout>
+</StackLayout>
+```
+
+Estamos accionando la función 'Principal' cuyo objetivo es Mostrar u Ocultar el contenido del header cambiando el valor del atributo 'header_principal' que controla la altura del componente. Como buscamos simular el acordeón, al abrir un contenido los otros header se deben cerrar aunque no este implementado sabemos que utilizaremos variables de control las cuales colocaremos con el valor de control para que no se muestren, se declara la función 'Principal' de la siguiente manera:
+
+```
+Principal() {
+  if (vm.get("header_principal") == 0){
+    vm.set("header_principal",1);
+    vm.set("header_sede",0);
+    vm.set("lszonas",0);
+    vm.set("infzona",0);
+  } else {
+  vm.set("header_principal",0);
+  }
+}
+```
+
+Replicamos la estructura del header pero esta vez colocaremos dos contenidos que se mostraran según las variables de control
+
+```
+<StackLayout>
+  <StackLayout class="separator" />
+  <!-- Header 2 -->
+  <DockLayout  tap="Sede">
+    <StackLayout dock="left">
+      <Label text="{{sede}}" class="header" />
+    </StackLayout>
+    <StackLayout dock="right" marginRight="3">
+      <image src="{{header_sede == 0 ?'~/images/1_Icons/recursos-12.png':'~/images/1_Icons/recursos-11.png'}}" 
+        horizontalAlignment="right" class="{{header_sede == 0 ?'open':'close'}}"/>
+    </StackLayout>
+  </DockLayout>
+
+  <!-- Contenido del segundo Header-->
+
+  <ListView items="{{ contact }}" height="{{lszonas == 0 ?'0':'auto'}}">
+    <ListView.itemTemplate >
+      <Label text="{{zona}}" ger="{{gerente}}" movil="{{movil}}" fijo="{{fijo}}" class="list" tap="changeZona"/>
+    </ListView.itemTemplate>
+  </ListView>
+
+  <StackLayout height="{{infzona == 0 ?'0':'auto'}}">
+    <DockLayout class="inf">
+      <Label dock="left" text="Gerente: " class="sub"/>
+      <Label dock="right" text="{{sel_gerente}}" textWrap="true" class="text" />
+    </DockLayout>
+    <DockLayout class="inf">
+      <Label dock="left" text="Oficina: " class="sub"/>
+      <Label dock="right" text="{{sel_fijo}}" textWrap="true" class="text"/>
+    </DockLayout>
+    <DockLayout class="inf">
+      <Label dock="left" text="Movil: " class="sub"/>
+      <Label dock="right" text="{{sel_movil}}" textWrap="true" class="text"/>
+    </DockLayout>
+    <DockLayout horizontalAlignment="center">
+      <Label dock="left" text="Zonas" class="{{infzona == 0 ?'':'boton'}}" marginRight="20" tap="Zonas"/>
+      <Label dock="right" text="Contactar" id="contactdetail" tap="navigate" class="{{infzona == 0 ?'':'boton'}}"/>
+    </DockLayout>
+  </StackLayout>
+
+  <StackLayout class="separator" />
+</StackLayout>
+```
+
+La función Sede se encargara de mostrar u ocultar el contenido del Header, al igual que 'Principal' esta acción deberá cerrar los demás header.
+
+```
+Sede() {
+  if (vm.get("header_sede") == 0){
+    vm.set("header_sede",1);
+    vm.set("header_principal",0);
+    vm.set("lszonas",1);
+  } else {
+  vm.set("header_sede",0);
+  vm.set("lszonas",0);
+  vm.set("infzona",0);
+  }
+}
+```
+
+Al abrir el header se mostrara el componente 'ListView' que lista las zonas que poseen información de contacto, al seleccionar una de estas se activa la función 'changeZona' la cual oculta el componente, cambia el controlador 'infzona' y guarda la información de la zona seleccionada para que se muestre en el segundo contenido del header.
+
+```
+changeZona(args) {
+      let zona = args.view.text;
+      vm.set("sede", zona);
+      let ger = args.view.ger;
+      vm.set("sel_gerente", ger);
+      let fijo = args.view.fijo;
+      vm.set("sel_fijo", fijo);
+      let movil = args.view.movil;
+      vm.set("sel_movil", movil);
+      vm.set("lszonas",0);
+      vm.set("infzona",1);
+    }
+```
+
+Finalmente, tenemos dos botones para la navegación a la Pantalla de Contactar o retornar a la lista de Zonas. Para retornar a la lista de zonas implementamos la función 'Zonas' que coloca los valores por defecto del segundo Header.
+
+```
+Zonas() {
+  vm.set("infzona",0);
+  vm.set("sede", "Selección de sede");
+  vm.set("lszonas",1);
+}
+```
+
+
 <br>
 <br>
 <br>
 *<Text style="text-decoration: underline; margin: 15px;"> 3.8. Desarrollo de la Pantalla para Contactar</Text>*
 <br>
 <br>
+A esta pagina se le accede desde la Pantalla de Contacto por lo que implementaremos la barra de navegación con el botón de regresar y no incluiremos el DrawerMenu.
+
+Al crear los archivos colocaremos el mismo nombre que el valor del ID al llamas la función 'navigate'
+
+```
+mkdir ./app/pages/contactdetail
+touch ./app/pages/contactdetail/contactdetail.ts
+touch ./app/pages/contactdetail/contactdetail.xml
+touch ./app/pages/contactdetail/contactdetail.css
+```
+
+Como no estamos pasando parametros no es necesario declarar la función 'onNavigatingTo' así que colocamos el código básico de nuestra pagina, utilizaremos el componente 'TextView' para que el usuario pueda insertar texto.
+
+```
+<Page loaded="pageLoaded"
+  actionBarHidden="true">
+  <stack-layout loaded="mainContentLoaded" class="white_bg">
+    <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}">
+      <image src="~/images/1_Icons/recursos-10.png" id="menu" tap="back" height="20" />
+      <Label text="contactar" width="{{width - 60}}" class="title"/>
+    </StackLayout>
+    <StackLayout orientation="vertical" margin="10">
+      <TextView hint="Nombre" class="text"/>
+      <StackLayout class="yellow_bar" />
+      <TextView hint="email" class="text"/>
+      <StackLayout class="yellow_bar" />
+      <TextView hint="Mensaje ..." class="mensaje" height="{{height*0.40}}"/>
+      <Label text="Enviar" class="boton"/>
+    </StackLayout>
+  </stack-layout>
+</Page>
+```
+
+La declaración de nuestra pagina es muy básica ya que no se implementara una función que genere el envió del mensaje.
+
+```
+import {BasePage} from "../../shared/BasePage";
+import {Observable, EventData} from "data/observable";
+import {View} from "ui/core/view";
+import {screen} from "platform";
+import {Page} from "ui/page";
+
+let vm = new Observable({
+  nombre: 'Nombre',
+  email: 'email',
+  msg: 'Mensaje ...',
+  width: screen.mainScreen.widthDIPs,
+  height: screen.mainScreen.heightDIPs}
+);
+
+class ContactDetailPage extends BasePage{
+  mainContentLoaded(args:EventData){
+    let view = <View>args.object;
+    view.bindingContext = vm;
+  }
+}
+
+export = new ContactDetailPage();
+```
 
 <br>
 <br>
@@ -1124,6 +1523,152 @@ En nuestra función 'OnMapReady' copiamos el array 'marks' para que sea recorrid
 *<Text style="text-decoration: underline; margin: 15px;"> 3.9. Desarrollo de la Pantalla de Información</Text>*
 <br>
 <br>
+Realizamos la ultima pagina de nuestra aplicacion en esta pantalla queremos mostrar un Accordeon que en su segundo header muestre la lista de zonas y permita al usuario navegar a la geolocalizacion respectiva de cada una. Comenzamos creando los archivos de la pagina y colocando el codigo basico.
+
+```
+mkdir ./app/pages/about
+touch ./app/pages/about/about.ts
+touch ./app/pages/about/about.xml
+touch ./app/pages/about/about.css
+```
+
+Realizamos el diseno de nuestra pagina
+
+```
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  loaded="loaded"
+  actionBarHidden="true">
+  <drawer:rad-side-drawer id="drawer">
+    <drawer:rad-side-drawer.mainContent>
+      <stack-layout loaded="mainContentLoaded" class="white_bg">
+
+        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}" >
+          <image src="res://ic_menu" id="menu" tap="toggleDrawer" class="barmenu"/>
+          <Label text="información" width="{{width - 60}}" class="title"/>
+        </StackLayout>
+
+        <StackLayout>
+          <StackLayout class="yellow_bar" height="{{height*0.25}}" verticalAlignment="center">
+            <image src="~/images/3_Logos/recursos-38.png" height="{{height*0.15}}" />
+          </StackLayout>
+          
+          <StackLayout class="header_border">
+            <!--Primer header -->
+            <DockLayout  tap="Resena" >
+              <StackLayout dock="left">
+                <Label text="Reseña" class="header"/>
+              </StackLayout>
+              <StackLayout dock="right" marginRight="3">
+                <image src="{{header_resena == 0 ?'~/images/1_Icons/recursos-12.png':'~/images/1_Icons/recursos-11.png'}}" 
+                  horizontalAlignment="right" 
+                  class="{{header_resena == 0 ?'open':'close'}}"/>
+              </StackLayout>
+            </DockLayout>
+
+            <!--Contenido-->
+            <Label text="Los Gorditos + donde un plato no es suficiente" textWrap="true" class="texto"
+             height="{{header_resena == 0 ?'0':'auto'}}"/>
+          
+            <StackLayout id="message">
+              <StackLayout class="separator" />
+              <!--Segundo header -->
+              <DockLayout  tap="Ubicaciones">
+                <StackLayout dock="left">
+                  <Label text="Ubicación" class="header" />
+                </StackLayout>
+                <StackLayout dock="right" marginRight="3">
+                  <image src="{{header_location == 0 ?'~/images/1_Icons/recursos-12.png':'~/images/1_Icons/recursos-11.png'}}" 
+                    horizontalAlignment="right" class="{{header_location == 0 ?'open':'close'}}"/>
+                </StackLayout>
+              </DockLayout>
+              <!--Contenido-->
+              <ListView items="{{ ubicaciones }}" id="groceryList" height="{{header_location == 0 ?'0':'150'}}">
+                <ListView.itemTemplate>
+                  <DockLayout margin="5">
+                    <StackLayout dock="left">
+                      <Label text="{{title}}" class="zona" />
+                      <Label text="{{mensaje}}" class="message"/>
+                    </StackLayout>
+                    <image dock="right" src="~/images/1_Icons/recursos-32.png" height="35" tap="Sede_Location"
+                    latitude="{{latitude}}"
+                    longitude="{{longitude}}"
+                    dir="{{dir}}"
+                    gerente="{{gerente}}"
+                    fijo="{{fijo}}"
+                    movil="{{movil}}" />
+                  </DockLayout>
+                </ListView.itemTemplate>
+              </ListView>
+              <StackLayout class="separator" />
+            </StackLayout>
+          </StackLayout>
+        </StackLayout>
+      </stack-layout>
+    </drawer:rad-side-drawer.mainContent>
+    <drawer:rad-side-drawer.drawerContent>
+      <widgets:drawer-content />
+    </drawer:rad-side-drawer.drawerContent>
+  </drawer:rad-side-drawer>
+</page>
+```
+
+En la declaración del componente necesitaremos los siguientes atributos:
+
+- header_resena: Variable de control para el primer header.
+- header_location: Variable de Control para el primer header
+- ubicaciones: Array con la información de las ubicaciones.
+
+Declararemos la función "Resena" y "Ubicaciones" para simular el manejo de los header del acordeón
+
+```
+Resena() {
+  if (vm.get("header_resena") == 0){
+    vm.set("header_resena",1);
+    vm.set("header_location",0);
+  } else {
+  vm.set("header_resena",0);
+  }
+}
+
+Ubicaciones() {
+  if (vm.get("header_location") == 0){
+    vm.set("header_location",1);
+    vm.set("header_resena",0);
+  } else {
+  vm.set("header_location",0);
+  }
+}
+```
+
+E implementamos la función que realizara la navegación a la pagina de Detalle de Ubicación pasando la información respectiva de la zona
+
+```
+Sede_Location(args){    
+  let arg_latitude=args.view.latitude;
+  let arg_longitude=args.view.longitude;
+  let arg_dir=args.view.dir;
+  let arg_gerente=args.view.gerente;
+  let arg_fijo= args.view.fijo;
+  let arg_movil= args.view.movil;
+  var navigationOptions={
+      moduleName:'pages/locationdetail/locationdetail',
+      context:{
+          mark: {
+            latitude: arg_latitude,
+            longitude: arg_longitude,
+            dir: arg_dir,
+            gerente: arg_gerente,
+            fijo: arg_fijo,
+            movil: arg_movil
+          }
+      }
+    }
+  topmost().navigate(navigationOptions);
+}
+```
 
 <br>
 <br>
@@ -1131,11 +1676,6 @@ En nuestra función 'OnMapReady' copiamos el array 'marks' para que sea recorrid
 *<Text style="text-decoration: underline; margin: 15px;"> 3.10. Desarrollo del Splash para el inicio de la aplicación</Text>*
 <br>
 <br>
+Se requiere editar los recursos por defecto que trae el framework podemos utilizar las guías para [iOS](https://docs.nativescript.org/publishing/creating-launch-screens-ios) y [Android](https://docs.nativescript.org/publishing/creating-launch-screens-android), algunos documentos de NativeScript indican crear una carpeta general para el Splash como se implementa en la librería [NativeScript-SplashScreen](https://github.com/triniwiz/nativescript-splashscreen) pero esta presenta errores desde inicios del mes de Septiembre 2016.
 
-<br>
-<br>
-<br>
-*<Text style="text-decoration: underline; margin: 15px;"> 3.11. Instalación en el dispositivo</Text>*
-<br>
-<br>
 
