@@ -368,6 +368,7 @@ La etiqueta 'actionBarHidden' por defecto trae el valor de 'false' cuando no se 
 Eliminaremos el contenido de la carpeta "./app/pages/" ya que por defecto trae 3 paginas generadas.
 <br>
 <br>
+<br>
 *<Text style="text-decoration: underline; margin: 15px;"> 3.1. Desarrollo de la vista del Menú</Text>*
 <br>
 <br>
@@ -426,9 +427,12 @@ export abstract class BasePage {
 }
 ```  
 
-
-
+<br>
+<br>
+<br>
 *<Text style="text-decoration: underline; margin: 15px;"> 3.2. Desarrollo de la Pantalla de presentación de categorías</Text>*
+<br>
+<br>
 
 Creamos la pagina de la pantalla recordando que debe tener el mismo nombre que el ID de navegacion del menú y colocaremos el código base en estas para su funcionamiento.
 
@@ -687,18 +691,451 @@ Para implementar los Tab realizaremos un StackLayout con orientación horizontal
 </StackLayout>
 ```
 
+Agregaremos la función para el manejo de los Tab la cual cambiara los valores de los atributos "Active" y "groceList" para indicar el tab activo y actualizar la lista de platos, respectivamente.
+
+```
+tabChange(args){
+  let tab = args.view.id.toLowerCase();
+  let tabActive ;
+  let tabTitle ;
+  switch (tab) { 
+    case'favoritos': 
+      tabActive=0;
+      tabTitle='favoritos';
+      vm.set("groceryList", vm.get("favoritosList"));
+    break; 
+    case'principales': 
+      tabActive=1;
+      tabTitle='principales';
+      vm.set("groceryList", vm.get("principalesList")); 
+    break; 
+    case'ensaladas': 
+      tabActive=2;
+      tabTitle='ensaladas';
+      vm.set("groceryList", vm.get("ensaladasList"));
+    break; 
+    case'postres': 
+      tabActive=3;
+      tabTitle='postres';
+      vm.set("groceryList", vm.get("postresList"));
+    break; 
+    case'bebidas': 
+      tabActive=4;
+      tabTitle='bebidas';
+      vm.set("groceryList", vm.get("bebidasList"));
+    break; 
+    default: 
+      tabActive=0;
+      tabTitle='favoritos';
+      vm.set("groceryList", vm.get("favoritosList"));
+    break; 
+  } 
+  vm.set("active", tabActive);
+  vm.set("titleTab", tabTitle);
+}
+```
+
+Trabajaremos con el componente ListView que recibe un array en la etiqueta "items" e itera el código que contiene por cada posición y podemos acceder a su contenido directamente. Colocamos en el XML de la pagina menulist el siguiente código bajo a la barra de Tabs.
+
+```
+<ListView items="{{ groceryList }}" id="groceryList" height="{{height*0.69}}">
+  <ListView.itemTemplate>
+    <StackLayout marginBottom= "5">
+      <image src="{{img}}" height="{{height*0.15}}" 
+          name="{{ name }}"
+          price="{{ price }}" 
+          rank="{{rank}}" 
+          description="{{description}}"
+          img="{{img}}"
+          tap="changeToDetail" />
+      <DockLayout class="DishBar">
+        <StackLayout dock="left">
+          <Label text="{{ name }}" textWrap="true" horizontalAlignment="left" verticalAlignment="center" class="DishName"/>
+          <Label text="{{ price }}" horizontalAlignment="left" verticalAlignment="center" class="DishPrice"/>
+        </StackLayout>
+        <StackLayout dock="right" marginRight="3">
+          <image src="~/images/1_Icons/recursos-07.png" horizontalAlignment="right" marginTop="5" height="17" marginRight="2"
+          name="{{ name }}"
+          price="{{ price }}" 
+          rank="{{rank}}" 
+          description="{{description}}"
+          img="{{img}}"
+          tap="changeToDetail" />
+          <image src="{{rank}}" horizontalAlignment="right" height="15" marginTop="6"/>
+        </StackLayout>
+      </DockLayout>
+    </StackLayout>
+  </ListView.itemTemplate>
+</ListView>
+```
+
+En el código anterior, estamos anexando información a las imágenes que ejecutan la función 'changeToDetail' para poder acceder a esta (args) cuando se genere la acción. Finalmente, declaramos la función 'changeToDetail' que realiza la navegación a la pagina para el detalle del plato enviando la información respectiva.
+
+```
+changeToDetail(args) {
+  let dish_img = args.view.img;
+  let dish_rank=  args.view.rank;
+  let dish_description= args.view.description;
+  let dish_price= args.view.price;
+  let dish_name= args.view.name
+  var navigationOptions={
+    moduleName:'pages/menudetail/menudetail',
+    context:{
+            name: dish_name,
+            img: dish_img,
+            rank: dish_rank,
+            price: dish_price,
+            description: dish_description
+            }
+  }
+  topmost().navigate(navigationOptions);
+}
+```
+<br>
+<br>
+<br>
 *<Text style="text-decoration: underline; margin: 15px;"> 3.4. Desarrollo de la Pantalla de Detalle del Plato</Text>*
+<br>
+<br>
 
+En esta pagina no se implementara el DrawerMenu sino que haremos un boton que utilize la funcion 'Back' del BasePage.js definimos nuestros archivos y el codigo base, como es una pagina que recibe parametros en la navegacion volveremos a declarar la funcion 'onNavigatingTo'
+
+```
+mkdir ./app/pages/menudetail
+touch ./app/pages/menudetail/menudetail.ts
+touch ./app/pages/menudetail/menudetail.xml
+touch ./app/pages/menudetail/menudetail.css
+```
+
+Volveremos a declarar nuestra barra de navegación para conservar el mismo estilo y le asignaremos la función 'back' para retornar a nuestra lista de platos.
+
+```
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  loaded="loaded"
+  navigatingTo="onNavigatingTo"
+  actionBarHidden="true"
+  class="white_bg"
+  >
+  <stack-layout loaded="mainContentLoaded">
+    <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}">
+      <image src="~/images/1_Icons/recursos-10.png" id="menu" tap="back" class="barmenu" />
+      <Label text="detalle" class="title" width="{{width - 60}}"/>
+    </StackLayout>
+  </stack-layout>
+</page>
+```
+
+Declaramos el TypeScript de la pagina.
+
+```
+import {BasePage} from "../../shared/BasePage";
+import {Observable, EventData} from "data/observable";
+import {View} from "ui/core/view";
+import {screen} from "platform"
+import {Page} from "ui/page";
+
+let vm = new Observable({ 
+    name: "default",
+    price: "",
+    img: "",
+    rank: "",
+    description:"",
+    show: 0,
+    width: screen.mainScreen.widthDIPs,
+    height: screen.mainScreen.heightDIPs
+ });
+
+class MenuDetailPage extends BasePage{
+  mainContentLoaded(args:EventData){
+    let view = <View>args.object;
+    view.bindingContext = vm;
+  }
+    
+  onNavigatingTo(args) {
+    var page = args.object;
+    var gotData=page.navigationContext;
+    vm.set("name", gotData.name);
+    vm.set("price", gotData.price);
+    vm.set("img", gotData.img);
+    vm.set("rank", gotData.rank);
+    vm.set("description", gotData.description);
+  }
+}
+export = new MenuDetailPage();
+```
+
+Una vez tenemos el código básico para poder navegar a nuestra pagina y obtener la información que pasamos en la navegación realizaremos el diseño de la pagina. Esta pagina consta de un 'Pop-up Button' para mostrar las opciones de redes sociales, sin embargo, NativeScript no ofrece una vista Pop-Up o la funcionalidad de CSS para posicionar componentes sino que ofrece un AbsoluteLayout en el cual simularemos el evento declarando las dos vistas y modificando la visibilidad según la acción.
+
+Agregamos al XML de la pagina nuestro diseno en AbsoluteLayout
+
+```
+<AbsoluteLayout>
+  <AbsoluteLayout left="0" top="0" padding="5">
+    <StackLayout left="0" top="0" width="{{width-10}}">
+      <image src="{{img}}" />
+    </StackLayout>
+    <DockLayout left="0" top="{{height*0.22}}" class="bara" width="{{width-10}}" height="{{height*0.09}}">
+      <StackLayout dock="left">
+        <Label text="{{ name }}" textWrap="true" class="DishName" />
+      </StackLayout>
+      <StackLayout dock="right" marginRight="3">
+        <image src="{{rank}}" horizontalAlignment="right" height="16" marginTop="6"/>
+      </StackLayout>
+    </DockLayout>
+    <Label text="{{ price }}" top="{{height*0.31}}" class="DishPrice"/>
+    <DockLayout top="{{height*0.37}}" width="{{width-10}}">
+      <StackLayout dock="left" class="button_1" tap="back">
+        <Label text="Cambiar Plato" />
+      </StackLayout>
+      <StackLayout dock="right" class="button_2">
+        <Label text="Pedir" horizontalAlignment="center"/>
+      </StackLayout>
+    </DockLayout>
+    <Label top="{{height*0.45}}" text="{{description}}" textWrap="true" width="{{width-10}}" class="description"/>
+  </AbsoluteLayout>
+  <AbsoluteLayout left="0" top="0" height="{{height}}" width="{{width}}" class="shadow" visibility="{{ show == 1 ? 'visible' : 'collapsed' }}"/>
+  <StackLayout left="{{width*0.37}}" top="{{height*0.37}}" orientation="horizontal" class="share" visibility="{{ show == 1 ? 'visible' : 'collapsed' }}">
+    <image src="~/images/1_Icons/recursos-29.png" height="50" margin="5"/>
+    <image src="~/images/1_Icons/recursos-30.png" height="50" margin="5"/>
+    <image src="~/images/1_Icons/recursos-31.png" height="50" margin="5"/>
+  </StackLayout>
+  <image src="~/images/1_Icons/recursos-28.png" class="share_button" top="{{height*0.27}}" tap="share" left="{{width*0.77}}"/>
+</AbsoluteLayout>
+```
+
+El orden en que se declaran los componentes indica el orden para sobreponer componentes, en el código anterior estamos declarando un AbsoluteLayout que representa todo el contenido de la pagina internamente contiene un AbsoluteLayout donde se organizan los componentes que serán opacados, seguido de otro AbsoluteLayout que generara la sombra para guiar al usuario en el 'Pop-up' y finalmente el contenido del 'pop-up', estos dos últimos tienen declarada la etiqueta 'visibility' que es contralada por el valor del atributo 'show' de esta manera al dar click en el "share_button" se mostrara u ocultara el 'pop-up'.
+
+Finalmente, declararemos la función 'share' para controlar la visibilidad del 'pop-up'.
+
+```
+share() {
+  if (vm.get("show") == 0)
+    vm.set("show", 1);
+  else
+    vm.set("show",0);
+}
+```
+<br>
+<br>
+<br>
 *<Text style="text-decoration: underline; margin: 15px;"> 3.5. Desarrollo de la Pantalla de Ubicación (Utilizando el API de Geolocalización)</Text>*
+<br>
+<br>
 
+Haremos la segunda pagina de nuestro DrawerMenu recordando que debe llamarce igual al 'id' que colocamos en este.
+
+```
+mkdir ./app/pages/location
+touch ./app/pages/location.ts
+touch ./app/pages/location.xml
+touch ./app/pages/location.css
+```
+
+Instalaremos el plugin de [Google Maps SDK](https://github.com/dapriett/nativescript-google-maps-sdk) para NativeScript y seguiremos la configuracion que indica la pagina.
+
+```
+tns plugin add nativescript-google-maps-sdk
+```
+
+Inconvenientes que se pueden presentar:
+
+iOS:
+
+- No acepta la llave porque no consigue un modulo. Solución: Crearemos en la carpeta 'app' los archivos 'GMSServiceKey.d.ts' y 'GMSServiceKey.js' con el siguiente contenido:
+
+GMSService.d.ts
+```
+declare function GMSServiceKey(): void; export = GMSServiceKey;
+```
+
+GMSService.js
+```
+module.exports = function () { GMSServices.provideAPIKey("API_KEY"); };
+```
+
+app.ts
+```
+import * as application from "application";
+import GMSServiceKey = require('./GMSServiceKey');
+
+if(application.ios) {
+  GMSServiceKey();
+}
+application.start({ moduleName: "pages/menu/menu" });
+```
+
+  - Error con el SandBox. Solución: tendremos que modificar el valor en el archivo de configuración de NativeScript que usualmente se encuentra en '/usr/local/lib/node_modules/nativescript/config/config.json' cambiamos el valor de 'USE_POD_SANDBOX' a false. Si da error con la llave por identificación, utilizar una llave genérica.
+
+Android:
+
+- No pinta el Mapa: Según los emuladores de Android no son compatibles con GoogleMaps v2 por lo que podemos intentar instalando una versión de la librería mas estable como indica la guía de configuración de esta. Sin embargo, en algunos dispositivos (emuladores o no) no pinta el mapa el problema fue presentado el 3 de Septiembre del 2016, se volvió a abrir el issue el 12 de Septiembre de 2016 y no se ha conseguido una solución a este.
+
+Una vez instalado el plugin declararemos nuestro XML indicando xmlns para utilizarlo
+
+```
+<page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:maps="nativescript-google-maps-sdk"
+  xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+  xmlns:widgets="shared/widgets"
+  xmlns:statusbar="nativescript-statusbar"
+  loaded="loaded"
+  actionBarHidden="true"
+  >
+  <drawer:rad-side-drawer id="drawer">
+    <drawer:rad-side-drawer.mainContent>
+      <stack-layout loaded="mainContentLoaded">
+        <StackLayout orientation="horizontal" class="bar" height="{{height*0.08}}" width="{{width}}" >
+          <image src="res://ic_menu" id="menu" tap="toggleDrawer" class="barmenu"/>
+          <Label text="ubicación" width="{{width - 60}}" class="title"/>
+        </StackLayout>
+        <AbsoluteLayout height="{{height}}" width="{{width}}" >
+
+          <maps:mapView latitude="9.2" longitude="-67" 
+          zoom="7" bearing="{{ bearing }}" 
+          tilt="{{ tilt }}" mapReady="OnMapReady"  
+          markerSelect="onMarkerSelect" 
+          height="{{height}}" width="{{width}}" />
+          <Label top="0" left="0" text="Seleccione un Establecimiento" width="{{width}}" class="helper" />
+
+        </AbsoluteLayout>
+      </stack-layout>
+    </drawer:rad-side-drawer.mainContent>
+    <drawer:rad-side-drawer.drawerContent>
+      <widgets:drawer-content />
+    </drawer:rad-side-drawer.drawerContent>
+  </drawer:rad-side-drawer>
+
+</page>
+```
+Nuevamente utilizaremos el AbsoluteLayout para posicionar un texto que indique al usuario la próxima acción a realizar en la pagina.
+
+En la declaración de la pagina utilizaremos variables que contenga la información de las marcas a colocar en el mapa
+
+```
+import {BasePage} from "../../shared/BasePage";
+import {Observable, EventData} from "data/observable";
+import {View} from "ui/core/view";
+import {topmost} from "ui/frame";
+import {screen} from "platform";
+import {Page} from "ui/page";
+var mapsModule = require("nativescript-google-maps-sdk");
+
+let vm = new Observable({ 
+    width: screen.mainScreen.widthDIPs,
+    height: screen.mainScreen.heightDIPs,
+    marks:([
+        { 
+            latitude: 10.498086655450642,
+            longitude: -66.85348734185897,
+            title: "Caracas",
+            snip: "Venezuela",
+            dir: "Synergy-Gb, Piso 3 Centro Gerencial Mohedano,Avenida Los Chaguaramos, Caracas, Distrito Capital",
+            gerente: "Alexander Ramirez",
+            fijo: "0212-1234567",
+            movil: "0414-1112233",
+            },
+        { 
+            latitude: 10.50,
+            longitude: -66.86,
+            title: "Los Jardines",
+            snip:"Distrito Capital",
+            dir: "Los Jardines,Avenida Los Samám, Caracas, Distrito Capital",
+            gerente: "Ali Suarez",
+            fijo: "0212-1234567",
+            movil: "0414-1112233",
+            },
+        { 
+            latitude: 10.347091,
+            longitude: -66.992912,
+            title: "Los Teques",
+            snip: "Carrizal",
+            dir: 'C.C La Cascada, Nivel Feria, Los Teques, Miranda',
+            gerente: "Alexander Ramirez",
+            fijo: "0212-1234567",
+            movil: "0414-1112233",
+        }
+    ]),
+ });
+
+
+class LocationPage extends BasePage{
+  mainContentLoaded(args:EventData){
+    let view = <View>args.object;
+    view.bindingContext = vm;
+  }
+
+  OnMapReady(args) {
+    var mapView = args.object;
+    let marcas=vm.get("marks");
+    for (let i=0; i<marcas.length; i++){
+        var marker = new mapsModule.Marker();
+        marker.position = mapsModule.Position.positionFromLatLng(marcas[i].latitude, marcas[i].longitude);
+        marker.userData = { index : i+1};
+        marker.data=marcas[i];
+        mapView.addMarker(marker);
+    }
+  }
+   
+  onMarkerSelect(args) {
+    let inf=args.marker.data;
+    var navigationOptions={
+        moduleName:'pages/locationdetail/locationdetail',
+        context:{
+            mark: inf
+        }
+      }
+    topmost().navigate(navigationOptions);
+  }
+   
+
+}
+export = new LocationPage();
+```
+
+En nuestra función 'OnMapReady' copiamos el array 'marks' para que sea recorrido y colocar la información respectiva a cada Marca que al ser seleccionada accionará la función 'onMarkerSelect' que realizara la navegación a la pagina 'locationdetal' o 'Detalle de Ubicación' pasando la información correspondiente.
+
+
+<br>
+<br>
+<br>
 *<Text style="text-decoration: underline; margin: 15px;"> 3.6. Desarrollo de la Pantalla de Detalle de Ubicación</Text>*
+<br>
+<br>
 
+<br>
+<br>
+<br>
 *<Text style="text-decoration: underline; margin: 15px;"> 3.7. Desarrollo de la Pantalla de Contacto</Text>*
+<br>
+<br>
 
+<br>
+<br>
+<br>
 *<Text style="text-decoration: underline; margin: 15px;"> 3.8. Desarrollo de la Pantalla para Contactar</Text>*
+<br>
+<br>
 
+<br>
+<br>
+<br>
 *<Text style="text-decoration: underline; margin: 15px;"> 3.9. Desarrollo de la Pantalla de Información</Text>*
+<br>
+<br>
 
+<br>
+<br>
+<br>
 *<Text style="text-decoration: underline; margin: 15px;"> 3.10. Desarrollo del Splash para el inicio de la aplicación</Text>*
+<br>
+<br>
 
+<br>
+<br>
+<br>
 *<Text style="text-decoration: underline; margin: 15px;"> 3.11. Instalación en el dispositivo</Text>*
+<br>
+<br>
+
