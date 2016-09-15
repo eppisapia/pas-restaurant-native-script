@@ -27,9 +27,9 @@ Abrimos el terminal o consola y nos dirigimos al directorio donde queremos crear
 
  Si nos dirigimos adentro de la carpeta de la aplicación podremos ver la estructura que ha montado el framework
  
-{:refdef: style="text-align: center;"}
-![Archivos_Iniciales](/pas-restaurant-native-script/Images/Archivos_Iniciales.png)
-{: refdef}
+<img style="display: block;
+    margin-left: auto;
+    margin-right: auto;" src="{{site.url}}/Images/Archivos_Iniciales.png">
 
  - app: Es la carpeta donde se desarrolla la aplicación, contiene todos los recursos para su construcción.
  - hooks: Por defecto, contiene una serie de archivos que NativeScript utiliza para preprocesar las instrucciones en código JavaScript.
@@ -61,6 +61,6 @@ Tras haber agregado la plataforma podremos ejecutar el ejemplo con el comando
     tns run android
 ```
 
-{:refdef: style="text-align: center;"}
-![Archivos_Iniciales](/pas-restaurant-native-script/Images/Primera_Vista.png)
-{: refdef}
+<img style="display: block;
+    margin-left: auto;
+    margin-right: auto;" src="{{site.url}}/Images/Primera_Vista.png">

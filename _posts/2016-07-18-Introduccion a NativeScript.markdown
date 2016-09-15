@@ -51,10 +51,67 @@ Es un framework de desarrollo elaborado por Telerik que utiliza JavaScript, Casc
 
 ***Conceptos Base***
 
-- Funciones que se ejecutan durante eventos de carga de las paginas
+- Funciones que se ejecutan durante eventos de las paginas
 	- loaded: Se ejecuta tras haber montado el componente y enlaza el modelo con la vista. 
 	- mainContentLoaded: Adjunta el contexto o modelo al contenido principal de la pagina.
+	- onNavigatingTo: Función que se ejecuta en la invocación de la pagina.
 
 - Parámetros args: Son aquellos que van asociados al componente que genera el evento.
 
-- Layout: 
+- Componente Screen: Permite obtener las dimensiones de la pagina.
+
+```
+import {screen} from "platform";
+
+let vm = new Observable({ 
+    width: screen.mainScreen.widthDIPs,
+    height: screen.mainScreen.heightDIPs});
+
+// Definición de la clase.
+``` 
+
+- Componente Topmost: Se encarga de la navegación y de sobreponer las paginas entre si.
+
+- Layout: Contenedores de elementos para el diseno de la aplicacion.
+	- AbsoluteLayout: Contenedor que permite colocar elementos en cualquier posición de la pantalla según la distancia a la parte izquierda y superior de esta, por defecto todos los componentes se alinean en la posición (0,0). Los elementos definidos en este contenedor se sobrepondrán entre si en base al orden que tengan en el Layout.
+	- DockLayout: Permite ubicar elementos en base a una orientación dejando el espacio no utilizado libre para los demás componentes.
+	- GridLayout: Permite definir Columnas y filas para posicionar los elementos, por defecto solo trae una columna y una fila.
+	- StackLayout: Coloca los elementos consecutivamente según la orientación que por defecto es vertical.
+	- WrapLayout: Crea filas o columnas para ubicar los elementos según la orientación, al acabarse el espacio en la fila o columna pasa a la siguiente.
+
+```
+<AbsoluteLayout>
+	<image src="<Direccion de la imagen>" />
+	<Label left="20" top="50" text="Este texto esta encima de la imagen con una distancia al margen izquierdo de 20 y superior de 50">
+</AbsoluteLayout>
+
+<DockLayout stretchLastChild="true">
+   	<Label dock="left" text="left" style="background-color: red; margin: 5;" />
+   	<Label dock="top" text="top" style="background-color: lightblue; margin: 5;" />
+   	<Label dock="right" text="right" style="background-color: lightgreen; margin: 5;" />
+   	<Label dock="bottom" text="bottom" style="background-color: lightpink; margin: 5;" />
+   	<Label text="relleno" style="background-color: wheat; margin: 5;" />
+</DockLayout>
+
+<GridLayout columns="80, *, auto" rows="auto, *" >
+	<Button col="0" />
+ 	<Button col="1" />
+ 	<Button col="2" />
+	// por defecto las columas y filas estas puestas en 0
+	<Button row="1" colSpan="3" />
+</GridLayout>
+
+<StackLayout orientation="horizontal">
+	<Label text="Label 1" />
+	<Label text="Label 2" />
+</StackLayout>
+
+<WrapLayout>
+    <Label text="Label 1" />
+    <Label text="Label 2" />
+    <Label text="Label 3" />
+    <Label text="Label 4" />
+</WrapLayout>
+```
+
+	

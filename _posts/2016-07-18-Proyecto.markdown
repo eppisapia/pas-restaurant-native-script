@@ -28,7 +28,7 @@ A consideración:
 - Como se quiere investigar el framework se evitara o reducirá el uso de herramientas externas.
 - El código a explicar esta escrito en el lenguaje TypeScript.
 
- ***2. Estructura*** 
+***2. Estructura*** 
 <br>
 *<Text style="text-decoration: underline; margin: 15px;"> 2.1. Patrón de diseño</Text>*
 <br>
@@ -39,269 +39,126 @@ Utilizaremos el patrón de diseño que ofrecen las plantillas de NativeScript el
 *<Text style="text-decoration: underline; margin: 15px;">2.2. Diseño de la aplicación</Text>*
 <br>
 
+<table style="width:100%">
+  <tr>
+    <td><img height="350" width="400" src="{{site.url}}/Images/Pantalla_menu.png"> </td>
+    <td>
+      Vista del Menú
+      <br>
+      <br>
+      Todas las pantallas contendran un panel estático principal que tendrá el botón que accionara el menu o el retorno, seguido del titulo de la pantalla en la que se encuentre el usuario. 
+      <br>
+      <br>
+      El menú a utilizar será un SideMenu o DrawerMenu que se deslizara de izquierda a derecha en la pantalla mostrando las opciones de navegación.
+    </td>
+  </tr>
 
+  <tr>
+    <td><img height="350" width="400" src="{{site.url}}/Images/Pantalla_categorias.png"> </td>
+    <td>
+      Pantalla de Presentación de Categorías
+      <br>
+      <br>
+      Será la pagina principal de la aplicación correspondiente al Menú, tendrá una imagen de fondo con 5 botones que representen las categorías del restaurante. 
+    </td>
+  </tr>
 
-<img style="float: left; margin: 5px;" src="/Images/Pantalla_menu.png">
-<br>
-Vista del Menú
+  <tr>
+    <td><img height="350" width="400" src="{{site.url}}/Images/Pantalla_platos.png"> </td>
+    <td>
+      Pantalla de Lista de Platos 
+      <br>
+      <br>
+      Consta de un navegador por tabs para la selección de las categorías y un ListView para mostrar la lista de platos.
+      <br>
+      Cada plato será almacenado en un contenedor que mostrara el Nombre, imagen, precio y ranking del platillo. Adicionalmente se colocara un Burger menú como submenú de acciones. 
+    </td>
+  </tr>
 
+  <tr>
+    <td><img height="350" width="400" src="{{site.url}}/Images/Pantalla_detalle_p.png"> </td>
+    <td>
+      Pantalla de Detalle del Plato
+      <br>
+      <br>
+      En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un botón de retorno y el titulo de la pagina.
+      <br>
+      Se mostrara una pantalla con el Nombre, imagen, precio, descripción, ranking del plato y tres botones que permitan al usuario realizar acciones.
+    </td>
+  </tr>
 
-Todas las pantallas contendran un panel estático principal que tendrá el botón que accionara el menu o el retorno, seguido del titulo de la pantalla en la que se encuentre el usuario. 
-<br>
+  <tr>
+    <td><img height="350" width="400" src="{{site.url}}/Images/Pantalla_informacion.png"> </td>
+    <td>
+      Pantalla de Información
+      <br>
+      <br>
+      Mostrara una imagen donde se puede colocar el logo o publicidad del sitio de comida rápida.
+      <br>
+      Seguido por un acordeón, que contendrá la reseña del lugar y las zonas en donde se dispone un local.
+      <br>
+      Se elaborara un contenedor que mostrara el nombre de la zona, hora de cierre y un botón para acceder a la ubicación del local respectivo.
+    </td>
+  </tr>
 
-El menú a utilizar será un SideMenu o DrawerMenu que se deslizara de izquierda a derecha en la pantalla mostrando las opciones de navegación. 
+  <tr>
+    <td><img height="350" width="400" src="{{site.url}}/Images/Pantalla_ubicacion.png"> </td>
+    <td>
+      Pantalla de Ubicación
+      <br>
+      <br>
+      Consta de un mapa que abarca la pantalla en el cual se marcaran las sedes y se mostrara un mensaje para guiar al usuario en su siguiente acción.
+    </td>
+  </tr>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+  <tr>
+    <td><img height="350" width="400" src="{{site.url}}/Images/Pantalla_comollegar.png"> </td>
+    <td>
+      Pantalla de Detalle de Ubicación
+      <br>
+      <br>
+      En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un general de retorno y el titulo de la pagina.
+      <br>
+      Contendrá un pequeño mapa que marque la ubicación seguido de la dirección y contacto del local.
+    </td>
+  </tr>
 
+  <tr>
+    <td><img height="350" width="400" src="{{site.url}}/Images/Pantalla_contacto.png"> </td>
+    <td>
+      Pantalla de Contacto
+      <br>
+      <br>
+      Tendrá un contenedor fijo que mostrara la información de contacto de la sede principal, nombre del gerente, teléfono fijo y móvil, junto a un botón para poder contactar con el gerente.
+      <br>
+      Seguido por un ComboBox que contendrá las zonas donde hay locales y al seleccionar una se cargara el contenedor de contacto con la información respectiva.
+    </td>
+  </tr>
 
-<img style="float: left; margin: 5px;" src="/Images/Pantalla_categorias.png">
-<br>
-Pantalla de Presentación de Categorías
+  <tr>
+    <td><img height="350" width="400" src="{{site.url}}/Images/Pantalla_contactar.png"> </td>
+    <td>
+      Pantalla para Contactar
+      <br>
+      <br>
+      En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un dirección de retorno y el titulo de la pagina.
+      <br>
+      Se mostrara un formulario donde el usuario introducirá su nombre, correo electrónico y el cuerpo del mensaje a enviar.
+    </td>
+  </tr>
 
-
-Será la pagina principal de la aplicación correspondiente al Menú, tendrá una imagen de fondo con 5 botones que representen las categorías del restaurante. 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+  <tr>
+    <td><img height="350" width="400" src="{{site.url}}/Images/Pantalla_inicio.png"> </td>
+    <td>
+      Splash para el inicio de la aplicación
+      <br>
+      <br>
+      Se mostrara el logo del sitio de comida hasta que finalice la carga y renderización de la pantalla principal de la aplicación, Pantalla de lista de platos.
+    </td>
+  </tr>
+</table>
  
 
-<img style="float: left; margin: 5px;" src="/Images/Pantalla_platos.png">
-<br>
-Pantalla de Lista de Platos	
-
-
-Consta de un navegador por tabs para la selección de las categorías y un ListView para mostrar la lista de platos.
-<br>
-
-Cada plato será almacenado en un contenedor que mostrara el Nombre, imagen, precio y ranking del platillo. Adicionalmente se colocara un Burger menú como submenú de acciones.
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<img style="float: left; margin: 5px;" src="/Images/Pantalla_detalle_p.png">
-<br>
-Pantalla de Detalle del Plato
-
-
-En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un botón de retorno y el titulo de la pagina.
-<br>
-Se mostrara una pantalla con el Nombre, imagen, precio, descripción, ranking del plato y tres botones que permitan al usuario realizar acciones.
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<img style="float: left; margin: 5px;" src="/Images/Pantalla_informacion.png">
-<br>
-Pantalla de Información
-
-
-Mostrara una imagen donde se puede colocar el logo o publicidad del sitio de comida rápida.
-<br>
-Seguido por un acordeón, que contendrá la reseña del lugar y las zonas en donde se dispone un local.
-<br>
-Se elaborara un contenedor que mostrara el nombre de la zona, hora de cierre y un botón para acceder a la ubicación del local respectivo.
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<img style="float: left; margin: 5px;" src="/Images/Pantalla_ubicacion.png">
-<br>
-Pantalla de Ubicación
-
-
-Consta de un mapa que abarca la pantalla en el cual se marcaran las sedes y se mostrara un mensaje para guiar al usuario en su siguiente acción.
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-<img style="float: left; margin: 5px;" src="/Images/Pantalla_comollegar.png">
-<br>
-Pantalla de Detalle de Ubicación
-
-
-En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un general de retorno y el titulo de la pagina.
-<br>
-Contendrá un pequeño mapa que marque la ubicación seguido de la dirección y contacto del local.
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-<img style="float: left; margin: 5px;" src="/Images/Pantalla_contacto.png">
-<br>
-Pantalla de Contacto
-
-
-Tendrá un contenedor fijo que mostrara la información de contacto de la sede principal, nombre del gerente, teléfono fijo y móvil, junto a un botón para poder contactar con el gerente.
-<br>
-Seguido por un ComboBox que contendrá las zonas donde hay locales y al seleccionar una se cargara el contenedor de contacto con la información respectiva.
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-<img style="float: left; margin: 5px;" src="/Images/Pantalla_contactar.png">
-<br>
-Pantalla para Contactar
-
-En esta vista, se deshabilitara el menú general y se cambiara el header por uno que contenga un dirección de retorno y el titulo de la pagina.
-<br>
-Se mostrara un formulario donde el usuario introducirá su nombre, correo electrónico y el cuerpo del mensaje a enviar.
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-				
-
-<img style="float: left; margin: 5px;" src="/Images/Pantalla_inicio.png">
-<br>
-Splash para el inicio de la aplicación
-
-
-Se mostrara el logo del sitio de comida hasta que finalice la carga y renderización de la pantalla principal de la aplicación, Pantalla de lista de platos.
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
  ***3. Implementación del Proyecto***
@@ -311,10 +168,14 @@ Se utilizara la plantilla de NativeScript para la navegacion e implementacion de
 - app/pages/: Dirección donde se ubican las paginas de la aplicación.
 - app/shared/: Dirección que contiene los componentes compartidos en la aplicación, es decir, aquellos componentes que se reutilizan.
 
+Y utilizaremos la librería [NativeScript Telerik UI](https://www.npmjs.com/package/nativescript-telerik-ui) que ofrece componentes con funcionalidad ya implementadas como el 'ListView'.
+
 Creamos el proyecto con nuestra plantilla basada en TypeScript (si quitamos la etiqueta -ts se genera el proyecto con JavaScript)
 
 ```
 tns create LosGorditosPlus --template nativescript-template-drawer-ts
+cd LosGorditosPlus
+npm install --save nativescript-telerik-ui
 ```
 
 En el archivo "app/shared/BasePage.ts" observamos la clase abstracta BasePage que contiene las funciones para la navegación entre paginas, conseguimos la definición del modelo de la clase con el atributo "selectedPage" que indica la pagina actual de la aplicación.
@@ -945,16 +806,19 @@ iOS:
 - No acepta la llave porque no consigue un modulo. Solución: Crearemos en la carpeta 'app' los archivos 'GMSServiceKey.d.ts' y 'GMSServiceKey.js' con el siguiente contenido:
 
 GMSService.d.ts
+
 ```
 declare function GMSServiceKey(): void; export = GMSServiceKey;
 ```
 
 GMSService.js
+
 ```
 module.exports = function () { GMSServices.provideAPIKey("API_KEY"); };
 ```
 
 app.ts
+
 ```
 import * as application from "application";
 import GMSServiceKey = require('./GMSServiceKey');
@@ -965,7 +829,7 @@ if(application.ios) {
 application.start({ moduleName: "pages/menu/menu" });
 ```
 
-  - Error con el SandBox. Solución: tendremos que modificar el valor en el archivo de configuración de NativeScript que usualmente se encuentra en '/usr/local/lib/node_modules/nativescript/config/config.json' cambiamos el valor de 'USE_POD_SANDBOX' a false. Si da error con la llave por identificación, utilizar una llave genérica.
+- Error con el SandBox. Solución: tendremos que modificar el valor en el archivo de configuración de NativeScript que usualmente se encuentra en '/usr/local/lib/node_modules/nativescript/config/config.json' cambiamos el valor de 'USE_POD_SANDBOX' a false. Si da error con la llave por identificación, utilizar una llave genérica.
 
 Android:
 

@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   En la presente página se busca introducir el Framework de desarrollo móvil NativeScript,
   ilustrando la elaboración de una aplicación para familiarizar a los desarrolladores
   con el framework.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/pas-restaurant-native-script" # the subpath of your site, e.g. /blog
 url: "http://blog.synergy-gb.com/pas-restaurant-native-script" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  eppisapia
