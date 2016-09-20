@@ -44,10 +44,16 @@
                 <ListView.itemTemplate>
                   <DockLayout margin="5">
                     <StackLayout dock="left">
-                      <Label text="{{zona}}" class="zona" />
+                      <Label text="{{title}}" class="zona" />
                       <Label text="{{mensaje}}" class="message"/>
                     </StackLayout>
-                    <image dock="right" data="{{data[0]}" src="~/images/1_Icons/recursos-32.png" height="35" tap="Sede_Location" />
+                    <image dock="right" src="~/images/1_Icons/recursos-32.png" height="35" tap="Sede_Location"
+                    latitude="{{latitude}}"
+                    longitude="{{longitude}}"
+                    dir="{{dir}}"
+                    gerente="{{gerente}}"
+                    fijo="{{fijo}}"
+                    movil="{{movil}}" />
                   </DockLayout>
                 </ListView.itemTemplate>
               </ListView>

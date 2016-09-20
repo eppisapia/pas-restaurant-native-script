@@ -13,29 +13,27 @@ let vm = new Observable({
         { name: "eggs", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-03.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
     ]),
   principalesList:([
-    { name: "principales", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-02.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso."},
-        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49.png", rank: "~/images/Recursos/componente-04.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
-        { name: "eggs", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-03.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
+    { name: "Pizza con Peperoni", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-06.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso."},
+    
+    { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49.png", rank: "~/images/Recursos/componente-06.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
+        
   ]),
   favoritosList:([
-        { name: "favoritos", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-02.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso."},
-        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49.png", rank: "~/images/Recursos/componente-04.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
-        { name: "eggs", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-03.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
+        { name: "Pizza con Peperoni", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-06.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso."},
+        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49.png", rank: "~/images/Recursos/componente-06.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
+        {name: 'Tiramisu', price: "1.500 Bsf", img:"~/images/Recursos/recursos-50.png", rank:"~/images/Recursos/componente-06.png", description: 'Capas de ponque mojado en cafe y separado por una crema a base de queso mascarpone con chips de chocolates'},
+        {name: 'Ensalada Cesar con Camarones', price: "4.300 Bsf", img:"~/images/Recursos/recursos-52.png", rank:"~/images/Recursos/componente-06.png", description: 'Ingredientes: Lechuga, Queso Parmesano, Pollo, Camarones, Adereso Cesar'},
   ]),
   ensaladasList:([
-        { name: "ensaladas", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-02.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso."},
-        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49.png", rank: "~/images/Recursos/componente-04.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
-        { name: "eggs", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-03.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
+        {name: 'Ensalada Cesar con Camarones', price: "4.300 Bsf", img:"~/images/Recursos/recursos-52.png", rank:"~/images/Recursos/componente-06.png", description: 'Ingredientes: Lechuga, Queso Parmesano, Pollo, Camarones, Adereso Cesar'},
   ]),
   postresList:([
-        { name: "postres", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-02.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso."},
-        { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49.png", rank: "~/images/Recursos/componente-04.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
-        { name: "eggs", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-03.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
+        {name: 'Tiramisu', price: "1.500 Bsf", img:"~/images/Recursos/recursos-50.png", rank:"~/images/Recursos/componente-06.png", description: 'Capas de ponque mojado en cafe y separado por una crema a base de queso mascarpone con chips de chocolates'},
+        
+        {name: 'Profiteroles', price: "1.200 Bsf", img:"~/images/Recursos/recursos-51.png", rank:"~/images/Recursos/componente-04.png", description: 'Tres biscochos rellenos de crema pastelera bañados con un salsa de chocolate oscuro'},
   ]),
   bebidasList:([
-      { name: "bebidas", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-02.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso."},
-      { name: "Pasta a la Caprese", img: "~/images/7_Others/recursos-49.png", rank: "~/images/Recursos/componente-04.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." },
-      { name: "eggs", img: "~/images/7_Others/recursos-48.png", rank: "~/images/Recursos/componente-03.png", price: "6.700 Bsf", description: "1 base para pizza. 100 gr. de pepperoni. 100 gr. de salami. 1 lata de tomate triturado. 100 gr. de queso parmesano rallado. 150 gr. de queso." }
+        {name: 'Coca-Cola', price: "500 Bsf", img:"~/images/Recursos/recursos-53.png", rank:"~/images/Recursos/componente-06.png", description: 'Coca-Cola'},
   ]),
   active: 0,
   titleTab: "",

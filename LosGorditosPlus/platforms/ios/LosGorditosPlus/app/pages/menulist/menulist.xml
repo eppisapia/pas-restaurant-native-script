@@ -59,7 +59,7 @@
           </StackLayout>
         </StackLayout>
         <StackLayout margin= "5">
-            <ListView items="{{ groceryList }}" id="groceryList" height="{{height*0.69}}">
+            <ListView items="{{ groceryList }}" id="groceryList" height="{{height*0.80}}">
                 <ListView.itemTemplate>
                   <StackLayout marginBottom= "5">
                     <image src="{{img}}" height="{{height*0.15}}" 

@@ -1,8 +1,4 @@
 .menu-background {
-	background-image: ~/images/Recursos/componente-01.png;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   	color: white;
 }
 
@@ -19,7 +15,7 @@
 }
 
 .DishName {
-	font-size: 20;
+	font-size: 16;
 	font-weight: bold;
 	color: white;
 	margin-left: 5;
