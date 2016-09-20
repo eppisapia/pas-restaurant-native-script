@@ -54,7 +54,7 @@ Utilizaremos el patrón de diseño que ofrecen las plantillas de NativeScript el
   </tr>
 
   <tr>
-    <td><img height="350" width="400" src="{{site.url}}/Images/Pantalla_categorias.png"> </td>
+    <td><img height="350" width="400" src="{{site.url site.baseurl}}/Images/Pantalla_categorias.png"> </td>
     <td>
       Pantalla de Presentación de Categorías
       <br>
